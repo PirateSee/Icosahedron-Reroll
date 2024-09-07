@@ -81,7 +81,17 @@
         "botania:mythic_botany/rings",
         "botania:mythic_botany/tools",
         "botania:mythic_botany/manaband",
-        "botania:functional_flowers/hopperhock"
+        "botania:functional_flowers/hopperhock",
+        "botania:functional_flowers/bubbell",
+        "botania:functional_flowers/spectranthemum",
+        "botania:functional_flowers/daffomill",
+        "botania:functional_flowers/vinculotus",
+        "botania:functional_flowers/tigerseye",
+        "botania:functional_flowers/tangleberrie",
+        "botania:functional_flowers/flower_shrinking",
+        "botania:functional_flowers/clayconia",
+        "botania:functional_flowers/loonium",
+        "botania:tools/grass_seeds"
       ],
       "bookmarks": [],
       "completedManualQuests": []

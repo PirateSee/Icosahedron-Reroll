@@ -1,10 +1,10 @@
 {
-  "volume": 70,
+  "volume": 80,
   "clientPlayerVolume": 100,
   "otherPlayerVolume": 100,
   "hostileEntitiesVolume": 100,
   "passiveEntitiesVolume": 100,
-  "runningVolumeIncrease": 0,
+  "runningVolumeIncrease": 10,
   "wetSoundsVolume": 50,
   "foliageSoundsVolume": 100,
   "maxSteppingEntities": 50,
