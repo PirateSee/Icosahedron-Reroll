@@ -1,0 +1,13 @@
+filename = 'alembic-1.1.0.jar'
+name = 'Alembic'
+side = 'both'
+
+[download]
+hash = 'd8bed18f7dbec03bd6d3ae53526784a0fa9312b056ec02acdc195d2ec254558f0063e0870206eadfdeab8549b71efe71775bac77ff5e9a78eef0fb5c6f826e38'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/glRa3GHb/versions/ff17u7rp/alembic-1.1.0.jar'
+
+[update.modrinth]
+mod-id = 'glRa3GHb'
+version = 'ff17u7rp'

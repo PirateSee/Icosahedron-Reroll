@@ -1,0 +1,10 @@
+{
+    "level": 6,
+    "color": "#8ea443a3bdaa", 
+    "icons": {
+      "minecraft:mineable/pickaxe": "minecraft:netherite_pickaxe",
+      "minecraft:mineable/axe": "minecraft:netherite_axe",
+      "minecraft:mineable/shovel": "minecraft:netherite_shovel",
+      "minecraft:mineable/hoe": "minecraft:netherite_hoe"
+    }
+  }

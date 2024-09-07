@@ -1,0 +1,13 @@
+filename = 'ParticleMimicry-1.20.1-0.4.2.jar'
+name = 'Particle Mimicry'
+side = 'both'
+
+[download]
+hash = '3c7664ede3b1b8355dacf7459c35309486b9fda00d6d92d6f03e149db6f55448c3030690b85f4529564894a60ea889d44653ce5c5b4dd4143a637b67710b9a91'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/g8vF2B3R/versions/imloyNtP/ParticleMimicry-1.20.1-0.4.2.jar'
+
+[update.modrinth]
+mod-id = 'g8vF2B3R'
+version = 'imloyNtP'

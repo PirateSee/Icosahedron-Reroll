@@ -1,0 +1,13 @@
+filename = 'Cognition-v2.2.3-1.20.1.jar'
+name = 'Cognition'
+side = 'both'
+
+[download]
+hash = 'b3b9170de8669b15087efc80e6ecefc9e69b85bb879865ea2134fcbcd80f485ab96b13f48d30276ecbae0bbd25991e1c4ad573bf54d9437655b43c759e8ec8c9'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/9GdSY2FZ/versions/ShI1WLWb/Cognition-v2.2.3-1.20.1.jar'
+
+[update.modrinth]
+mod-id = '9GdSY2FZ'
+version = 'ShI1WLWb'

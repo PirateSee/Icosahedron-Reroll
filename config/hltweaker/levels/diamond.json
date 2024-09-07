@@ -1,0 +1,10 @@
+{
+    "level": 5,
+    "color": "#2cbaa8", 
+    "icons": {
+      "minecraft:mineable/pickaxe": "minecraft:diamond_pickaxe",
+      "minecraft:mineable/axe": "minecraft:diamond_axe",
+      "minecraft:mineable/shovel": "minecraft:diamond_shovel",
+      "minecraft:mineable/hoe": "minecraft:diamond_hoe"
+    }
+  }

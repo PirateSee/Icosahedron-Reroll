@@ -1,0 +1,13 @@
+filename = 'harvestleveltweaker-1.20.1-1.2.2.jar'
+name = 'Harvest Level Tweaker'
+side = 'both'
+
+[download]
+hash = '57afd63850cf85f953234afd0b37ea2325663a98'
+hash-format = 'sha1'
+mode = 'metadata:curseforge'
+url = ''
+
+[update.curseforge]
+file-id = 5001632
+project-id = 833035

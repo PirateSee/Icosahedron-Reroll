@@ -1,0 +1,13 @@
+filename = 'betterarcheology-1.2.0-1.20.1.jar'
+name = 'Better Archeology'
+side = 'both'
+
+[download]
+hash = '4948f43ebdbc4d1f3ab02b21b001cfb462e3bb27030024b9c1e5884cb24b7fd25645c1c6f7392593eb3d68a72713bd79c2c130108b49f9b76126b22fa25db5d5'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/zCh7omyG/versions/LSyNevQ8/betterarcheology-1.2.0-1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'zCh7omyG'
+version = 'LSyNevQ8'

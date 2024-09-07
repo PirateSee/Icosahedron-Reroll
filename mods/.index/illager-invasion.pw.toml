@@ -1,0 +1,13 @@
+filename = 'IllagerInvasion-v8.0.5-1.20.1-Forge.jar'
+name = 'Illager Invasion'
+side = 'both'
+
+[download]
+hash = 'bc612d0b9823385bd8339b82d654e90870676cccc051a499524efffe647097b8df4f6a24489631995c79ebd2ff25b35fb4c9f7b929f03c4cc4f6f76f516a8fda'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/jSV9w0J5/versions/wPqH0RfQ/IllagerInvasion-v8.0.5-1.20.1-Forge.jar'
+
+[update.modrinth]
+mod-id = 'jSV9w0J5'
+version = 'wPqH0RfQ'

@@ -1,0 +1,16 @@
+{
+    "values": [
+        "alembic:alchemical_damage",
+        "alembic:arcane_damage",
+        "alembic:physical_damage",
+        "alembic:fire_damage",
+        "alembic:true_damage",
+        "alembic:alchemical_reaction",
+        "alembic:arcane_spark",
+        "alembic:ender_magic",
+        "alembic:sculk_hit",
+        "alembic:wither_decay",
+        "alembic:frostbite",
+        "alembic:redstone_spark"
+    ]
+}

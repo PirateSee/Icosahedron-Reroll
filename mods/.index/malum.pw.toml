@@ -1,0 +1,13 @@
+filename = 'malum-1.20.1-1.6.2.jar'
+name = 'Malum'
+side = 'both'
+
+[download]
+hash = 'b05557f4d0f1ba8c570d77ecec9eab34a18c6ef6fd09cea56acf687a507abef50b581faf9d7e362b9b80ac5e4e62da6656691c4b0acc57ba56ffe72131495c08'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/jgzwYsAN/versions/OvRVC914/malum-1.20.1-1.6.2.jar'
+
+[update.modrinth]
+mod-id = 'jgzwYsAN'
+version = 'OvRVC914'

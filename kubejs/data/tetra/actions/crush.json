@@ -1,0 +1,12 @@
+[
+    {
+        "key": "crush_andesite_action",
+        "requirement": {
+            "items": [ "minecraft:andesite" ]
+        },
+        "requiredTools": {
+            "hammer_dig": "minecraft:gold"
+        },
+        "lootTable": "ico:actions/crush_andesite"
+    }
+]

@@ -1,0 +1,13 @@
+filename = 'lodestone-1.20.1-1.6.2.1.jar'
+name = 'Lodestone'
+side = 'both'
+
+[download]
+hash = '765bcd8d52c8cf13755c672aa2da18fe399008c77a8d5c60362b69693eb42ab8be3d4e1bf9642a21a0a41b3af305fe418d3ba6ec9d34e0667da945b3794e6618'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/bN3xUWdo/versions/CPL5stBi/lodestone-1.20.1-1.6.2.1.jar'
+
+[update.modrinth]
+mod-id = 'bN3xUWdo'
+version = 'CPL5stBi'

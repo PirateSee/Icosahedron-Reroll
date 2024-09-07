@@ -1,0 +1,10 @@
+{
+    "level": 3,
+    "color": "#cecaca", 
+    "icons": {
+      "minecraft:mineable/pickaxe": "minecraft:iron_pickaxe",
+      "minecraft:mineable/axe": "minecraft:iron_axe",
+      "minecraft:mineable/shovel": "minecraft:iron_shovel",
+      "minecraft:mineable/hoe": "minecraft:iron_hoe"
+    }
+  }
