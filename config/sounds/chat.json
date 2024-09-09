@@ -21,7 +21,8 @@
 		"soundEvent": "minecraft:block.note_block.chime"
 	},
 	"mentionKeywords": [
-		"@PirateSee"
+		"@PirateSee",
+		"@CesiumHorizon"
 	],
 	"ignoreSystemChats": false,
 	"enableChatSoundCooldown": false,
