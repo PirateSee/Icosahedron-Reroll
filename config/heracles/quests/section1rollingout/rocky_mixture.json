@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "cave_hopping"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 1: Rolling out": {
+        "position": [
+          60,
+          30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "create:andesite_alloy",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Rocky Mixture"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

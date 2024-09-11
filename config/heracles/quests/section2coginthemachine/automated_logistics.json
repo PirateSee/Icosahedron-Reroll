@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "cutting_disk"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "BIOS"
+    },
+    "description": [],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          90,
+          30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "create:andesite_funnel",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Automated Logistics"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

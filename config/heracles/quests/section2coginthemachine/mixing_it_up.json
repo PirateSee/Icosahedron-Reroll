@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "deafening_clang"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "Stir the pot"
+    },
+    "description": [],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          60,
+          -30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "create:mechanical_mixer",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Mixing it up"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

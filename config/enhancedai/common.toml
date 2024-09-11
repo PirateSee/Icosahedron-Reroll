@@ -385,7 +385,7 @@
 	"Enable Biting Mobs" = true
 	#Mobs can mine blocks to reach the target. Uses offhand item to mine. Only mobs in the entity type tag enhancedai:can_be_miner can spawn with the ability to mine and blocks in the tag enhancedai:miner_block_blacklist cannot be mined.
 	"Enable Miner Mobs" = true
-	#Mobs will run away from exploding creepers / TNT. Use the entity type tag enhancedai:no_run_from_explosion to blacklist them
+	#Mobs will run away from exploding creepers / TNT. Use the entity type tag enhancedai:can_run_from_explosion to whitelist them
 	"Enable Avoid Explosions" = true
 	#Let mobs use Fishing Rods, reeling players in. Either put a Fishing Rod in main or off hand and when near enough from the target they will use it. Only mobs in enhancedai:can_be_fisher entity type tag are affected by this feature.
 	"Enable Fisher Mobs" = true
@@ -548,7 +548,7 @@
 			#If true the list will be treated as a whitelist instead of blacklist
 			"List as Whitelist" = false
 
-	#Mobs will run away from exploding creepers / TNT. Use the entity type tag enhancedai:no_run_from_explosion to blacklist them
+	#Mobs will run away from exploding creepers / TNT. Use the entity type tag enhancedai:can_run_from_explosion to whitelist them
 	[Mobs."Avoid Explosions"]
 		#Speed multiplier when the mob runs from explosions and it's within 7 blocks from him.
 		#Range: 0.0 ~ 10.0

@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "bronze_age"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "Just add water"
+    },
+    "description": [],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          180,
+          -60
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "create:steam_engine",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Full Steam Ahead"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

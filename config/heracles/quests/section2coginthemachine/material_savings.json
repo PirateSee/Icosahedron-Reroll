@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "mixing_it_up"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "Buy low, sell high!"
+    },
+    "description": [],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          90,
+          -60
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "kubejs:crushed_andesite",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Material Savings"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

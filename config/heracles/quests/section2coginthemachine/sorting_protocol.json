@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "crude_ore_processing"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "This goes there..."
+    },
+    "description": [],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          120,
+          30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "thermal:gold_gear",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Sorting Protocol"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

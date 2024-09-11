@@ -1,0 +1,65 @@
+{
+  "dependencies": [
+    "planetfall"
+  ],
+  "tasks": {
+    "get_tin": {
+      "type": "heracles:item",
+      "item": "thermal:tin_ingot",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    },
+    "get_andesite": {
+      "type": "heracles:item",
+      "item": "minecraft:andesite",
+      "amount": 16,
+      "collection": "AUTOMATIC"
+    }
+  },
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "For rock and stone!"
+    },
+    "description": [
+      "## - Cave Hopping ---",
+      "For rock and stone!",
+      "",
+      "The caves have changed a bit. /b/Stone/b/ generates with a /b/secondary material/b/ determined by large regions. This means while you'll /6/only see one kind of secondary stone/6/ in an area, you'll always /6/find a lot/6/ of it. Certain /b/biomes may have special/b/ secondary materials under them.",
+      "",
+      "The refining and progression of ores has been changed as well. You'll need /b/Tin/b/ instead of /b/Iron/b/ as your first metal. While you can /6/still mine most minerals/6/, /c/refining them to usable form will take more effort/c/.",
+      "",
+      "Get your first /b/Tin/b/ and /b/Andesite/b/. You'll need that /b/Andesite/b/ soon.",
+      "<hr/>",
+      "<task task=\"get_tin\" quest=\"cave_hopping\"/>",
+      "<task task=\"get_andesite\" quest=\"cave_hopping\"/>"
+    ],
+    "groups": {
+      "Section 1: Rolling out": {
+        "position": [
+          30,
+          30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "minecraft:polished_basalt",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Cave Hopping"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}
