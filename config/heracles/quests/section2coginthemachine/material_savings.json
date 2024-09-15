@@ -8,7 +8,12 @@
     "subtitle": {
       "translate": "Buy low, sell high!"
     },
-    "description": [],
+    "description": [
+      "## - Material Savings ---",
+      "Buy low, sell high!",
+      "",
+      "Certain materials can be made cheaper via automation than by hand. /b/Andesite Alloy/b/, if produced in a /6/Mixer/6/, costs /6/half as much/6/ for the same amount. /b/Shafts/b/ can be made /6/150% cheaper/6/ at a /b/Mechanical Saw/b/."
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

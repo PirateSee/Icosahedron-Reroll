@@ -13,13 +13,13 @@
       "Section 2: Cog in the Machine": {
         "position": [
           120,
-          30
+          60
         ]
       }
     },
     "icon": {
       "item": {
-        "id": "thermal:gold_gear",
+        "id": "kubejs:sorting_algorithm",
         "count": 1
       },
       "type": "heracles:item"

@@ -5,10 +5,10 @@ ServerEvents.recipes(e => {
 
     e.recipes.create.milling('kubejs:crushed_andesite', 'minecraft:andesite').id('ico:crushed_andesite_milling')
 
-    e.shapeless('kubejs:andesite_slush', ['2x kubejs:crushed_andesite', '2x #ico:andesite_alloyable', '2x minecraft:clay_ball', 'minecraft:water_bucket']).id('ico:andesite_slush_shapeless')
+    e.shapeless('kubejs:andesite_slush', ['2x kubejs:crushed_andesite', '2x #ico:andesite_alloyable', 'minecraft:water_bucket']).id('ico:andesite_slush_shapeless')
     //e.shapeless('2x kubejs:andesite_slush', ['4x kubejs:crushed_andesite', '4x #ico:andesite_alloyable', 'minecraft:water_bucket']).id('ico:andesite_slush_shapeless_double')
-    e.recipes.create.mixing('kubejs:andesite_slush', ['kubejs:crushed_andesite', '#ico:andesite_alloyable', 'minecraft:clay_ball', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_slush_mixing')
-    e.recipes.create.mixing('create:andesite_alloy', ['kubejs:crushed_andesite', '#ico:andesite_alloyable', 'minecraft:clay_ball', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_alloy_mixing').heated()
+    e.recipes.create.mixing('kubejs:andesite_slush', ['kubejs:crushed_andesite', '#ico:andesite_alloyable', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_slush_mixing')
+    //e.recipes.create.mixing('create:andesite_alloy', ['kubejs:crushed_andesite', '#ico:andesite_alloyable', 'minecraft:clay_ball', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_alloy_mixing').heated()
 
     e.smelting('create:andesite_alloy', 'kubejs:andesite_slush').id('ico:andesite_alloy_smelting')
     e.blasting('create:andesite_alloy', 'kubejs:andesite_slush').id('ico:andesite_alloy_blasting')
@@ -20,7 +20,7 @@ ServerEvents.recipes(e => {
         'AT',
         'TA'
     ], {
-        A: 'create:andesite_alloy',
+        A: 'createdeco:andesite_sheet',
         T: '#forge:plates/tin'
     }).id('ico:basic_burner')
 
@@ -30,7 +30,7 @@ ServerEvents.recipes(e => {
     //e.remove([{id:'create:crafting/kinetics/cogwheel'}])
     e.smoking('supplementaries:ash', '#immersive_weathering:flammable_planks').id('ico:smoking_planks')
     e.smoking('supplementaries:ash', '#minecraft:logs_that_burn').id('ico:smoking_logs')
-    e.shapeless('2x kubejs:hardened_wood_planks', ['2x #minecraft:planks', 'supplementaries:ash', 'kubejs:andesite_slush']).id('ico:hardened_wood_planks')
+    e.shapeless('kubejs:hardened_wood_planks', ['2x #minecraft:planks', 'supplementaries:ash', 'kubejs:andesite_slush']).id('ico:hardened_wood_planks')
 
     e.shapeless('petrolsparts:coaxial_gear', ['kubejs:hardened_wood_planks']).id('ico:coaxial_gear')
     e.shapeless('petrolsparts:large_coaxial_gear', ['2x kubejs:hardened_wood_planks']).id('ico:large_coaxial_gear')
@@ -75,12 +75,14 @@ ServerEvents.recipes(e => {
 	}).id('ico:upgrade_cogwheel_large_cogwheel')
 
     e.shaped('kubejs:andesite_framing', [
-        'TA',
-        'AT'
+        'TAT',
+        'A A',
+        'TAT'
     ], {
-        A: 'create:andesite_alloy',
+        A: 'createdeco:andesite_sheet',
         T: '#forge:nuggets/tin'
-    }).id('ico:andesite_framing')
+    }).id('ico:andesite_framing_shapeless')
+    e.recipes.create.compacting('kubejs:andesite_framing', ['4x createdeco:andesite_sheet', '4x #forge:nuggets/tin']).id('ico:andesite_framing_compacting')
 
     e.custom({
 		"type": "create:item_application",
@@ -531,4 +533,38 @@ ServerEvents.recipes(e => {
 		"processingTime": 300,
 		"minimumSpeed": 64.0
 	}).id('ico:sift_for_copper')
+
+    //automation
+    e.remove([{id: 'create:milling/andesite'}, {id: 'minecraft:andesite'}])
+
+    e.custom({
+		"type": "createsifter:sifting",
+		"ingredients": [
+			{
+			"item": "createsifter:andesite_mesh"
+			},
+			{
+			"item": 'minecraft:clay_ball'
+			}
+		],
+		"results": [
+            {
+			    "item": 'minecraft:flint',
+                "chance": 0.3
+			},
+            {
+			    "item": 'thermal:tin_nugget',
+                "chance": 0.2
+			}
+		],
+		"processingTime": 300,
+		"minimumSpeed": 64.0
+	}).id('ico:sift_clay')
+
+    e.shapeless('minecraft:andesite', ['minecraft:diorite', 'minecraft:cobblestone']).id('ico:andesite')
+
+    //other
+    e.remove({id: 'born_in_chaos_v1:fire_light_dust_k'})
+
+    e.shapeless('3x minecraft:fire_charge', ['minecraft:gunpowder', 'born_in_chaos_v1:fire_dust', '#minecraft:coals'])
 })

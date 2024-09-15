@@ -1,0 +1,145 @@
+{
+    "replace": true,
+    "type": "tetra:basic_major_module",
+    "slots": [
+        "single/head"
+    ],
+    "improvements": [
+        "tetra:single/spell_focus/",
+        "tetra:single/shared_head/",
+        "tetra:single/shared/",
+        "tetra:shared/"
+    ],
+    "variants": [
+        {
+            "materials": [
+                "tetra:gem/"
+            ],
+            "key": "spell_focus/",
+            "attributes": {
+                "generic.attack_speed": -1.1,
+				"generic.attack_damage": 0.5
+            },
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": -50,
+            "extract": {
+                "primaryAttributes": {
+                    "**irons_spellbooks:spell_power": 0.02
+                },
+                "secondaryAttributes": {
+                    "**irons_spellbooks:cooldown_reduction": 0.03,
+					"generic.attack_damage": 0.5
+                },
+				"tertiaryAttributes": {
+					"**irons_spellbooks:cast_time_reduction": 0.03
+				},
+                "durability": 0.5,
+                "integrity": -1,
+                "magicCapacity": 1.2,
+                "glyph": {
+                    "textureX": 208,
+                    "textureY": 32
+                },
+                "availableTextures": [
+                    "shiny",
+                    "crude"
+                ],
+                "models": [
+                    {
+                        "location": "tetra:item/module/single/head/spearhead/"
+                    }
+                ]
+            }
+		},
+		{
+			"materials": [
+                "tetra:wood/"
+            ],
+            "key": "spell_focus/",
+            "attributes": {
+                "generic.attack_speed": -0.9,
+				"generic.attack_damage": 0.4
+            },
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": -50,
+            "extract": {
+                "primaryAttributes": {
+                    "**irons_spellbooks:spell_power": 0.02
+                },
+                "secondaryAttributes": {
+                    "**irons_spellbooks:mana_regen": 0.04,
+					"generic.attack_damage": 0.5
+                },
+				"tertiaryAttributes": {
+					"**irons_spellbooks:cast_time_reduction": 0.03,
+					"**irons_spellbooks:cooldown_reduction": 0.03
+				},
+                "durability": 0.65,
+                "integrity": -1,
+                "magicCapacity": 1,
+                "glyph": {
+                    "textureX": 208,
+                    "textureY": 32
+                },
+                "availableTextures": [
+                    "crude"
+                ],
+                "models": [
+                    {
+                        "location": "tetra:item/module/single/head/spearhead/"
+                    }
+                ]
+            }
+        },
+		{
+            "key": "spell_focus/blaze_rod",
+            "attributes": {
+                "**irons_spellbooks:spell_power": 0.05,
+				"**irons_spellbooks:fire_spell_power": 0.15,
+				"**irons_spellbooks:cast_time_reduction": 0.1
+            },
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": 64,
+			"integrity": -2,
+            "magicCapacity": 90,			
+            "glyph": {
+                "textureX": 192,
+                "textureY": 32
+            },
+			"models": [
+				{
+					"location": "tetra:item/module/single/head/spearhead/"
+				}
+			]
+        },
+		{
+            "key": "spell_focus/frozen_bone",
+            "attributes": {
+                "**irons_spellbooks:spell_power": 0.05,
+				"**irons_spellbooks:ice_spell_power": 0.15,
+				"**irons_spellbooks:mana_regen": 0.25
+            },
+            "aspects": {
+                "breakable": 2
+            },
+            "durability": 64,
+			"integrity": -2,
+            "magicCapacity": 90,			
+            "glyph": {
+                "textureX": 192,
+                "textureY": 32
+            },
+			"models": [
+				{
+					"location": "tetra:item/module/single/head/spearhead/"
+				}
+			]
+        }
+    ]
+}

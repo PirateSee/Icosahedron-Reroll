@@ -91,7 +91,8 @@
         "botania:functional_flowers/flower_shrinking",
         "botania:functional_flowers/clayconia",
         "botania:functional_flowers/loonium",
-        "botania:tools/grass_seeds"
+        "botania:tools/grass_seeds",
+        "botania:functional_flowers/marimorphosis"
       ],
       "bookmarks": [],
       "completedManualQuests": []
@@ -207,7 +208,9 @@
         "irons_spellbooks:spell_books/craftable_spell_books",
         "irons_spellbooks:progression/mid_game",
         "irons_spellbooks:spell_books/casting_implements",
-        "irons_spellbooks:spell_books/scrolls"
+        "irons_spellbooks:spell_books/scrolls",
+        "irons_spellbooks:progression/ink",
+        "irons_spellbooks:progression/late_game"
       ],
       "bookmarks": [],
       "completedManualQuests": []

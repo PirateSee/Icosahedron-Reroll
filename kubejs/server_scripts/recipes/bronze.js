@@ -2,8 +2,8 @@ ServerEvents.recipes(e => {
     //bronze
     e.remove([{id: 'thermal:fire_charge/bronze_ingot_4'}, {id: 'thermal:bronze_dust_4'}, {id:'create:item_application/copper_casing_from_log'}, {id:'create:item_application/copper_casing_from_wood'}])
 
-    e.recipes.create.mixing('4x thermal:bronze_dust', ['3x #forge:dusts/copper', '#forge:dusts/tin', 'minecraft:fire_charge']).id('ico:bronze_fire_charge')
-    e.recipes.create.mixing('4x thermal:rose_gold_dust', ['2x #forge:dusts/copper', '2x #forge:dusts/gold', 'minecraft:fire_charge']).id('ico:rose_gold_fire_charge')
+    e.recipes.create.mixing('4x thermal:bronze_dust', ['3x #forge:dusts/copper', '#forge:dusts/tin', 'minecraft:fire_charge']).id('ico:bronze_fire_charge').lowheated()
+    e.recipes.create.mixing('4x thermal:rose_gold_dust', ['2x #forge:dusts/copper', '2x #forge:dusts/gold', 'minecraft:fire_charge']).id('ico:rose_gold_fire_charge').lowheated()
 
     e.shaped('kubejs:bronze_framing', [
         'TA',
@@ -33,8 +33,8 @@ ServerEvents.recipes(e => {
     let inter = 'kubejs:incomplete_sorting_algorithm'
     e.recipes.create.sequenced_assembly([
 	    'kubejs:sorting_algorithm'
-	], '#forge:gears/rose_gold', [
-        e.recipes.createDeploying(inter, [inter, '#forge:plates/rose_gold']),
+	], '#forge:plates/gold', [
+        e.recipes.createDeploying(inter, [inter, '#forge:gears/rose_gold']),
         e.recipes.createCutting(inter,inter),
 		e.recipes.createDeploying(inter, [inter, 'create:polished_rose_quartz']),
         e.recipes.createPressing(inter,inter)

@@ -4,27 +4,36 @@
   "rewards": {},
   "display": {
     "subtitle": {
-      "translate": "Melt your metals!"
+      "text": ""
     },
-    "description": [],
+    "description": [
+      "",
+      "tree farm (hardened wood)",
+      "",
+      "cobblestone alchemy catlyst to sand",
+      "sand to clay via claycidonia",
+      "sift clay for tin",
+      "",
+      "stone alchemy catylst to andesite"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          246,
-          -67
+          75,
+          100
         ]
       }
     },
     "icon": {
       "item": {
-        "id": "createmetallurgy:foundry_basin",
+        "id": "thermal:diamond_gear",
         "count": 1
       },
       "type": "heracles:item"
     },
     "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
     "title": {
-      "translate": "Foundry"
+      "translate": "Automation Suggestions"
     }
   },
   "settings": {

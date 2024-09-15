@@ -1,32 +1,32 @@
 {
   "dependencies": [
-    "the_sieve"
+    "deafening_clang"
   ],
   "tasks": {},
   "rewards": {},
   "display": {
     "subtitle": {
-      "translate": "Riches from rock"
+      "translate": "And the sand"
     },
     "description": [],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          120,
+          90,
           0
         ]
       }
     },
     "icon": {
       "item": {
-        "id": "minecraft:raw_copper",
+        "id": "createsifter:sifter",
         "count": 1
       },
       "type": "heracles:item"
     },
-    "icon_background": "heracles:textures/gui/quest_backgrounds/diamonds.png",
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
     "title": {
-      "translate": "Crude Ore Processing"
+      "translate": "The Sieve"
     }
   },
   "settings": {
