@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "structural_components"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 4: Shock and a Spark": {
+        "position": [
+          90,
+          90
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "immersiveengineering:sorter",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Logistical Routing"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

@@ -1,0 +1,13 @@
+filename = 'multiblocked2-1.20.1-1.0.8.jar'
+name = 'Multiblocked2'
+side = 'both'
+
+[download]
+hash = 'e4120bd3f70822658151047ce69e13cbb538692de0a50f9c4868d248692ebd2b445d6b1ddb02b79cf8ad8d5cfe5532cc78ebe032fecc24502312995e986c2fa0'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/R2gjKEpa/versions/8KV5UGbC/multiblocked2-1.20.1-1.0.8.jar'
+
+[update.modrinth]
+mod-id = 'R2gjKEpa'
+version = '8KV5UGbC'

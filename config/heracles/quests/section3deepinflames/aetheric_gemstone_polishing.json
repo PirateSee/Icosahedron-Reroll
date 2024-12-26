@@ -1,0 +1,42 @@
+{
+  "dependencies": [
+    "gemstone_polishing"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [
+      "skyjade, gravitite"
+    ],
+    "groups": {
+      "Section 3: Deep in Flames": {
+        "position": [
+          -120,
+          150
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "deep_aether:skyjade",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Aetheric Gemstone Polishing"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

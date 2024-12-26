@@ -20,7 +20,7 @@
       "Section 2: Cog in the Machine": {
         "position": [
           75,
-          100
+          75
         ]
       }
     },
@@ -33,7 +33,7 @@
     },
     "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
     "title": {
-      "translate": "Automation Suggestions"
+      "translate": "Full Auto"
     }
   },
   "settings": {

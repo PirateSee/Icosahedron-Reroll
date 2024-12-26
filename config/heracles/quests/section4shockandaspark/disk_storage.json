@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "multismelter"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 4: Shock and a Spark": {
+        "position": [
+          -150,
+          60
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "ae2:item_storage_cell_4k",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/diamonds.png",
+    "title": {
+      "translate": "Disk Storage"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

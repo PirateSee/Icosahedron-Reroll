@@ -1,0 +1,41 @@
+{
+  "dependencies": [
+    "bio_plastics",
+    "in_control"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 4: Shock and a Spark": {
+        "position": [
+          -150,
+          240
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "ae2:molecular_assembler",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Batch Processing"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "thermal:tree_extractor",
+  "trunk": {
+    "Name": "malum:runewood_log"
+  },
+  "leaves": {
+    "Name": "malum:runewood_leaves",
+    "Properties": {
+      "persistent": "false"
+    }
+  },
+  "sapling": "malum:runewood_sapling",
+  "min_height": 8,
+  "max_height": 16,
+  "min_leaves": 64,
+  "max_leaves": 100,
+  "result": {
+    "fluid": "kubejs:runic_sap",
+    "amount": 10
+  }
+}

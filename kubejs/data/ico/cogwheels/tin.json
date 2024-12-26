@@ -1,0 +1,20 @@
+{
+    "items": [
+      {
+        "tag": "forge:ingots/tin"
+      },
+      {
+        "tag": "forge:sheets/tin"
+      }
+    ],
+    "textures": [
+        {
+            "old": "create:cogwheel",
+            "replacement": "ico:block/cog/tin"
+        },
+        {
+            "old": "create:large_cogwheel",
+            "replacement": "ico:block/cog/large_tin"
+        }
+    ]
+}

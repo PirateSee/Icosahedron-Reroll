@@ -1,0 +1,13 @@
+filename = "XeKr's Decoration-1.20.1-Forge-0.8.2.jar"
+name = "XK's Decoration"
+side = 'both'
+
+[download]
+hash = '853d2d31bad9a9265aaac0fdb08988872dee8a1fdfc0c434c752b00ce5d020ab9b7013b4c6a82517bb579df432a4591c8aab5bcf5deaeeb31f9e3d122a6f2ce9'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/XlwMlNhH/versions/ZtuNrbl5/XeKr%27s Decoration-1.20.1-Forge-0.8.2.jar'
+
+[update.modrinth]
+mod-id = 'XlwMlNhH'
+version = 'ZtuNrbl5'

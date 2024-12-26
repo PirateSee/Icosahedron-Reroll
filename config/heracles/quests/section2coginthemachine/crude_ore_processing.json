@@ -8,7 +8,9 @@
     "subtitle": {
       "translate": "Riches from rock"
     },
-    "description": [],
+    "description": [
+      "cassiterite, limonite, sphalerite, gold, copper"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

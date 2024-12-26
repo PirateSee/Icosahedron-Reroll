@@ -1,0 +1,78 @@
+{
+	"Bloom": [
+		{
+			"block": "galosphere:amethyst_lamp"
+		},
+		{
+			"block": "hexcasting:amethyst_sconce"
+		},
+		{
+			"block": "botania:mana_pylon"
+		},
+		{
+			"block": "create:rose_quartz_lamp",
+			"state": {
+				"powering": true
+			}
+		},
+		{
+			"particle": "hexcasting:conjure_particle"
+		}
+	],
+	"LightBlock": [
+		{
+			  "block": "galosphere:amethyst_lamp",
+			  "r": 184,
+			  "g": 94,
+			  "b": 211,
+			  "a": 255,
+			  "radius": 15
+		},
+		{
+			  "block": "galosphere:allurite_lamp",
+			  "r": 49,
+			  "g": 194,
+			  "b": 232,
+			  "a": 255,
+			  "radius": 15
+		},
+		{
+			  "block": "galosphere:lumiere_lamp",
+			  "r": 232,
+			  "g": 185,
+			  "b": 13,
+			  "a": 255,
+			  "radius": 15
+		},
+		{
+			  "block": "hexcasting:amethyst_sconce",
+			  "r": 184,
+			  "g": 94,
+			  "b": 211,
+			  "a": 255,
+			  "radius": 7
+		},
+		{
+			  "block": "minecraft:redstone_torch",
+			  "state": {
+				"lit": true
+			  },
+			  "r": 255,
+			  "g": 30,
+			  "b": 30,
+			  "a": 255,
+			  "radius": 7
+		},
+		{
+			  "block": "create:rose_quartz_lamp",
+			  "state": {
+				"powering": true
+			  },
+			  "r": 248,
+			  "g": 106,
+			  "b": 123,
+			  "a": 255,
+			  "radius": 15
+		}
+	 ]
+}

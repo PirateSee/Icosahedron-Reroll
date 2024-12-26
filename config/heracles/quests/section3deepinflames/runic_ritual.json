@@ -1,0 +1,45 @@
+{
+  "dependencies": [
+    "light_up"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [
+      ""
+    ],
+    "groups": {
+      "Section 3: Deep in Flames": {
+        "position": [
+          -150,
+          330
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "wizards_reborn:runic_wisestone_plate",
+        "count": 1,
+        "nbt": {
+          "crystalRitual": "wizards_reborn:empty"
+        }
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Runic Ritual"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

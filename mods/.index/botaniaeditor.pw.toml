@@ -1,0 +1,13 @@
+filename = 'BotaniaEditor-1.20.1-1.19.2.jar'
+name = 'BotaniaEditor'
+side = 'both'
+
+[download]
+hash = '865c6bbd807d0a0ceb0ec681c444957c11b0a1dc2b1469dbfb344305d825206d76090b954b9e08f8ceb480d5ffc08fcac831f49cc1445d3587fcecbd4baf8ed8'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/IELXiU8H/versions/rPNGvvA9/BotaniaEditor-1.20.1-1.19.2.jar'
+
+[update.modrinth]
+mod-id = 'IELXiU8H'
+version = 'rPNGvvA9'

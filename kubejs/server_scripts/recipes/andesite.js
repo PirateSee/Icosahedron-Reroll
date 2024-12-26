@@ -5,9 +5,9 @@ ServerEvents.recipes(e => {
 
     e.recipes.create.milling('kubejs:crushed_andesite', 'minecraft:andesite').id('ico:crushed_andesite_milling')
 
-    e.shapeless('kubejs:andesite_slush', ['2x kubejs:crushed_andesite', '2x #ico:andesite_alloyable', 'minecraft:water_bucket']).id('ico:andesite_slush_shapeless')
+    e.shapeless('kubejs:andesite_slush', ['4x kubejs:crushed_andesite', '2x #ico:andesite_alloyable', 'minecraft:water_bucket']).id('ico:andesite_slush_shapeless')
     //e.shapeless('2x kubejs:andesite_slush', ['4x kubejs:crushed_andesite', '4x #ico:andesite_alloyable', 'minecraft:water_bucket']).id('ico:andesite_slush_shapeless_double')
-    e.recipes.create.mixing('kubejs:andesite_slush', ['kubejs:crushed_andesite', '#ico:andesite_alloyable', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_slush_mixing')
+    e.recipes.create.mixing('kubejs:andesite_slush', ['2x kubejs:crushed_andesite', '#ico:andesite_alloyable', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_slush_mixing')
     //e.recipes.create.mixing('create:andesite_alloy', ['kubejs:crushed_andesite', '#ico:andesite_alloyable', 'minecraft:clay_ball', Fluid.of('minecraft:water', 1000)]).id('ico:andesite_alloy_mixing').heated()
 
     e.smelting('create:andesite_alloy', 'kubejs:andesite_slush').id('ico:andesite_alloy_smelting')
@@ -25,84 +25,73 @@ ServerEvents.recipes(e => {
     }).id('ico:basic_burner')
 
     //cogwheels
-    e.remove([{id:'create:crafting/kinetics/cogwheel'}, {id:'create:crafting/kinetics/large_cogwheel'}, {id:'create:crafting/kinetics/large_cogwheel_from_little'}, {id:'create:deploying/large_cogwheel'}, {id:'create:deploying/cogwheel'}, {id:'create_dd:item_application/large_cogwheel'}, {id:'create_dd:item_application/cogwheel'}])
+    e.remove([{id:'create:crafting/kinetics/cogwheel'}, {id:'create:crafting/kinetics/large_cogwheel'}, {id:'create:crafting/kinetics/large_cogwheel_from_little'}, {id:'create:deploying/large_cogwheel'}, {id:'create:deploying/cogwheel'}, {id:'create_dd:item_application/large_cogwheel'}, {id:'create_dd:item_application/cogwheel'}, {id:'petrolsparts:cutting/coaxial_gear_from_wood'}])
+    e.remove([{id:'extendedgears:crafting/half_shaft_cogwheel'}, {id:'extendedgears:crafting/large_half_shaft_cogwheel'}, {id:'extendedgears:deploying/half_shaft_cogwheel'}, {id:'extendedgears:deploying/large_half_shaft_cogwheel'}, {id:'extendedgears:crafting/shaftless_cogwheel'}, {id:'extendedgears:crafting/large_shaftless_cogwheel'}, {id:'extendedgears:deploying/shaftless_cogwheel'}, {id:'extendedgears:deploying/large_shaftless_cogwheel'}, {id:'extendedgears:deploying/small_large_shaftless_cogwheel_to_large/large_shaftless_cogwheel'}])
 
     //e.remove([{id:'create:crafting/kinetics/cogwheel'}])
     e.smoking('supplementaries:ash', '#immersive_weathering:flammable_planks').id('ico:smoking_planks')
     e.smoking('supplementaries:ash', '#minecraft:logs_that_burn').id('ico:smoking_logs')
+
     e.shapeless('kubejs:hardened_wood_planks', ['2x #minecraft:planks', 'supplementaries:ash', 'kubejs:andesite_slush']).id('ico:hardened_wood_planks')
+    e.shaped('kubejs:compacted_hardened_wood', [
+        'WW',
+        'WW'
+    ], {
+        W: 'kubejs:hardened_wood_planks'
+    }).id('ico:compacted_hardened_wood')
 
-    e.shapeless('petrolsparts:coaxial_gear', ['kubejs:hardened_wood_planks']).id('ico:coaxial_gear')
-    e.shapeless('petrolsparts:large_coaxial_gear', ['2x kubejs:hardened_wood_planks']).id('ico:large_coaxial_gear')
-    e.shapeless('petrolsparts:large_coaxial_gear', ['petrolsparts:coaxial_gear', '1x kubejs:hardened_wood_planks']).id('ico:large_coaxial_gear_upgrade')
+    //e.shapeless('extendedgears:shaftless_cogwheel', ['kubejs:hardened_wood_planks']).id('ico:coaxial_gear')
+    //e.shapeless('extendedgears:large_shaftless_cogwheel', ['2x kubejs:hardened_wood_planks']).id('ico:large_coaxial_gear')
+    //e.shapeless('extendedgears:large_shaftless_cogwheel', ['extendedgears:shaftless_cogwheel', '1x kubejs:hardened_wood_planks']).id('ico:large_coaxial_gear_upgrade')
 
-    e.shapeless('create:large_cogwheel', ['create:cogwheel', 'kubejs:hardened_wood_planks']).id('ico:large_cogwheel_upgrade')
+    //e.shapeless('create:large_cogwheel', ['create:cogwheel', 'kubejs:hardened_wood_planks']).id('ico:large_cogwheel_upgrade')
+
+    e.shaped('petrolsparts:coaxial_gear', [
+        'TTT',
+        'T T',
+        'TTT'
+    ], {
+        T: '#forge:nuggets/tin'
+    }).id('ico:coaxial_gear')
+
+    e.shaped('create:cogwheel', [
+        'TTT',
+        'TST',
+        'TTT'
+    ], {
+        T: '#forge:nuggets/tin',
+        S: 'create:shaft'
+    }).id('ico:cogwheel')
+
+    e.shaped('petrolsparts:large_coaxial_gear', [
+        'TTT',
+        'TIT',
+        'TTT'   
+    ], {
+        T: '#forge:nuggets/tin',
+        I: '#forge:ingots/tin'
+    }).id('ico:large_coaxial_gear')
+
+    let inter = 'kubejs:incomplete_wooden_slide'
+    e.recipes.create.sequenced_assembly([
+	    'petrolsparts:coaxial_gear'
+	], '#forge:nuggets/tin', [
+		e.recipes.createDeploying(inter, [inter, '#forge:nuggets/tin'])
+	]).transitionalItem(inter).loops(7).id('ico:coaxial_gear_assembly')
 
     e.remove([{id:'create:item_application/andesite_casing_from_log'}, {id:'create:item_application/andesite_casing_from_wood'}])
 
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "create:shaft"
-			},
-			{
-				"item": 'kubejs:hardened_wood_planks'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:cogwheel'
-			}
-		]
-	}).id('ico:upgrade_shaft_cogwheel')
-
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "create:cogwheel"
-			},
-			{
-				"item": 'kubejs:hardened_wood_planks'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:large_cogwheel'
-			}
-		]
-	}).id('ico:upgrade_cogwheel_large_cogwheel')
-
     e.shaped('kubejs:andesite_framing', [
-        'TAT',
+        ' A ',
         'A A',
-        'TAT'
+        ' A '
     ], {
-        A: 'createdeco:andesite_sheet',
-        T: '#forge:nuggets/tin'
-    }).id('ico:andesite_framing_shapeless')
-    e.recipes.create.compacting('kubejs:andesite_framing', ['4x createdeco:andesite_sheet', '4x #forge:nuggets/tin']).id('ico:andesite_framing_compacting')
-
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:hardened_wood_planks"
-			},
-			{
-				"item": 'kubejs:andesite_framing'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:andesite_casing'
-			}
-		]
-	})
+        A: 'create:andesite_alloy'
+    }).id('ico:andesite_framing_shaped')
+    e.recipes.create.compacting('kubejs:andesite_framing', ['4x create:andesite_alloy']).id('ico:andesite_framing_compacting')
 
     //machinery
-    e.remove([{id:'create:crafting/kinetics/mechanical_press'}, {id:'create:crafting/kinetics/whisk'}, {id:'create:crafting/kinetics/mechanical_mixer'}, {id:'create:crafting/kinetics/mechanical_saw'}, {id:'create:crafting/kinetics/mechanical_drill'}, {id:'create:crafting/kinetics/deployer'}])
+    e.remove([{id:'create:crafting/kinetics/mechanical_press'}, {id:'create:crafting/kinetics/whisk'}, {id:'create:crafting/kinetics/mechanical_mixer'}, {id:'create:crafting/kinetics/mechanical_saw'}, {id:'create:crafting/kinetics/mechanical_drill'}, {id:'create:crafting/kinetics/deployer'}, {id:'create_mechanical_extruder:mechanical_extruder'}])
 
     e.shaped('kubejs:wooden_slide', [
         'L',
@@ -112,6 +101,15 @@ ServerEvents.recipes(e => {
         L: '#forge:stripped_logs',
         S: 'create:shaft'
     }).id('ico:wooden_slide')
+
+    inter = 'kubejs:incomplete_wooden_slide'
+    e.recipes.create.sequenced_assembly([
+	    'kubejs:wooden_slide'
+	], 'create:shaft', [
+		e.recipes.createDeploying(inter, [inter, '#forge:stripped_logs']),
+        e.recipes.createDeploying(inter, [inter, '#forge:stripped_logs']),
+        e.recipes.createCutting(inter,inter)
+	]).transitionalItem(inter).loops(1).id('ico:wooden_slide_assembly')
 
     e.shaped('kubejs:andesite_parts', [
         'WTW',
@@ -123,7 +121,7 @@ ServerEvents.recipes(e => {
         L: 'create:large_cogwheel'
     }).id('ico:andesite_parts')
 
-    let inter = 'kubejs:incomplete_andesite_parts'
+    inter = 'kubejs:incomplete_andesite_parts'
     e.recipes.create.sequenced_assembly([
 	    'kubejs:andesite_parts'
 	], 'create:gearbox', [
@@ -134,33 +132,22 @@ ServerEvents.recipes(e => {
         e.recipes.createPressing(inter,inter)
 	]).transitionalItem(inter).loops(2).id('ico:andesite_parts_assembly')
 
-    /*e.shaped('create:mechanical_press', [
+    inter = 'kubejs:incomplete_wooden_slide'
+    e.recipes.create.sequenced_assembly([
+	    'create:gearbox'
+	], 'create:andesite_casing', [
+		e.recipes.createDeploying(inter, [inter, 'create:cogwheel'])
+	]).transitionalItem(inter).loops(4).id('ico:gearbox_assembly')
+
+    e.shaped('create:mechanical_press', [
         ' W ',
-        'SC ',
+        ' C ',
         ' T '
     ], {
         W: 'kubejs:wooden_slide',
-        S: 'create:shaft',
-        C: 'create:gearbox',
+        C: 'create:andesite_casing',
         T: '#forge:storage_blocks/tin'
-    }).id('ico:mechanical_press')*/
-
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"item": '#forge:storage_blocks/tin'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:mechanical_press'
-			}
-		]
-	}).id('ico:mechanical_press')
+    }).id('ico:mechanical_press')
 
     e.shaped('create:whisk', [
         ' A ',
@@ -171,33 +158,16 @@ ServerEvents.recipes(e => {
         T: '#forge:plates/tin'
     }).id('ico:whisk')
 
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"item": 'create:whisk'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:mechanical_mixer'
-			}
-		]
-	}).id('ico:mechanical_mixer')
-
-    /*e.shaped('create:mechanical_mixer', [
+    e.shaped('create:mechanical_mixer', [
         ' W ',
         'SC ',
         ' T '
     ], {
         W: 'kubejs:wooden_slide',
         S: 'create:cogwheel',
-        C: 'create:andesite_casing',
+        C: 'create:gearbox',
         T: 'create:whisk'
-    }).id('ico:mechanical_mixer')*/
+    }).id('ico:mechanical_mixer')
 
     e.shaped('kubejs:sawblade', [
         ' S ',
@@ -218,40 +188,6 @@ ServerEvents.recipes(e => {
         A: 'create:shaft'
     }).id('ico:iron_drill')
 
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"item": 'kubejs:sawblade'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:mechanical_saw'
-			}
-		]
-	}).id('ico:mechanical_saw')
-
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"item": 'kubejs:iron_drill'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:mechanical_drill'
-			}
-		]
-	}).id('ico:mechanical_drill')
-
     e.shaped('kubejs:bronze_hand', [
         ' A ',
         'BDB',
@@ -262,42 +198,21 @@ ServerEvents.recipes(e => {
         D: 'minecraft:diamond',
     }).id('ico:bronze_hand')
 
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"item": 'kubejs:bronze_hand'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:deployer'
-			}
-		]
-	}).id('ico:deployer')
+    e.shaped('create:deployer', [
+        ' W ',
+        ' C ',
+        ' T '
+    ], {
+        W: 'kubejs:wooden_slide',
+        C: 'create:gearbox',
+        T: 'kubejs:bronze_hand'
+    }).id('ico:deployer')
+
+    //see custom_recipe/item_application.js for the rest
 
     //contraption anchors
-    e.remove([{id: 'create:crafting/kinetics/mechanical_bearing'}, {id: 'create:crafting/kinetics/piston_extension_pole'}, {id: 'create:crafting/kinetics/mechanical_piston'}])
-
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"tag": 'minecraft:wooden_slabs'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:mechanical_bearing'
-			}
-		]
-	}).id('ico:mechanical_bearing')
+    e.remove([{id: 'create:crafting/kinetics/mechanical_bearing'}])
+    e.remove([{id: 'create:crafting/kinetics/piston_extension_pole'}, {id: 'create:crafting/kinetics/mechanical_piston'}])
 
     e.shaped('8x create:piston_extension_pole', [
         'W',
@@ -307,30 +222,26 @@ ServerEvents.recipes(e => {
         A: 'create:andesite_alloy'
     }).id('ico:piston_extension_pole')
 
-    e.custom({
-		"type": "create:item_application",
-		"ingredients": [
-			{
-				"item": "kubejs:andesite_parts"
-			},
-			{
-				"item": 'create:piston_extension_pole'
-			}
-		],
-		"results": [
-			{
-				"item": 'create:mechanical_piston'
-			}
-		]
-	}).id('ico:mechanical_piston')
+    //blast furnace
+    e.remove({id: 'immersiveengineering:crafting/blastbrick'})
+
+    e.recipes.shaped('3x immersiveengineering:blastbrick', [
+        'TBT',
+        'BAB',
+        'TBT'
+    ], {
+        B: '#forge:ingots/brick',
+        T: '#minecraft:terracotta',
+        A: 'create:andesite_alloy'
+    })
 
     //logistics
 
-    e.remove([{id:'create:crafting/kinetics/belt_connector'}, {id:'create:crafting/kinetics/chute'}, {id:'create:crafting/kinetics/andesite_funnel'}, {id:'create:crafting/kinetics/andesite_tunnel'}])
+    e.remove([{id:'create:crafting/kinetics/belt_connector'}, {id:'create:crafting/kinetics/chute'}, {id:'create:crafting/kinetics/andesite_funnel'}, {id:'create:crafting/kinetics/andesite_tunnel'}, {id:'create:crafting/kinetics/item_vault'}, {id:'create_connected:crafting/kinetics/item_silo'}])
 
     e.recipes.create.compacting('kubejs:kelp_sheet', '6x minecraft:dried_kelp').id('ico:kelp_sheet')
 
-    e.recipes.create.cutting('create:belt_connector', 'kubejs:kelp_sheet')
+    e.recipes.create.cutting('create:belt_connector', 'kubejs:kelp_sheet').id('ico:belt_connector')
 
     e.shaped('4x create:chute', [
         'P',
@@ -357,214 +268,32 @@ ServerEvents.recipes(e => {
         K: 'kubejs:kelp_sheet'
     }).id('ico:andesite_tunnel')
 
-    //crude ore processing
-    
-    function crude_ore_processing(ore, impuredust, material, ingot, compact) {
-        e.remove({output: ingot, type: 'smelting', not: {mod: 'immersive_weathering'}})
-        e.remove({output: ingot, type: 'blasting', not: {mod: 'immersive_weathering'}})
+    e.shaped('2x create:item_vault', [
+        'P',
+        'B',
+        'P'
+    ], {
+        P: '#forge:plates/tin',
+        B: '#c:barrels'
+    }).id('ico:item_vault')
 
-        e.recipes.create.milling(impuredust, ore).id('ico:mill_for_' + material)
-        
-        if(compact) {
-            e.recipes.create.compacting('createmetallurgy:' + material + '_dust', '4x kubejs:tiny_' + material + '_dust').id('ico:compacting_' + material + '_dust')
-        }
-        else if(material == "tin") {
-            e.recipes.create.compacting('kubejs:' + material + '_dust', '4x kubejs:tiny_' + material + '_dust').id('ico:compacting_' + material + '_dust')
-        }
+    e.shaped('2x create_connected:item_silo', [
+        'PBP',
+    ], {
+        P: '#forge:plates/tin',
+        B: '#c:barrels'
+    }).id('ico:item_silo')
 
-        e.smelting(ingot, '#forge:dusts/' + material).id('ico:smelt_for_' + material)
-    }
-
-    crude_ore_processing('kubejs:limonite_ore', 'kubejs:limonite_dust', 'iron', 'minecraft:iron_ingot', true)
-    e.custom({
-		"type": "createsifter:sifting",
-		"ingredients": [
-			{
-			"item": "createsifter:andesite_mesh"
-			},
-			{
-			"item": 'kubejs:limonite_dust'
-			}
-		],
-		"results": [
-			{
-			    "item": 'kubejs:tiny_iron_dust',
-                "count": 2
-			},
-            {
-			    "item": 'kubejs:tiny_iron_dust',
-                "chance": 0.5
-			},
-			{
-                "item": "kubejs:soft_slag_dust",
-                "chance": 0.15
-			},
-			{
-				"item": 'create:experience_nugget',
-				"chance": 0.1
-			}
-		],
-		"processingTime": 300,
-		"minimumSpeed": 64.0
-	}).id('ico:sift_for_iron')
-    crude_ore_processing('kubejs:cassiterite_ore', 'kubejs:cassiterite_dust', 'tin', 'thermal:tin_ingot')
-    e.custom({
-		"type": "createsifter:sifting",
-		"ingredients": [
-			{
-			"item": "createsifter:andesite_mesh"
-			},
-			{
-			"item": 'kubejs:cassiterite_dust'
-			}
-		],
-		"results": [
-			{
-			    "item": 'kubejs:tiny_tin_dust',
-                "count": 3
-			},
-            {
-			    "item": 'kubejs:tiny_tin_dust',
-                "chance": 0.5
-			},
-            {
-			    "item": 'kubejs:tiny_zinc_dust',
-                "chance": 0.5
-			},
-			{
-                "item": "kubejs:soft_slag_dust",
-                "chance": 0.2
-			},
-			{
-				"item": 'create:experience_nugget',
-				"chance": 0.1
-			}
-		],
-		"processingTime": 300,
-		"minimumSpeed": 64.0
-	}).id('ico:sift_for_tin')
-    crude_ore_processing('kubejs:sphalerite_ore', 'kubejs:sphalerite_dust', 'zinc', 'create:zinc_ingot', true)
-    e.custom({
-		"type": "createsifter:sifting",
-		"ingredients": [
-			{
-			"item": "createsifter:andesite_mesh"
-			},
-			{
-			"item": 'kubejs:sphalerite_dust'
-			}
-		],
-		"results": [
-			{
-			    "item": 'kubejs:tiny_zinc_dust',
-                "count": 3
-			},
-            {
-			    "item": 'kubejs:tiny_zinc_dust',
-                "chance": 0.5
-			},
-            {
-			    "item": 'kubejs:tiny_iron_dust',
-                "chance": 0.5
-			},
-			{
-                "item": "kubejs:soft_slag_dust",
-                "chance": 0.2
-			},
-			{
-				"item": 'create:experience_nugget',
-				"chance": 0.2
-			}
-		],
-		"processingTime": 300,
-		"minimumSpeed": 64.0
-	}).id('ico:sift_for_zinc')
-    crude_ore_processing('minecraft:raw_gold', 'kubejs:impure_gold_grit', 'gold', 'minecraft:gold_ingot')
-    e.custom({
-		"type": "createsifter:sifting",
-		"ingredients": [
-			{
-			"item": "createsifter:andesite_mesh"
-			},
-			{
-			"item": 'kubejs:impure_gold_grit'
-			}
-		],
-		"results": [
-			{
-			    "item": '#forge:dusts/gold'
-			},
-			{
-                "item": "kubejs:soft_slag_dust",
-                "chance": 0.05
-			},
-			{
-				"item": 'create:experience_nugget',
-				"chance": 0.1
-			}
-		],
-		"processingTime": 300,
-		"minimumSpeed": 64.0
-	}).id('ico:sift_for_gold')
-    crude_ore_processing('minecraft:raw_copper', 'kubejs:impure_copper_grit', 'copper', 'minecraft:copper_ingot')
-    e.custom({
-		"type": "createsifter:sifting",
-		"ingredients": [
-			{
-			"item": "createsifter:andesite_mesh"
-			},
-			{
-			"item": 'kubejs:impure_copper_grit'
-			}
-		],
-		"results": [
-			{
-			    "item": '#forge:dusts/copper'
-			},
-			{
-                "item": "kubejs:soft_slag_dust",
-                "chance": 0.05
-			},
-			{
-				"item": 'create:experience_nugget',
-				"chance": 0.1
-			}
-		],
-		"processingTime": 300,
-		"minimumSpeed": 64.0
-	}).id('ico:sift_for_copper')
-
-    //automation
-    e.remove([{id: 'create:milling/andesite'}, {id: 'minecraft:andesite'}])
-
-    e.custom({
-		"type": "createsifter:sifting",
-		"ingredients": [
-			{
-			"item": "createsifter:andesite_mesh"
-			},
-			{
-			"item": 'minecraft:clay_ball'
-			}
-		],
-		"results": [
-            {
-			    "item": 'minecraft:flint',
-                "chance": 0.3
-			},
-            {
-			    "item": 'thermal:tin_nugget',
-                "chance": 0.2
-			}
-		],
-		"processingTime": 300,
-		"minimumSpeed": 64.0
-	}).id('ico:sift_clay')
-
-    e.shapeless('minecraft:andesite', ['minecraft:diorite', 'minecraft:cobblestone']).id('ico:andesite')
+    //sifter
+    e.remove([{id: 'create:milling/andesite'}, {id: 'minecraft:andesite'}, {id: 'createsifter:sifting/gravel_andesite_mesh'}, {id: 'createsifter:sifting/gravel_zinc_mesh'}, {id: 'createsifter:sifting/gravel_brass_mesh'}, {id: 'createsifter:sifting/gravel_advanced_brass_mesh'}, {id: 'createsifter:sifting/sand_andesite_mesh'}, {id: 'createsifter:sifting/sand_zinc_mesh'}, {id: 'createsifter:sifting/sand_brass_mesh'}, {id: 'createsifter:sifting/soul_sand_brass_mesh'}, {id: 'createsifter:sifting/soul_sand_advanced_brass_mesh'}, {id: 'create:splashing/sand'}])
 
     //other
     e.remove({id: 'born_in_chaos_v1:fire_light_dust_k'})
 
     e.shapeless('3x minecraft:fire_charge', ['minecraft:gunpowder', 'born_in_chaos_v1:fire_dust', '#minecraft:coals'])
+
+    //raw tin
+    e.smelting('thermal:tin_nugget', 'kubejs:raw_tin_nugget').id('ico:smelting_raw_tin_nugget').cookingTime(23)
+    e.blasting('thermal:tin_nugget', 'kubejs:raw_tin_nugget').id('ico:blasting_raw_tin_nugget').cookingTime(12)
+    e.shapeless('thermal:raw_tin', '9x kubejs:raw_tin_nugget').id('ico:raw_tin')
 })

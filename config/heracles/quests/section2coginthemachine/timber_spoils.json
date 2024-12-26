@@ -1,0 +1,55 @@
+{
+  "dependencies": [
+    "bronze_age"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "translate": "This stuff grows in trees!"
+    },
+    "description": [
+      "## - Timber Spoils ---",
+      "This stuff grows in trees!",
+      "",
+      "The /b/Arboreal Extractor/b/ /6/extracts fluids from trees/6/. Place one at the /b/base/b/ of a /6/natrually grown tree/6/ and wait for the fluids to flow.",
+      "",
+      "Diffrent trees produce diffrent resources.",
+      "",
+      "Some resources include:",
+      "",
+      "Sap - Seperates into /b/Syrup/b/, a food product, and water",
+      "Resin - Seperates into /b/Rosin/b/, used for ore processing, and /b/Tree Oil/b/, a liquid fuel",
+      "Latex - Can be processed into /b/Rubber/b/",
+      "",
+      "<hr/>"
+    ],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          210,
+          -30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "thermal:device_tree_extractor",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Timber Spoils"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

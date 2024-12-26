@@ -39,7 +39,7 @@
 	margin_h_stamina_hud = 3
 	#vertical margin of normal HUD
 	#Range: 0 ~ 100
-	margin_v_stamina_hud = 3
+	margin_v_stamina_hud = 20
 
 [Animations]
 	#Enable custom animations

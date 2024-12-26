@@ -1,0 +1,13 @@
+filename = 'lazyyyyy-lexforge-core-0.3.1.jar'
+name = 'lazyyyyy'
+side = 'both'
+
+[download]
+hash = 'd4f3dfcf1b85cb3591fa1ba0d6b161557c2e27fe2c73eec04ec940d04c5c2139e372ac3f17bc1fc708d7bca29861f40ef0f7243a8dceabce25501a94c98122ce'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/U8A8WZbk/versions/WqEUZQTw/lazyyyyy-lexforge-core-0.3.1.jar'
+
+[update.modrinth]
+mod-id = 'U8A8WZbk'
+version = 'WqEUZQTw'
