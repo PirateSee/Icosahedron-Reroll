@@ -9,6 +9,7 @@
 		"forceNullRenderReplacement": false,
 		"disableEmptySlotScreenError": false,
 		"allowSlotScrolling": true,
+		"showUnusedSlots": false,
 		"equipControl": "MUST_NOT_CROUCH",
 		"hoverOptions": {
 			"hoveredOptions": {

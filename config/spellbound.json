@@ -64,6 +64,17 @@
     "POWER_RANGE": 50,
     "MAX_BLAST_RES": 99
   },
+  "chilled": {
+    "ENABLED": true,
+    "IS_TREASURE": false,
+    "IS_FOR_SALE": true,
+    "RARITY": 4,
+    "SOFT_CAP": 1,
+    "HARD_CAP": 1,
+    "BASE_POWER": 15,
+    "POWER_PER_RANK": 10,
+    "POWER_RANGE": 50
+  },
   "deathWish": {
     "ENABLED": true,
     "IS_TREASURE": false,
@@ -370,7 +381,12 @@
     "BASE_POWER": 5,
     "POWER_PER_RANK": 5,
     "POWER_RANGE": 20,
-    "DURATION": 60
+    "DURATION": 60,
+    "SAFE_FOR_USER": true,
+    "SHOCKWAVE_FORCE_SCALE": 0.5,
+    "SHOCKWAVE_DAMAGE_SCALE": 1.5,
+    "SHOCKWAVE_RADIUS_SCALE": 2.0,
+    "SHOCKWAVE_FULL_DAMAGE_RADIUS": 0.2
   },
   "prospector": {
     "ENABLED": true,
@@ -529,7 +545,29 @@
     "WORDS_PER_LEVEL_FIRST_DEGREE": -22,
     "WORDS_PER_LEVEL_SECOND_DEGREE": 22,
     "ALLOW_NEW_PLOTHOOKS": true,
-    "RARITY_OF_NEW_PLOTHOOKS": 2
+    "RARITY_OF_NEW_PLOTHOOKS": 2,
+    "CAN_CREATE_TREASURE": true,
+    "CAN_CREATE_CURSE": false
+  },
+  "sunkenTreasure": {
+    "ENABLED": true,
+    "IS_TREASURE": false,
+    "IS_FOR_SALE": true,
+    "RARITY": 3,
+    "SOFT_CAP": 3,
+    "HARD_CAP": 3,
+    "BASE_POWER": 6,
+    "POWER_PER_RANK": 9,
+    "POWER_RANGE": 50,
+    "QUALITY_WEIGHTS": [
+      25.0,
+      55.0,
+      15.0,
+      4.0,
+      1.0
+    ],
+    "LUCK_IMPACT_ON_QUALITY": 0.1,
+    "CRATE_CHANCE_PER_LEVEL": 0.1
   },
   "tethering": {
     "ENABLED": true,
@@ -554,6 +592,18 @@
     "BASE_POWER": -19,
     "POWER_PER_RANK": 20,
     "POWER_RANGE": 50
+  },
+  "universal": {
+    "ENABLED": true,
+    "IS_TREASURE": false,
+    "IS_FOR_SALE": true,
+    "RARITY": 4,
+    "SOFT_CAP": 1,
+    "HARD_CAP": 1,
+    "BASE_POWER": 15,
+    "POWER_PER_RANK": 10,
+    "POWER_RANGE": 50,
+    "OFF_TYPE_MINING_SPEED_FACTOR": 0.5
   },
   "warlike": {
     "ENABLED": true,

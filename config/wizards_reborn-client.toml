@@ -1,31 +1,17 @@
 
 #Graphics
 [graphics]
-	#Enable better particle/effect layering.
-	#Fixes particles and effects rendering behind clouds and weather.
-	#NOTE: Does NOT work with fabulous graphics mode.
-	betterLayering = true
 
 	#Animations
 	[graphics.animations]
-		#Enable large item models.
-		largeItemModel = true
-		#Enable spells animations player.
-		spellsAnimation = true
 		#Enable spells item animations.
 		spellsItemAnimation = true
-		#Enable spells first person item animations.
-		spellsFirstPersonItemAnimation = true
 
 	#Particles
 	[graphics.particles]
 		#Limit wissen rays per tick.
 		#Range: 0 ~ 1000
 		wissenRaysLimit = 200
-		#Enable dropping items particles.
-		itemParticle = true
-		#Enable items particles in GUI.
-		itemGuiParticle = true
 
 #Arcanemicon
 [arcanemicon]
@@ -105,20 +91,4 @@
 		reverseBar = false
 		#Enable show empty spells in bar.
 		showEmptySpells = true
-
-#Menu
-[menu]
-	#Enable custom panorama.
-	customPanorama = false
-	#Enable custom panorama button.
-	panoramaButton = true
-	#Custom panorama button row.
-	#Range: 0 ~ 4
-	panoramaButtonRow = 3
-	#Custom panorama button X offset with row.
-	panoramaButtonRowXOffset = 4
-	#Custom panorama button X offset.
-	panoramaButtonXOffset = 0
-	#Custom panorama button Y offset.
-	panoramaButtonYOffset = 0
 

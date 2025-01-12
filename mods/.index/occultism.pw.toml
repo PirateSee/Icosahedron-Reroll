@@ -1,13 +1,16 @@
-filename = 'occultism-1.20.1-1.137.1.jar'
+filename = 'occultism-1.20.1-1.140.2.jar'
 name = 'Occultism'
 side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '1320e4deedd203d10acfd560b3933ece31b09bb6f78aefbed7027d454093a64a35fbc9aa9f984395acb2288986d121b36a484aa91d509a266492b6d594d7aa3a'
+hash = '34b92281e15361eea566ab36785e3e6652a85ca9ffc5362781c0bfa7318dba4ba4cd2d8a29ea8297a7a5e7b7bdd3dbfbcb437d947ef8d661ec11fe585ad38d18'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/sbJh4AZw/versions/zzB3y40z/occultism-1.20.1-1.137.1.jar'
+url = 'https://cdn.modrinth.com/data/sbJh4AZw/versions/EbOztEEx/occultism-1.20.1-1.140.2.jar'
 
 [update.modrinth]
 mod-id = 'sbJh4AZw'
-version = 'zzB3y40z'
+version = 'EbOztEEx'

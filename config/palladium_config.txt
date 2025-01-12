@@ -1,0 +1,9 @@
+rl_dedup:"all"
+shaderUniformCaching:true
+enableShaderAttributeCaching:true
+enableMipmapCaching:true
+resourceKeyDedup:true
+quadsDedup:true
+composterFix:true
+lightweightWolfAndCatAttackAi:true
+lightweightWolfAndRabbitFleeAi:true

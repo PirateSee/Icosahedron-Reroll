@@ -1,13 +1,16 @@
-filename = 'puffish_attributes-0.5.0-1.20-forge.jar'
+filename = 'puffish_attributes-0.7.1-1.20-forge.jar'
 name = "Pufferfish's Attributes"
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '66c177f6e007d11e7cb1a242824a09271922bb4ffb702c07d39e84ec51884ea8cfe16c93d1ae1c356c16c8d6a293d3c148ef274500d47a2b3cd4868e72553098'
+hash = '7e3736b8694049136c826ae42a6fb42eea67e2898b730f3573c77d9b8f57f479a4e415b4673a4cfc913c790c4d577159e137e6b9b158371a35489e5f9284211b'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/FCFcFw09/versions/VEQOxNHY/puffish_attributes-0.5.0-1.20-forge.jar'
+url = 'https://cdn.modrinth.com/data/FCFcFw09/versions/Qe48MP2m/puffish_attributes-0.7.1-1.20-forge.jar'
 
 [update.modrinth]
 mod-id = 'FCFcFw09'
-version = 'VEQOxNHY'
+version = 'Qe48MP2m'

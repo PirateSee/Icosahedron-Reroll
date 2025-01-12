@@ -1,13 +1,16 @@
-filename = 'alekiNiftyShips-FORGE-1.20.1-1.0.12.jar'
+filename = 'alekiNiftyShips-FORGE-1.20.1-1.0.14.jar'
 name = "aleki's Nifty Ships"
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '67e8c2de6af2e81c76d7842f45f55cb2f3ad07c717a941234d6bc1f3a91594804dd1971d826ed1842f9e961961ff70a857b3a2de0366791c2202f23c89785dff'
+hash = '948dde522b1e0b95316db4105026bc8aa2488d709e133bd24a5cf20a17b3a7bb2e3ffa3b2cf038adc43ae768a6dc77ed9161518b8a3bc96475395c1f41b94096'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/vuNeeDyl/versions/tqjwM6lC/alekiNiftyShips-FORGE-1.20.1-1.0.12.jar'
+url = 'https://cdn.modrinth.com/data/vuNeeDyl/versions/VX4fjmf1/alekiNiftyShips-FORGE-1.20.1-1.0.14.jar'
 
 [update.modrinth]
 mod-id = 'vuNeeDyl'
-version = 'tqjwM6lC'
+version = 'VX4fjmf1'

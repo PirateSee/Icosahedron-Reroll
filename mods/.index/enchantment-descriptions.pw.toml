@@ -1,13 +1,16 @@
-filename = 'EnchantmentDescriptions-Forge-1.20.1-17.1.18.jar'
-name = 'Enchantment Descriptions'
-side = 'client'
+filename = 'EnchantmentDescriptions-Forge-1.20.1-17.1.19.jar'
+name = 'EnchantmentDescriptions'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '3704e620cf9e346437f3e97e163d2102c1d358a6322b416f8a23390c21e86bd6196a23a629c90c0a80299de8330a478f5867c865200c663cc93eca167d21ef3b'
+hash = 'd57228e02a626e3605a32952ed9ae5ea9c3fc0e1a953080cddec8bc6e3f2931e6e7102549116840be02a8ecd9db166e001efab89cd28e404ab73ddce8bb8ea76'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/UVtY3ZAC/versions/n3plC8IW/EnchantmentDescriptions-Forge-1.20.1-17.1.18.jar'
+url = 'https://cdn.modrinth.com/data/UVtY3ZAC/versions/nq9ce04C/EnchantmentDescriptions-Forge-1.20.1-17.1.19.jar'
 
 [update.modrinth]
 mod-id = 'UVtY3ZAC'
-version = 'n3plC8IW'
+version = 'nq9ce04C'

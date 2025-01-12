@@ -1,13 +1,16 @@
-filename = 'wizards_reborn-1.20.1-0.1.6.jar'
+filename = 'wizards_reborn-1.20.1-0.2.4.jar'
 name = "Wizard's Reborn"
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'alpha'
 
 [download]
-hash = 'fcd2670e69649df3427c321d6554af667a634115926b630ff72689c98462cb8c2bc14665f4c28e4ccc49a2f4b0a0eff352ef127ac91c19b915672cd34d08638b'
+hash = '13c4379a3161de335279640ff0f7cad7c5908310ba5ebfcff97daa9fd2da85e1ec9ab2a675b261be7867578df36537818efb441d2f1cab0ea753712871ad10ac'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/axZDcOCH/versions/VKvQj28e/wizards_reborn-1.20.1-0.1.6.jar'
+url = 'https://cdn.modrinth.com/data/axZDcOCH/versions/Dan2ufxA/wizards_reborn-1.20.1-0.2.4.jar'
 
 [update.modrinth]
 mod-id = 'axZDcOCH'
-version = 'VKvQj28e'
+version = 'Dan2ufxA'

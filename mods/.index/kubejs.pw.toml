@@ -1,13 +1,16 @@
-filename = 'kubejs-forge-2001.6.4-build.138.jar'
+filename = 'kubejs-forge-2001.6.5-build.16.jar'
 name = 'KubeJS'
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '18becff9f7f765e52f88b42ddf6ddc9251364c3e08b5f3b678eb898555337a00d1dabf9f5d11639f0a2663fe0602cab5fc0ee2fcd17216fb3b52d9f25857c4fe'
+hash = '819f730d2a9d980bb246d30d67793f06f6a1608381c7ce3577cf25e70dd3d595271f8fcfbf3ae037168842f660e79e49846756bd18c79793b310ff18ab826cbd'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/umyGl7zF/versions/DNX6SE7o/kubejs-forge-2001.6.4-build.138.jar'
+url = 'https://cdn.modrinth.com/data/umyGl7zF/versions/g5igndAv/kubejs-forge-2001.6.5-build.16.jar'
 
 [update.modrinth]
 mod-id = 'umyGl7zF'
-version = 'DNX6SE7o'
+version = 'g5igndAv'

@@ -1,13 +1,16 @@
-filename = 'alembic-1.1.0.jar'
+filename = 'alembic-1.1.1.jar'
 name = 'Alembic'
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'd8bed18f7dbec03bd6d3ae53526784a0fa9312b056ec02acdc195d2ec254558f0063e0870206eadfdeab8549b71efe71775bac77ff5e9a78eef0fb5c6f826e38'
+hash = '3d492a4fd6041aa8f70c6b6f43ff47fe132e1c8fe4708f5bf5591214f4cba51504bf0dee2d86ad134313d998ce8a7321ebda7839ee259feb603914d381a7a7f0'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/glRa3GHb/versions/ff17u7rp/alembic-1.1.0.jar'
+url = 'https://cdn.modrinth.com/data/glRa3GHb/versions/FzDraS9k/alembic-1.1.1.jar'
 
 [update.modrinth]
 mod-id = 'glRa3GHb'
-version = 'ff17u7rp'
+version = 'FzDraS9k'

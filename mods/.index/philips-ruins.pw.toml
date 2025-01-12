@@ -1,13 +1,16 @@
-filename = 'Philips-Ruins1.20.1-4.4.1.jar'
+filename = 'PhilipsRuins1.20.1-4.8.jar'
 name = 'Philips Ruins'
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '059706a2fbfc0f7497e6c35b248da515d09aa1c2b0bbc0213f6fdba0b9b0f5ad26778300a34039bccc087da4c70e9deeac329f6b4196471f6d49b271e780c6be'
+hash = 'a6ba400759208f43dbadd4ad11bff98deb5c77eb6f9c5472478d59a242c6904aaf465f1275aa67babad29fbf2103b63e9488e2c517c2d286b19958d6ca35f3ca'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/KdJhOYVV/versions/xXzUmeYC/Philips-Ruins1.20.1-4.4.1.jar'
+url = 'https://cdn.modrinth.com/data/KdJhOYVV/versions/tVGZGmHn/PhilipsRuins1.20.1-4.8.jar'
 
 [update.modrinth]
 mod-id = 'KdJhOYVV'
-version = 'xXzUmeYC'
+version = 'tVGZGmHn'

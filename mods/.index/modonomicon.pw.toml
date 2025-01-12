@@ -1,13 +1,16 @@
-filename = 'modonomicon-1.20.1-forge-1.75.0.jar'
+filename = 'modonomicon-1.20.1-forge-1.77.5.jar'
 name = 'Modonomicon'
 side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '4aee186da498b6815c8da84b3bb8e19657984d9d02691dfcf8efd0f713fb92bc3bc4ba6dabae426a209a30a603f26bd60c149eee590e0735bcfe6a9702d206e6'
+hash = '3a3cc30dbf9aa397aaa77ab164540260718052ffcc3f543f5f996d50bf122d46dd1f93503dbc4b07c986a33b0dda0c38d203ce1188cdc107cb4938594d0c6024'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/692GClaE/versions/g6z0BOcy/modonomicon-1.20.1-forge-1.75.0.jar'
+url = 'https://cdn.modrinth.com/data/692GClaE/versions/pmgtNvBe/modonomicon-1.20.1-forge-1.77.5.jar'
 
 [update.modrinth]
 mod-id = '692GClaE'
-version = 'g6z0BOcy'
+version = 'pmgtNvBe'

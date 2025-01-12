@@ -1,13 +1,16 @@
-filename = 'supplementaries-1.20-2.8.17.jar'
+filename = 'supplementaries-1.20-3.1.10.jar'
 name = 'Supplementaries'
 side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '92bc96f04afcf1dbadc72766a389d6be0a718c55d5ff22b73defae4e9408a27f27fd0708a417c3c70330bda9b16dee843af1ad7fcd70d7505dff3a26837b1728'
+hash = 'ae597c5d9f8203b612ef97433dfe207929984523f5c041d86f9e6a199d66c9044a71c8809646c64e4b5faa37bf34fbcb7f07b335f52443244475f3f549ca25ef'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/fFEIiSDQ/versions/eMF95dNK/supplementaries-1.20-2.8.17.jar'
+url = 'https://cdn.modrinth.com/data/fFEIiSDQ/versions/HcdcLvdS/supplementaries-1.20-3.1.10.jar'
 
 [update.modrinth]
 mod-id = 'fFEIiSDQ'
-version = 'eMF95dNK'
+version = 'HcdcLvdS'

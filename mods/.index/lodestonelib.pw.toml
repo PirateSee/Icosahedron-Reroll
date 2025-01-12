@@ -1,13 +1,16 @@
-filename = 'lodestone-1.20.1-1.6.2.1.jar'
+filename = 'lodestone-1.20.1-1.6.4.1.jar'
 name = 'Lodestone'
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '765bcd8d52c8cf13755c672aa2da18fe399008c77a8d5c60362b69693eb42ab8be3d4e1bf9642a21a0a41b3af305fe418d3ba6ec9d34e0667da945b3794e6618'
+hash = '473c53cc8ce12c0023115d995b929902283e71b04327af302c858923f247a866a9665157c5ccf1a2a5f44e5242df4aa656a40d20c20b16d17f0f7844839e6c14'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/bN3xUWdo/versions/CPL5stBi/lodestone-1.20.1-1.6.2.1.jar'
+url = 'https://cdn.modrinth.com/data/bN3xUWdo/versions/riljz5Ik/lodestone-1.20.1-1.6.4.1.jar'
 
 [update.modrinth]
 mod-id = 'bN3xUWdo'
-version = 'CPL5stBi'
+version = 'riljz5Ik'

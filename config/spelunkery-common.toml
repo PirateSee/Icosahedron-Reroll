@@ -1,7 +1,6 @@
 
 [misc]
 	spelunkery_creative_tab = false
-	wip_grindstone_rework = false
 	#Range: 0 ~ 128
 	diamond_grindstone_deplete_chance = 20
 	#Range: 0 ~ 128
