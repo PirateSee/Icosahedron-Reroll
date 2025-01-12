@@ -93,7 +93,7 @@ ServerEvents.recipes(e => {
     e.recipes.create.compacting('kubejs:andesite_framing', ['4x create:andesite_alloy']).id('ico:andesite_framing_compacting')
 
     //machinery
-    e.remove([{id:'create:crafting/kinetics/mechanical_press'}, {id:'create:crafting/kinetics/whisk'}, {id:'create:crafting/kinetics/mechanical_mixer'}, {id:'create:crafting/kinetics/mechanical_saw'}, {id:'create:crafting/kinetics/mechanical_drill'}, {id:'create:crafting/kinetics/deployer'}, {id:'create_mechanical_extruder:mechanical_extruder'}])
+    e.remove([{id:'create:crafting/kinetics/mechanical_press'}, {id:'create:crafting/kinetics/whisk'}, {id:'create:crafting/kinetics/mechanical_mixer'}, {id:'create:crafting/kinetics/mechanical_saw'}, {id:'create:crafting/kinetics/mechanical_drill'}, {id:'create_mechanical_extruder:mechanical_extruder'}])
 
     e.shaped('kubejs:wooden_slide', [
         'L',
@@ -189,26 +189,6 @@ ServerEvents.recipes(e => {
         I: '#forge:ingots/iron',
         A: 'create:shaft'
     }).id('ico:iron_drill')
-
-    e.shaped('kubejs:bronze_hand', [
-        ' A ',
-        'BDB',
-        ' B '
-    ], {
-        A: 'create:andesite_alloy',
-        B: '#forge:plates/bronze',
-        D: 'minecraft:diamond',
-    }).id('ico:bronze_hand')
-
-    e.shaped('create:deployer', [
-        ' W ',
-        ' C ',
-        ' T '
-    ], {
-        W: 'kubejs:wooden_slide',
-        C: 'create:gearbox',
-        T: 'kubejs:bronze_hand'
-    }).id('ico:deployer')
 
     e.shaped('create_mechanical_extruder:mechanical_extruder', [
         ' W ',

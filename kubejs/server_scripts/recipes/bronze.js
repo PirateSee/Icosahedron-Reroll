@@ -42,7 +42,7 @@ ServerEvents.recipes(e => {
 	]).transitionalItem(inter).loops(1).id('ico:sorting_algorithm')
 
     //machinery
-    e.remove([{id: 'create:crafting/kinetics/spout'}, {id: 'create:crafting/kinetics/item_drain'}, {id: 'create:crafting/kinetics/steam_engine'}, {id: 'create:crafting/kinetics/empty_blaze_burner'}, {id: 'create:crafting/kinetics/fluid_pipe'}, {id: 'create:crafting/kinetics/fluid_pipe_vertical'}, {id: 'create:crafting/kinetics/mechanical_pump'}, {id: 'create:crafting/kinetics/fluid_valve'}, {id: 'create:crafting/kinetics/fluid_tank'}])
+    e.remove([{id: 'create:crafting/kinetics/spout'}, {id: 'create:crafting/kinetics/item_drain'}, {id: 'create:crafting/kinetics/steam_engine'}, {id: 'create:crafting/kinetics/empty_blaze_burner'}, {id: 'create:crafting/kinetics/fluid_pipe'}, {id: 'create:crafting/kinetics/fluid_pipe_vertical'}, {id: 'create:crafting/kinetics/mechanical_pump'}, {id: 'create:crafting/kinetics/fluid_valve'}, {id: 'create:crafting/kinetics/fluid_tank'}, {id: 'create_enchantment_industry:disenchanter'}])
 
     e.shapeless('2x create:fluid_tank', ['#c:barrels', 'create:copper_casing']).id('ico:fluid_tank')
 
@@ -86,6 +86,14 @@ ServerEvents.recipes(e => {
         B: 'minecraft:iron_bars'
     }).id('ico:item_drain')
 
+    e.shaped('create_enchantment_industry:disenchanter', [
+        'S',
+        'D'
+    ], {
+        D: 'create:item_drain',
+        S: '#create:sandpaper'
+    }).id('ico:disenchanter')
+
     e.shaped('create:empty_blaze_burner', [
         'NIN',
         'IFI',
@@ -106,9 +114,29 @@ ServerEvents.recipes(e => {
         B: '#forge:storage_blocks/bronze'
     }).id('ico:steam_engine')
 
+    e.shaped('kubejs:bronze_hand', [
+        ' A ',
+        'BDB',
+        ' B '
+    ], {
+        A: 'create:andesite_alloy',
+        B: '#forge:plates/bronze',
+        D: 'spelunkery:rough_diamond'
+    }).id('ico:bronze_hand')
+
+    e.shaped('create:deployer', [
+        ' W ',
+        ' C ',
+        ' T '
+    ], {
+        W: 'kubejs:wooden_slide',
+        C: 'create:gearbox',
+        T: 'kubejs:bronze_hand'
+    }).id('ico:deployer')
+
     //logistics
 
-    e.remove([{id:'create:crafting/kinetics/smart_chute'}, {id:'create:crafting/logistics/brass_funnel'}, {id:'create:crafting/logistics/brass_tunnel'}, {id:'create:crafting/kinetics/smart_fluid_pipe'}])
+    e.remove([{id:'create:crafting/kinetics/smart_chute'}, {id:'create:crafting/logistics/brass_funnel'}, {id:'create:crafting/logistics/brass_tunnel'}, {id:'create:crafting/kinetics/smart_fluid_pipe'}, {id:'create:crafting/kinetics/deployer'}])
 
     e.shaped('2x create:brass_funnel', [
         'S',

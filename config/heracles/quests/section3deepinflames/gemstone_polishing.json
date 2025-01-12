@@ -8,13 +8,11 @@
     "subtitle": {
       "text": ""
     },
-    "description": [
-      "diamond"
-    ],
+    "description": [],
     "groups": {
       "Section 3: Deep in Flames": {
         "position": [
-          1,
+          0,
           150
         ]
       }

@@ -147,9 +147,11 @@ ServerEvents.recipes(e => {
 
     e.remove([{id: 'create:compacting/blaze_cake'}, {id: 'create:filling/blaze_cake'}, {id: 'create:crushing/netherrack'}])
 
+    e.recipes.create.mixing('1x minecraft:netherrack', ['minecraft:cobblestone', 'malum:blazing_quartz_fragment']).id('ico:netherrack_from_blazing_quartz')
+
     e.recipes.create.crushing('create:cinder_flour', 'minecraft:nether_brick').id('ico:cinder_flour')
 
-    e.recipes.create.compacting(['create:blaze_cake_base', 'thermal:nickel_ingot'], ['#forge:eggs', 'sugar', '2x create:cinder_flour', '#forge:ingots/nickel']).id('ico:blaze_cake_base')
+    e.recipes.create.compacting(['create:blaze_cake_base', 'thermal:nickel_ingot'], ['#forge:eggs', 'sugar', '4x create:cinder_flour', '#forge:ingots/nickel']).id('ico:blaze_cake_base')
 
     e.recipes.create.mixing([Fluid.of('kubejs:blazing_icing', 250), 'malum:blazing_quartz'], [Fluid.of('lava', 500), Fluid.of('thermal:sap', 250), '#forge:nuggets/copper', 'malum:blazing_quartz']).id('ico:blazing_icing')
     e.recipes.create.filling('create:blaze_cake', ['create:blaze_cake_base', Fluid.of('kubejs:blazing_icing', 250)]).id('ico:blaze_cake')

@@ -14,7 +14,7 @@ ServerEvents.recipes(e => {
             "processingTime": 100,
             "results": [
                 {
-                    "item": "kubejs:uncut_diamond"
+                    "item": uncut
                 }
             ]
         }).id('ico:dissolve_' + id)
