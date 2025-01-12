@@ -8,7 +8,10 @@
     "subtitle": {
       "translate": "Rotation transportation"
     },
-    "description": [],
+    "description": [
+      "## - Roll Around ---",
+      "--Rotation Transportation--"
+    ],
     "groups": {
       "Section 1: Rolling out": {
         "position": [

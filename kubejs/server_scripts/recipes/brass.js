@@ -1,7 +1,9 @@
+// contains brass level create machinery related recipes
+
 ServerEvents.recipes(e => {
     //alloying
 
-    e.remove({id: 'createmetallurgy:alloying/alloying_brass'})
+    e.remove([{id: 'createmetallurgy:alloying/alloying_brass'}, {id: 'create:item_application/brass_casing_from_log'}, {id: 'create:item_application/brass_casing_from_wood'}])
 
     e.shaped('kubejs:brass_framing', [
         ' A ',
@@ -95,7 +97,8 @@ ServerEvents.recipes(e => {
     //gemstone
     e.remove([{id: 'create:crafting/materials/rose_quartz'}, {id: 'spelunkery:rose_quartz'}, {id: 'create:crafting/materials/electron_tube'}])
 
-    e.recipes.vintageimprovements.pressurizing('create:rose_quartz', ['malum:blazing_quartz', '#forge:gems/cinnabar', '3x minecraft:redstone', Fluid.of('minecraft:lava', 1000)]).heated().secondaryFluidInput(0).id('ico:rose_quartz')
+    e.recipes.create.mixing(['malum:blazing_quartz', '2x malum:blazing_quartz_fragment'], ['malum:blazing_quartz', "#forge:gems/quartz", Fluid.of('minecraft:lava', 500)]).id('ico:blazing_quartz_reaction')
+    e.recipes.vintageimprovements.pressurizing('create:rose_quartz', ['malum:blazing_quartz', 'minecraft:redstone_block', Fluid.of('minecraft:lava', 1000)]).heated().secondaryFluidInput(0).id('ico:rose_quartz')
 
     /*let inter = 'kubejs:incomplete_electron_tube'
 	e.recipes.create.sequenced_assembly([
@@ -142,9 +145,11 @@ ServerEvents.recipes(e => {
 		e.recipes.createDeploying(inter, [inter, '#forge:nuggets/nickel'])
 	]).transitionalItem(inter).loops(5).id('ico:precision_mechanism')
 
-    e.remove([{id: 'create:compacting/blaze_cake'}, {id: 'create:filling/blaze_cake'}])
+    e.remove([{id: 'create:compacting/blaze_cake'}, {id: 'create:filling/blaze_cake'}, {id: 'create:crushing/netherrack'}])
 
-    e.recipes.create.compacting(['create:blaze_cake', 'thermal:nickel_ingot'], ['#forge:eggs', 'sugar', '2x create:cinder_flour', '#forge:ingots/nickel']).id('ico:blaze_cake_base')
+    e.recipes.create.crushing('create:cinder_flour', 'minecraft:nether_brick').id('ico:cinder_flour')
+
+    e.recipes.create.compacting(['create:blaze_cake_base', 'thermal:nickel_ingot'], ['#forge:eggs', 'sugar', '2x create:cinder_flour', '#forge:ingots/nickel']).id('ico:blaze_cake_base')
 
     e.recipes.create.mixing([Fluid.of('kubejs:blazing_icing', 250), 'malum:blazing_quartz'], [Fluid.of('lava', 500), Fluid.of('thermal:sap', 250), '#forge:nuggets/copper', 'malum:blazing_quartz']).id('ico:blazing_icing')
     e.recipes.create.filling('create:blaze_cake', ['create:blaze_cake_base', Fluid.of('kubejs:blazing_icing', 250)]).id('ico:blaze_cake')

@@ -37,7 +37,6 @@ ServerEvents.recipes(e => {
 
     item_application_craft('create:gearbox', 'kubejs:sawblade', 'create:mechanical_saw', 'ico:mechanical_saw')
     item_application_craft('create:gearbox', 'kubejs:iron_drill', 'create:mechanical_drill', 'ico:mechanical_drill')
-    item_application_craft('create:mechanical_drill', 'kubejs:wooden_slide', 'create_mechanical_extruder:mechanical_extruder', 'ico:mechanical_extruder')
 
     //bronze
     item_application('create:andesite_casing', 'kubejs:bronze_framing', 'create:copper_casing', 'ico:copper_casing')

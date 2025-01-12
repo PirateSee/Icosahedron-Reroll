@@ -4,7 +4,7 @@
   "otherPlayerVolume": 100,
   "hostileEntitiesVolume": 100,
   "passiveEntitiesVolume": 100,
-  "runningVolumeIncrease": 10,
+  "runningVolumeIncrease": 20,
   "wetSoundsVolume": 50,
   "foliageSoundsVolume": 100,
   "maxSteppingEntities": 50,
@@ -15,6 +15,6 @@
   "footwear": true,
   "visualiser": false,
   "exclusive": false,
-  "stance": "NONE",
+  "stance": "QUADRUPED",
   "targetEntities": "ALL"
 }

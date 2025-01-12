@@ -64,3 +64,5 @@ config/voicechat/voicechat-volumes.properties
 !resourcepacks/icoHud
 !resourcepacks/simpleradioredone
 .disabled
+config/figura.json
+config/figura.json

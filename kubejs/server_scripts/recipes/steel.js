@@ -1,3 +1,5 @@
+// contains steel level immersive engineering related recipes
+
 ServerEvents.recipes(e => {
     //steel
     e.remove({id: 'immersiveengineering:crafting/cokebrick'})
@@ -10,6 +12,18 @@ ServerEvents.recipes(e => {
         B: '#forge:ingots/brick',
         N: 'minecraft:nether_brick',
         L: 'minecraft:blackstone'
+    })
+
+    e.custom({
+        "type": "immersiveengineering:coke_oven",
+        "creosote": 50,
+        "input": {
+          "tag": "forge:storage_blocks/charcoal"
+        },
+        "result": {
+          "item": 'thermal:coal_coke'
+        },
+        "time": 2000
     })
 
     e.remove([{id: 'createmetallurgy:alloying/steel'}, {id: 'immersiveengineering:blastfurnace/steel'}, {id: 'immersiveengineering:blastfurnace/steel_block'}, {id: 'createmetallurgy:smelting/coke_from_coal'}, {id: 'createmetallurgy:blasting/coke_from_coal'}])
@@ -32,6 +46,9 @@ ServerEvents.recipes(e => {
         },
         "time": 1200
     })
+
+    //components
+    e.recipes.create.cutting('kubejs:screws', '#forge:nuggets/carbon_steel').id('ico:screws')
 
     //treated wood
 
@@ -167,6 +184,10 @@ ServerEvents.recipes(e => {
             },
             {
                 "tag": "forge:ingots/nickel"
+            },
+            {
+                "item": "kubejs:screws",
+                "count": 2
             }
         ],
         "result": {
@@ -186,6 +207,10 @@ ServerEvents.recipes(e => {
             },
             {
                 "tag": "forge:ingots/aluminum"
+            },
+            {
+                "item": "kubejs:screws",
+                "count": 2
             }
         ],
         "result": {
@@ -203,7 +228,7 @@ ServerEvents.recipes(e => {
     ], {
         S: 'immersiveengineering:sheetmetal_steel',
         C: 'immersiveengineering:component_iron',
-        N: '#forge:ingots/nickel'
+        N: 'create:precision_mechanism'
     }).id('ico:light_engineering')
 
     e.shaped('2x immersiveengineering:rs_engineering', [
@@ -221,25 +246,27 @@ ServerEvents.recipes(e => {
         'CNC',
         'SCS'
     ], {
-        S: 'immersiveengineering:sheetmetal_steel',
+        S: 'immersiveengineering:sheetmetal_aluminum',
         C: 'immersiveengineering:component_steel',
-        N: '#forge:ingots/aluminum'
+        N: 'create:precision_mechanism'
     }).id('ico:heavy_engineering')
 
     e.shaped('3x immersiveengineering:steel_scaffolding_standard', [
-        'S S',
-        ' S ',
-        'S S'
+        'SCS',
+        'CSC',
+        'SCS'
     ], {
-        S: '#forge:rods/steel'
+        S: '#forge:rods/steel',
+        C: 'kubejs:screws'
     }).id('ico:steel_scaffolding_standard')
 
     e.shaped('3x immersiveengineering:alu_scaffolding_standard', [
-        'S S',
-        ' S ',
-        'S S'
+        'SCS',
+        'CSC',
+        'SCS'
     ], {
-        S: '#forge:rods/aluminum'
+        S: '#forge:rods/aluminum',
+        C: 'kubejs:screws'
     }).id('ico:alu_scaffolding_standard')
 
     //thermal machinery
@@ -258,49 +285,45 @@ ServerEvents.recipes(e => {
     e.recipes.create.deploying('thermal:rf_coil', ['#forge:rods/electrum', 'minecraft:redstone'])
 
     e.recipes.shaped('thermal:machine_refinery', [
-        'LPL',
+        'LRL',
         'GFG',
         'LRL'
     ], {
-        F: 'thermal:machine_frame',
+        F: 'immersiveengineering:light_engineering',
         R: 'thermal:rf_coil',
-        P: 'create:precision_mechanism',
         G: '#forge:gears/tin',
         L: '#forge:glass'
     }).id('ico:machine_refinery')
 
     e.recipes.shaped('thermal:machine_crystallizer', [
-        'LPL',
+        'LRL',
         'GFG',
         'LRL'
     ], {
-        F: 'thermal:machine_frame',
+        F: 'immersiveengineering:light_engineering',
         R: 'thermal:rf_coil',
-        P: 'create:precision_mechanism',
         G: '#forge:gears/rose_gold',
         L: '#thermal:glass/hardened'
     }).id('ico:machine_crystallizer')
 
     e.recipes.shaped('thermal:machine_chiller', [
-        'LPL',
+        'LRL',
         'GFG',
         'LRL'
     ], {
-        F: 'thermal:machine_frame',
+        F: 'immersiveengineering:light_engineering',
         R: 'thermal:rf_coil',
-        P: 'create:precision_mechanism',
         G: '#forge:gears/electrum',
         L: 'minecraft:packed_ice'
     }).id('ico:machine_chiller')
 
     e.recipes.shaped('thermal:machine_smelter', [
-        'LPL',
+        'LRL',
         'GFG',
         'LRL'
     ], {
-        F: 'thermal:machine_frame',
+        F: 'immersiveengineering:light_engineering',
         R: 'thermal:rf_coil',
-        P: 'create:precision_mechanism',
         G: '#forge:gears/invar',
         L: '#forge:ingots/steel'
     }).id('ico:machine_smelter')

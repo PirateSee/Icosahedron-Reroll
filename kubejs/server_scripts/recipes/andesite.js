@@ -1,3 +1,5 @@
+// contains andesite level create machinery related recipes
+
 ServerEvents.recipes(e => {
 
     //andesite alloy
@@ -21,7 +23,7 @@ ServerEvents.recipes(e => {
         'TA'
     ], {
         A: 'createdeco:andesite_sheet',
-        T: '#forge:plates/tin'
+        T: '#forge:plates/iron'
     }).id('ico:basic_burner')
 
     //cogwheels
@@ -111,7 +113,7 @@ ServerEvents.recipes(e => {
         e.recipes.createCutting(inter,inter)
 	]).transitionalItem(inter).loops(1).id('ico:wooden_slide_assembly')
 
-    e.shaped('kubejs:andesite_parts', [
+    /*e.shaped('kubejs:andesite_parts', [
         'WTW',
         'LCL'
     ], {
@@ -130,7 +132,7 @@ ServerEvents.recipes(e => {
         e.recipes.createCutting(inter,inter),
 		e.recipes.createDeploying(inter, [inter, '#forge:plates/tin']),
         e.recipes.createPressing(inter,inter)
-	]).transitionalItem(inter).loops(2).id('ico:andesite_parts_assembly')
+	]).transitionalItem(inter).loops(2).id('ico:andesite_parts_assembly')*/
 
     inter = 'kubejs:incomplete_wooden_slide'
     e.recipes.create.sequenced_assembly([
@@ -207,6 +209,17 @@ ServerEvents.recipes(e => {
         C: 'create:gearbox',
         T: 'kubejs:bronze_hand'
     }).id('ico:deployer')
+
+    e.shaped('create_mechanical_extruder:mechanical_extruder', [
+        ' W ',
+        'IAI',
+        ' D '
+    ], {
+        W: 'kubejs:wooden_slide',
+        D: 'create:mechanical_drill',
+        A: 'create:andesite_alloy_block',
+        I: '#forge:plates/wrought_iron'
+    }).id('ico:mechanical_extruder')
 
     //see custom_recipe/item_application.js for the rest
 

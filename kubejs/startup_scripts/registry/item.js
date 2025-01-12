@@ -85,6 +85,8 @@ StartupEvents.registry('item', e => {
     e.create('carbon_steel_ingot').texture('ico:item/ore/alloy/carbon_steel_ingot')
     e.create('carbon_steel_nugget').texture('ico:item/ore/alloy/carbon_steel_nugget')
 
+    e.create('screws').texture('ico:item/ore/alloy/screws')
+
     e.create('steel_balls').texture('ico:item/ore/alloy/steel_balls')
 
     //gemstone polishing

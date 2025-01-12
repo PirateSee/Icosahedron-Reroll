@@ -1,4 +1,20 @@
+// contains bronze level create machinery and alloying related recipes
+
 ServerEvents.recipes(e => {
+    //diamond
+    e.remove({id: 'spelunkery:diamond_grindstone'})
+
+    e.shaped('spelunkery:diamond_grindstone', [
+        ' D ',
+        'RSR',
+        'IDI'
+    ], {
+        D: 'spelunkery:rough_diamond_shard',
+        S: 'minecraft:polished_deepslate_slab',
+        R: '#forge:rods/iron',
+        I: '#forge:ingots/bronze'
+    }).id('ico:diamond_grindstone')
+
     //bronze
     e.remove([{id: 'thermal:fire_charge/bronze_ingot_4'}, {id: 'thermal:bronze_dust_4'}, {id:'create:item_application/copper_casing_from_log'}, {id:'create:item_application/copper_casing_from_wood'}])
 
@@ -39,7 +55,7 @@ ServerEvents.recipes(e => {
         e.recipes.createCutting(inter,inter)
 	]).transitionalItem(inter).loops(1).id('ico:bronze_tubing')
 
-    inter = 'kubejs:incomplete_bronze_parts'
+    /*inter = 'kubejs:incomplete_bronze_parts'
     e.recipes.create.sequenced_assembly([
 	    'kubejs:bronze_parts'
 	], 'create:fluid_tank', [
@@ -48,7 +64,7 @@ ServerEvents.recipes(e => {
         e.recipes.createCutting(inter,inter),
         e.recipes.createDeploying(inter, [inter, 'kubejs:bronze_tubing']),
         e.recipes.createPressing(inter,inter)
-	]).transitionalItem(inter).loops(3).id('ico:incomplete_bronze_parts')
+	]).transitionalItem(inter).loops(3).id('ico:incomplete_bronze_parts')*/
 
     e.recipes.create.deploying('create:fluid_pipe', ['#forge:plates/copper', '#forge:nuggets/copper'])
 
@@ -115,7 +131,7 @@ ServerEvents.recipes(e => {
     }).id('ico:brass_tunnel')
 
     //foundry
-    e.remove([{id: 'createmetallurgy:graphite'}, {id: 'createmetallurgy:foundry_basin'}, {id: 'createmetallurgy:foundry_lid'}, {id: 'createmetallurgy:casting_table'}, {id: 'createmetallurgy:casting_basin'}])
+    e.remove([{id: 'createmetallurgy:graphite'}, {id: 'createmetallurgy:foundry_basin'}, {id: 'createmetallurgy:foundry_lid'}, {id: 'createmetallurgy:glassed_foundry_lid'}, {id: 'createmetallurgy:casting_table'}, {id: 'createmetallurgy:casting_basin'}])
 
     e.recipes.create.mixing('2x createmetallurgy:graphite', ['3x #minecraft:coals', 'kubejs:andesite_slush']).id('ico:graphite')
 

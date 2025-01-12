@@ -6,7 +6,10 @@
     "subtitle": {
       "translate": "A spark of machinery"
     },
-    "description": [],
+    "description": [
+      "## - Andesite Age ---",
+      "--A spark of machinery--"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

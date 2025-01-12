@@ -114,4 +114,9 @@ StartupEvents.registry('fluid', e => {
     e.create('molten_invar')
         .stillTexture('ico:fluid/molten_invar/still')
         .flowingTexture('ico:fluid/flowing/molten_invar')
+
+    //other
+    e.create('blaze_petrol')
+        .stillTexture('ico:fluid/blaze_petrol/still')
+        .flowingTexture('ico:fluid/blaze_petrol/flowing')
 })

@@ -1,3 +1,6 @@
+// various recipes not nessarily related to one stage of the pack
+// lots of automation-related stuff
+
 ServerEvents.recipes(e => {
     //apoth recycling
 
@@ -29,7 +32,7 @@ ServerEvents.recipes(e => {
 
     e.recipes.create.crushing([Item.of('spelunkery:rough_lazurite_shard').withChance(0.8), Item.of('kubejs:raw_tin_nugget').withChance(0.6)], '#create:stone_types/limestone').id('ico:crush_limestone')
 
-    e.recipes.create.crushing([Item.of('spelunkery:raw_zinc_nugget').withChance(0.4), Item.of('spelunkery:raw_zinc_nugget').withChance(0.1), Item.of('vintageimprovements:vanadium_nugget').withChance(0.1)], '#create:stone_types/scoria').id('ico:crush_scoria')
+    e.recipes.create.crushing([Item.of('spelunkery:raw_zinc_nugget').withChance(0.3), Item.of('spelunkery:raw_zinc_nugget').withChance(0.1), Item.of('vintageimprovements:vanadium_nugget').withChance(0.1)], '#create:stone_types/scoria').id('ico:crush_scoria')
     e.recipes.create.crushing([Item.of('spelunkery:raw_copper_nugget').withChance(0.6), Item.of('vintageimprovements:sulfur_chunk').withChance(0.05)], '#create:stone_types/scorchia').id('ico:crush_scorchia')
 
     e.recipes.create.crushing([Item.of('vintageimprovements:vanadium_nugget').withChance(0.3), Item.of('vintageimprovements:vanadium_nugget').withChance(0.1)], '#create_dd:stone_types/basalt').id('ico:crush_basalt')
@@ -93,7 +96,7 @@ ServerEvents.recipes(e => {
     //create ores
     e.remove({id: /create:crushing\/[asurine|crimsite|veridium]*?/})
 
-    e.recipes.create.crushing([Item.of('kubejs:salpherite_ore').withChance(0.5), Item.of('spelunkery:raw_zinc_nugget').withChance(0.3)], '#create:stone_types/asurine').id('ico:asurine_recycling')
+    e.recipes.create.crushing([Item.of('kubejs:sphalerite_ore').withChance(0.5), Item.of('spelunkery:raw_zinc_nugget').withChance(0.3)], '#create:stone_types/asurine').id('ico:asurine_recycling')
     e.recipes.create.crushing([Item.of('kubejs:hematite_ore').withChance(0.6), Item.of('spelunkery:raw_iron_nugget').withChance(0.4)], '#create:stone_types/crimsite').id('ico:crimsite_recycling')
     e.recipes.create.crushing([Item.of('kubejs:malachite_ore').withChance(0.9), Item.of('spelunkery:raw_copper_nugget').withChance(0.8)], '#create:stone_types/veridium').id('ico:veridium_recycling')
 

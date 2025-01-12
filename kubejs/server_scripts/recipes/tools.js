@@ -1,3 +1,5 @@
+// contains tool recipes
+
 ServerEvents.recipes(e => {
     /*e.remove({id: 'minecraft:iron_pickaxe'})
     e.shaped(Item.of('tetra:modular_double', '{"double/basic_handle_material":"basic_handle/stick","double/basic_pickaxe_left_material":"basic_pickaxe/iron","double/basic_pickaxe_right_material":"basic_pickaxe/iron","double/handle":"double/basic_handle","double/head_left":"double/basic_pickaxe_left","double/head_right":"double/basic_pickaxe_right",id:"8c24714a-065d-426d-a7b1-18810159bd24"}'), [
@@ -94,4 +96,31 @@ ServerEvents.recipes(e => {
     tool_set('spruce', 'spruce', 'minecraft:spruce_planks')
     tool_set('jungle', 'jungle', 'minecraft:jungle_planks')
     tool_set('dark_oak', 'dark_oak', 'minecraft:dark_oak_planks')
+
+    e.shaped("minecraft:chainmail_boots", [
+        'T T',
+        'T T'
+    ], {
+        T: '#forge:ingots/tin'
+    }).id('ico:chainmail_boots')
+    e.shaped("minecraft:chainmail_leggings", [
+        'TTT',
+        'T T',
+        'T T'
+    ], {
+        T: '#forge:ingots/tin'
+    }).id('ico:chainmail_leggings')
+    e.shaped("minecraft:chainmail_chestplate", [
+        'T T',
+        'TTT',
+        'TTT'
+    ], {
+        T: '#forge:ingots/tin'
+    }).id('ico:chainmail_chestplate')
+    e.shaped("minecraft:chainmail_helmet", [
+        'TTT',
+        'T T'
+    ], {
+        T: '#forge:ingots/tin'
+    }).id('ico:chainmail_helmet')
 })

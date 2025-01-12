@@ -1,3 +1,5 @@
+// contains ae2 related recipes
+
 ServerEvents.recipes(e => {
 
     //resources

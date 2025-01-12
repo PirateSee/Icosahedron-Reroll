@@ -11,23 +11,18 @@ StartupEvents.registry('block', e => {
 		.tagBlock("mineable/axe")
 		.textureAll('ico:block/compacted_hardened_wood')
 
-    e.create("andesite_parts")
-		.mapColor("wood").stoneSoundType()
-		.hardness(3).resistance(4)
-		.tagBlock("mineable/axe").tagBlock("mineable/pickaxe")
-		.textureAll('ico:block/andesite_parts')
-
-    e.create("bronze_parts")
-		.mapColor("wood").stoneSoundType()
-		.hardness(3).resistance(4)
-		.tagBlock("mineable/axe").tagBlock("mineable/pickaxe")
-		.textureAll('ico:block/bronze_parts')
-
+    // components
     e.create("heavier_engineering_block")
 		.mapColor("iron").soundType(SoundType.METAL)
 		.hardness(3).resistance(4)
 		.tagBlock("mineable/pickaxe")
 		.textureAll('ico:block/heavier_engineering')
+    
+    e.create("aluminum_contacts")
+		.mapColor("iron").soundType(SoundType.METAL)
+		.hardness(3).resistance(4)
+		.tagBlock("mineable/pickaxe")
+		.textureAll('ico:block/aluminum_contacts')
 
     //storage
     e.create("pig_iron_block")
