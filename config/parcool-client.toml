@@ -21,7 +21,7 @@
 	#Enable animation of camera by Hang-Down
 	enable_camera_animation_hang-down = true
 	#Enable first-person-view animations
-	enable_fpv_animation = false
+	enable_fpv_animation = true
 
 	[Animations.Animators]
 		enable_BackwardWallJumpAnimator = true

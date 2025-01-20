@@ -1,6 +1,13 @@
 {
   "dependencies": [],
-  "tasks": {},
+  "tasks": {
+    "get_create_andesite_casing": {
+      "type": "heracles:item",
+      "item": "create:andesite_casing",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
@@ -8,7 +15,12 @@
     },
     "description": [
       "## - Andesite Age ---",
-      "--A spark of machinery--"
+      "--A spark of machinery--",
+      "<hr/>",
+      "<p><aqua><item item=\"create:andesite_casing\"/></aqua> is used for basic kinetic machinery. Make it by <gold>right-clicking </gold> <aqua><item item=\"minecraft:stripped_oak_log\">Stripped Logs</item></aqua> with <aqua><item item=\"kubejs:andesite_framing\"/></aqua>.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_andesite_casing\" quest=\"andesite_age\"/>"
     ],
     "groups": {
       "Section 2: Cog in the Machine": {

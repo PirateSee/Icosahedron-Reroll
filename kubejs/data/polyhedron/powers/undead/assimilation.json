@@ -1,0 +1,15 @@
+{
+    "name": "§a+§r§n Assimilation",
+    "description": "Eating rotten flesh heals you",
+    "type": "origins:modify_food",
+    "item_condition": {
+        "type": "origins:ingredient",
+        "ingredient": {
+            "item": "minecraft:rotten_flesh"
+        }
+    },
+    "entity_action": {
+        "type": "origins:heal",
+        "amount": 3
+    }
+}

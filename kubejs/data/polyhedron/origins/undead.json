@@ -1,0 +1,11 @@
+{
+    "name": "Undead",
+    "powers": [
+        "polyhedron:undead/assimilation",
+        "polyhedron:undead/slowheal",
+        "polyhedron:undead/undead",
+        "polyhedron:undead/solar_rad",
+        "polyhedron:undead/evade_light"
+    ],
+    "impact": 0
+}

@@ -3,7 +3,7 @@
 ServerEvents.recipes(e => {
 
     //resources
-    e.remove([{id: 'ae2:transform/fluix_crystals'}, {id: 'ae2:smelting/silicon_from_certus_quartz_dust'}, {id: 'ae2:blasting/silicon_from_certus_quartz_dust'}])
+    e.remove([{id: 'ae2:transform/fluix_crystals'}, {id: 'create:mxing/compact/ae2/fluix_crystal'}, {id: 'ae2:smelting/silicon_from_certus_quartz_dust'}, {id: 'ae2:blasting/silicon_from_certus_quartz_dust'}, {id: 'ae2:decorative/quartz_glass'}])
 
     e.custom({
         "type": "wizards_reborn:alchemy_machine",
@@ -112,7 +112,7 @@ ServerEvents.recipes(e => {
             "count": 1,
             "item": "ae2:engineering_processor"
         }
-    }).id('ico:engineering_processor')
+    }).id('ico:engineering_processor')    
 
     //cells
     e.remove([{id: 'ae2:network/cells/item_cell_housing'}, {id: 'ae2:network/cells/fluid_cell_housing'}])
@@ -138,7 +138,7 @@ ServerEvents.recipes(e => {
     })
 
     //network
-    e.remove([{id: 'ae2:network/parts/quartz_fiber'}, {id: 'ae2:network/blocks/inscribers'}, {id: 'ae2:network/blocks/storage_drive'}, {id: 'ae2:network/blocks/energy_energy_acceptor'}, {id: 'ae2:network/blocks/controller'}])
+    e.remove([{id: 'ae2:network/parts/quartz_fiber_part'}, {id: 'ae2:network/blocks/inscribers'}, {id: 'ae2:network/blocks/storage_drive'}, {id: 'ae2:network/blocks/energy_energy_acceptor'}, {id: 'ae2:network/blocks/controller'}])
     e.recipes.create.deploying('ae2:quartz_fiber', ['ae2:certus_quartz_dust', '#thermal:glass/hardened']).id('ico:quartz_fiber')
     
     e.custom({
@@ -157,7 +157,7 @@ ServerEvents.recipes(e => {
                 "tag": "forge:ingots/invar"
             },
             "F": {
-                "item": "thermal:machine_frame"
+                "item": "immersiveengineering:light_engineering"
             },
             "P": {
                 "item": "create:mechanical_press"
@@ -189,7 +189,7 @@ ServerEvents.recipes(e => {
                 "tag": "forge:ingots/invar"
             },
             "F": {
-                "item": "thermal:machine_frame"
+                "item": "immersiveengineering:light_engineering"
             },
             "P": {
                 "item": "ae2:engineering_processor"
@@ -218,7 +218,7 @@ ServerEvents.recipes(e => {
                 "tag": "forge:ingots/invar"
             },
             "F": {
-                "item": "thermal:machine_frame"
+                "item": "immersiveengineering:light_engineering"
             },
             "G": {
                 "item": "ae2:quartz_glass"
@@ -260,17 +260,17 @@ ServerEvents.recipes(e => {
         "wissen": 1000
     }).id('ico:controller')
 
-    e.recipes.createDeploying('ae2:1k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_1k'])
-    e.recipes.createDeploying('ae2:4k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_4k'])
-    e.recipes.createDeploying('ae2:16k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_16k'])
-    e.recipes.createDeploying('ae2:64k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_64k'])
-    e.recipes.createDeploying('ae2:256k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_256k'])
+    e.recipes.createDeploying('ae2:1k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_1k']).id('ico:deploy_1k_crafting_storage')
+    e.recipes.createDeploying('ae2:4k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_4k']).id('ico:deploy_4k_crafting_storage')
+    e.recipes.createDeploying('ae2:16k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_16k']).id('ico:deploy_16k_crafting_storage')
+    e.recipes.createDeploying('ae2:64k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_64k']).id('ico:deploy_64k_crafting_storage')
+    e.recipes.createDeploying('ae2:256k_crafting_storage', ['ae2:crafting_unit', 'ae2:cell_component_256k']).id('ico:deploy_256k_crafting_storage')
 
-    e.recipes.createDeploying('ae2:item_storage_cell_1k', ['ae2:item_cell_housing', 'ae2:cell_component_1k'])
-    e.recipes.createDeploying('ae2:item_storage_cell_4k', ['ae2:item_cell_housing', 'ae2:cell_component_4k'])
-    e.recipes.createDeploying('ae2:item_storage_cell_16k', ['ae2:item_cell_housing', 'ae2:cell_component_16k'])
-    e.recipes.createDeploying('ae2:item_storage_cell_64k', ['ae2:item_cell_housing', 'ae2:cell_component_64k'])
-    e.recipes.createDeploying('ae2:item_storage_cell_256k', ['ae2:item_cell_housing', 'ae2:cell_component_256k'])
+    e.recipes.createDeploying('ae2:item_storage_cell_1k', ['ae2:item_cell_housing', 'ae2:cell_component_1k']).id('ico:item_storage_cell_1k')
+    e.recipes.createDeploying('ae2:item_storage_cell_4k', ['ae2:item_cell_housing', 'ae2:cell_component_4k']).id('ico:item_storage_cell_4k')
+    e.recipes.createDeploying('ae2:item_storage_cell_16k', ['ae2:item_cell_housing', 'ae2:cell_component_16k']).id('ico:item_storage_cell_16k')
+    e.recipes.createDeploying('ae2:item_storage_cell_64k', ['ae2:item_cell_housing', 'ae2:cell_component_64k']).id('ico:item_storage_cell_64k')
+    e.recipes.createDeploying('ae2:item_storage_cell_256k', ['ae2:item_cell_housing', 'ae2:cell_component_256k']).id('ico:item_storage_cell_256k')
 
     e.recipes.createDeploying('ae2:fluid_storage_cell_1k', ['ae2:fluid_cell_housing', 'ae2:cell_component_1k'])
     e.recipes.createDeploying('ae2:fluid_storage_cell_4k', ['ae2:fluid_cell_housing', 'ae2:cell_component_4k'])
@@ -310,7 +310,16 @@ ServerEvents.recipes(e => {
         ]
     }).id('ico:crystallize_certus_quartz')
 
-    e.custom({
+    //disks
+    e.remove({id: /^ae2:network\/cells\/*?/})
+
+    e.recipes.create.compacting('ae2:cell_component_1k', ["ae2:logic_processor", "3x ae2:quartz_glass", "4x #forge:gems/certus_quartz", Fluid.of('create_enchantment_industry:experience', 2)]).id('ico:compact_cell_component_1k')
+    e.recipes.create.compacting('ae2:cell_component_4k', ["ae2:calculation_processor", "4x ae2:quartz_glass", "3x ae2:cell_component_1k", Fluid.of('create_enchantment_industry:experience', 4)]).id('ico:compact_cell_component_4k')
+    e.recipes.create.compacting('ae2:cell_component_16k', ["ae2:calculation_processor", "4x ae2:quartz_glass", "3x ae2:cell_component_4k", Fluid.of('create_enchantment_industry:experience', 8)]).id('ico:compact_cell_component_16k')
+    e.recipes.create.compacting('ae2:cell_component_64k', ["ae2:calculation_processor", "4x ae2:sky_dust", "3x ae2:cell_component_16k", Fluid.of('create_enchantment_industry:experience', 16)]).id('ico:compact_cell_component_64k')
+    e.recipes.create.compacting('ae2:cell_component_256k', ["ae2:calculation_processor", "4x ae2:sky_dust", "3x ae2:cell_component_64k", Fluid.of('create_enchantment_industry:experience', 32)]).id('ico:compact_cell_component_256k')
+
+    /*e.custom({
         "type": "wizards_reborn:arcane_iterator",
         "output": {
             "item": "ae2:cell_component_1k",
@@ -482,5 +491,5 @@ ServerEvents.recipes(e => {
                 "item": "ae2:sky_dust"
             }
         ]
-    }).id('ico:cell_component_256k')
+    }).id('ico:cell_component_256k')*/
 })

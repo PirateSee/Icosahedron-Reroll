@@ -3,13 +3,27 @@
     "metal_mixture",
     "sentient_fireplace"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_brass_ingot": {
+      "type": "heracles:item",
+      "item": "create:brass_ingot",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "text": ""
     },
-    "description": [],
+    "description": [
+      "## - Big Brass ---",
+      "--???--",
+      "<hr/>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_brass_ingot\" quest=\"big_brass\"/>"
+    ],
     "groups": {
       "Section 3: Deep in Flames": {
         "position": [

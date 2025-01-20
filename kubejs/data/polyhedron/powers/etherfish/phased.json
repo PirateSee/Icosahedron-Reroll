@@ -1,0 +1,22 @@
+{
+    "name": "§c-§r Phased",
+    "type": "origins:multiple",
+    "shield": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "origins:shields"
+            }
+        }
+    },
+    "resistance": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:armor_toughness",
+            "operation": "multiply_base",
+            "value": -0.25
+        },
+        "update_health": false
+    }
+}

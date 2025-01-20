@@ -48,13 +48,13 @@ ServerEvents.recipes(e => {
 
     //e.shapeless('create:large_cogwheel', ['create:cogwheel', 'kubejs:hardened_wood_planks']).id('ico:large_cogwheel_upgrade')
 
-    e.shaped('petrolsparts:coaxial_gear', [
+    /*e.shaped('petrolsparts:coaxial_gear', [
         'TTT',
         'T T',
         'TTT'
     ], {
         T: '#forge:nuggets/tin'
-    }).id('ico:coaxial_gear')
+    }).id('ico:coaxial_gear')*/
 
     e.shaped('create:cogwheel', [
         'TTT',
@@ -65,7 +65,21 @@ ServerEvents.recipes(e => {
         S: 'create:shaft'
     }).id('ico:cogwheel')
 
-    e.shaped('petrolsparts:large_coaxial_gear', [
+    let inter = 'kubejs:incomplete_wooden_slide'
+    e.recipes.create.sequenced_assembly([
+	    '5x create:cogwheel'
+	], '#forge:gears/tin', [
+		e.recipes.createDeploying(inter, [inter, 'create:shaft'])
+	]).transitionalItem(inter).loops(5).id('ico:cogwheels_from_gear')
+
+    inter = 'kubejs:incomplete_wooden_slide'
+    e.recipes.create.sequenced_assembly([
+	    '5x create:large_cogwheel'
+	], '#forge:gears/tin', [
+		e.recipes.createDeploying(inter, [inter, 'create:cogwheel'])
+	]).transitionalItem(inter).loops(5).id('ico:large_cogwheels_from_gear')
+
+    /*e.shaped('petrolsparts:large_coaxial_gear', [
         'TTT',
         'TIT',
         'TTT'   
@@ -79,7 +93,7 @@ ServerEvents.recipes(e => {
 	    'petrolsparts:coaxial_gear'
 	], '#forge:nuggets/tin', [
 		e.recipes.createDeploying(inter, [inter, '#forge:nuggets/tin'])
-	]).transitionalItem(inter).loops(7).id('ico:coaxial_gear_assembly')
+	]).transitionalItem(inter).loops(7).id('ico:coaxial_gear_assembly')*/
 
     e.remove([{id:'create:item_application/andesite_casing_from_log'}, {id:'create:item_application/andesite_casing_from_wood'}])
 

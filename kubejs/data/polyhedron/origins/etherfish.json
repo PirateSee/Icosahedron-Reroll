@@ -1,0 +1,18 @@
+{
+    "name": "Etherfish",
+    "description": "[Aquatic] [Nimble]\nAquatic life slightly out of phase with this world. Adapted to the seas, these creatures move effortlessly in both liqud and solid matter.",
+    "powers": [
+        "polyhedron:etherfish/phasedash",
+        "polyhedron:etherfish/phased",
+        "polyhedron:etherfish/solid_boyancy",
+        "polyhedron:etherfish/no_wall",
+        "origins:aquatic",
+        "origins:like_water",
+        "origins:conduit_power_on_land",
+        "origins:air_from_potions",
+        "origins:aquatic",
+        "origins:aqua_affinity",
+        "origins:water_breathing"
+    ],
+    "impact": 0
+}

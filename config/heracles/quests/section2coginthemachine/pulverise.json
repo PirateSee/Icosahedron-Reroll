@@ -2,13 +2,35 @@
   "dependencies": [
     "andesite_age"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_millstone": {
+      "type": "heracles:item",
+      "item": "create:millstone",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    },
+    "adv_create_millstone": {
+      "advancements": [
+        "create:millstone"
+      ],
+      "type": "heracles:advancement"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Reduced to dust"
     },
-    "description": [],
+    "description": [
+      "## - On the Grind ---",
+      "--Quick Polishing--",
+      "<hr/>",
+      "<p><aqua><item item=\"create:millstone\">Millstones</item></aqua> use rotational energy to crush and mill items. <gold>Throw items</gold> in the top, and <gold>right</gold> click to extract.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_millstone\" quest=\"pulverise\"/>",
+      "<task task=\"adv_create_millstone\" quest=\"pulverise\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

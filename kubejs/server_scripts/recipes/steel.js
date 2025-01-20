@@ -89,13 +89,15 @@ ServerEvents.recipes(e => {
     })
 
     //wiring
-    e.remove([{id: 'immersiveengineering:crafting/wirecoil_copper'}, {id: 'immersiveengineering:crafting/wirecoil_electrum'}])
+    e.remove([{id: 'immersiveengineering:crafting/wirecoil_copper'}, {id: 'immersiveengineering:crafting/wirecoil_electrum'}, {id: 'immersiveengineering:crafting/wirecoil_steel'}])
 
     let inter = 'kubejs:incomplete_andesite_parts'
     e.recipes.create.sequenced_assembly([
 	    'immersiveengineering:wirecoil_copper'
 	], 'createaddition:spool', [
 		e.recipes.createDeploying(inter, [inter, '#forge:wires/copper']),
+        e.recipes.createDeploying(inter, [inter, '#forge:wires/copper']),
+        e.recipes.createDeploying(inter, [inter, '#forge:wires/copper']),
         e.recipes.createDeploying(inter, [inter, '#forge:wires/copper'])
 	]).transitionalItem(inter).loops(1).id('ico:wirecoil_copper')
 
@@ -106,6 +108,7 @@ ServerEvents.recipes(e => {
 	    'immersiveengineering:wirecoil_electrum'
 	], 'createaddition:spool', [
 		e.recipes.createDeploying(inter, [inter, '#forge:wires/electrum']),
+        e.recipes.createDeploying(inter, [inter, '#forge:wires/electrum']),
         e.recipes.createDeploying(inter, [inter, '#forge:wires/electrum']),
         e.recipes.createDeploying(inter, [inter, '#forge:wires/electrum'])
 	]).transitionalItem(inter).loops(1).id('ico:wirecoil_electrum')
@@ -125,14 +128,200 @@ ServerEvents.recipes(e => {
     //connectors
     e.remove([{id: 'immersiveengineering:crafting/connector_lv'}, {id: 'immersiveengineering:crafting/relay_lv'},{id: 'immersiveengineering:crafting/connector_mv'}, {id: 'immersiveengineering:crafting/relay_mv'},{id: 'immersiveengineering:crafting/connector_hv'}, {id: 'immersiveengineering:crafting/relay_hv'}])
 
-    e.recipes.create.deploying('immersiveengineering:connector_lv', ['#immersiveengineering:connector_insulator', '#forge:ingots/copper']).id('ico:connector_lv')
+    /*e.recipes.create.deploying('immersiveengineering:connector_lv', ['#immersiveengineering:connector_insulator', '#forge:ingots/copper']).id('ico:connector_lv')
     e.recipes.create.deploying('2x immersiveengineering:relay_lv', ['#immersiveengineering:connector_insulator', '#forge:rods/copper']).id('ico:relay_lv')
 
     e.recipes.create.deploying('immersiveengineering:connector_mv', ['#immersiveengineering:connector_insulator', '#forge:ingots/electrum']).id('ico:connector_mv')
     e.recipes.create.deploying('2x immersiveengineering:relay_mv', ['#immersiveengineering:connector_insulator', '#forge:rods/electrum']).id('ico:relay_mv')
 
     e.recipes.create.deploying('immersiveengineering:connector_mv', ['#ico:insulating_glass', '#forge:ingots/aluminum']).id('ico:connector_hv')
-    e.recipes.create.deploying('2x immersiveengineering:relay_mv', ['#ico:insulating_glass', '#forge:rods/aluminum']).id('ico:relay_hv')
+    e.recipes.create.deploying('2x immersiveengineering:relay_mv', ['#ico:insulating_glass', '#forge:rods/aluminum']).id('ico:relay_hv')*/
+
+    e.custom({
+        "type": "immersiveengineering:blueprint",
+        "category": "components",
+        "inputs": [
+            {
+                "base_ingredient": {
+                    "tag": "forge:rods/copper"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "immersiveengineering:connector_insulator"
+                },
+                "count": 2
+            },
+            {
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 1
+            }
+        ],
+        "result": {
+            "count": 1,
+            "item": "immersiveengineering:connector_lv"
+        }
+    }).id('ico:connector_lv')
+
+    e.custom({
+        "type": "immersiveengineering:blueprint",
+        "category": "components",
+        "inputs": [
+            {
+                "base_ingredient": {
+                    "tag": "forge:plates/copper"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "immersiveengineering:connector_insulator"
+                },
+                "count": 2
+            },
+            {
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 2
+            }
+        ],
+        "result": {
+            "count": 2,
+            "item": "immersiveengineering:connector_lv_relay"
+        }
+    }).id('ico:connector_lv_relay')
+
+    e.custom({
+        "type": "immersiveengineering:blueprint",
+        "category": "components",
+        "inputs": [
+            {
+                "base_ingredient": {
+                    "tag": "forge:rods/electrum"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "immersiveengineering:connector_insulator"
+                },
+                "count": 2
+            },
+            {
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 1
+            }
+        ],
+        "result": {
+            "count": 1,
+            "item": "immersiveengineering:connector_mv"
+        }
+    }).id('ico:connector_mv')
+
+    e.custom({
+        "type": "immersiveengineering:blueprint",
+        "category": "components",
+        "inputs": [
+            {
+                "base_ingredient": {
+                    "tag": "forge:plates/electrum"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "immersiveengineering:connector_insulator"
+                },
+                "count": 2
+            },
+            {
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 2
+            }
+        ],
+        "result": {
+            "count": 2,
+            "item": "immersiveengineering:connector_mv_relay"
+        }
+    }).id('ico:connector_mv_relay')
+
+    e.custom({
+        "type": "immersiveengineering:blueprint",
+        "category": "components",
+        "inputs": [
+            {
+                "base_ingredient": {
+                    "tag": "forge:rods/aluminum"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "forge:rods/steel"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "ico:insulating_glass"
+                },
+                "count": 2
+            },
+            {
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 2
+            }
+        ],
+        "result": {
+            "count": 1,
+            "item": "immersiveengineering:connector_hv"
+        }
+    }).id('ico:connector_hv')
+
+    e.custom({
+        "type": "immersiveengineering:blueprint",
+        "category": "components",
+        "inputs": [
+            {
+                "base_ingredient": {
+                    "tag": "forge:plates/aluminum"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "forge:plates/steel"
+                },
+                "count": 1
+            },
+            {
+                "base_ingredient": {
+                    "tag": "ico:insulating_glass"
+                },
+                "count": 2
+            },
+            {
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 8
+            }
+        ],
+        "result": {
+            "count": 4,
+            "item": "immersiveengineering:connector_hv_relay"
+        }
+    }).id('ico:connector_hv_relay')
 
     //misc wires
     e.remove([{id: 'immersiveengineering:crafting/wirecoil_structure_rope'}, {id: 'immersiveengineering:crafting/wirecoil_structure_steel'}, {id: 'immersiveengineering:crafting/wirecoil_redstone'}])
@@ -186,8 +375,10 @@ ServerEvents.recipes(e => {
                 "tag": "forge:ingots/nickel"
             },
             {
-                "item": "kubejs:screws",
-                "count": 2
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 3
             }
         ],
         "result": {
@@ -206,11 +397,13 @@ ServerEvents.recipes(e => {
                 "count": 4
             },
             {
-                "tag": "forge:ingots/aluminum"
+                "tag": "forge:ingots/invar"
             },
             {
-                "item": "kubejs:screws",
-                "count": 2
+                "base_ingredient": {
+                    "item": "kubejs:screws"
+                },
+                "count": 3
             }
         ],
         "result": {
@@ -219,14 +412,14 @@ ServerEvents.recipes(e => {
     }).id('ico:component_steel')
 
     //multiblocks
-    e.remove([{id:'immersiveengineering:crafting/light_engineering'}, {id:'immersiveengineering:crafting/rs_engineering'}, {id:'immersiveengineering:crafting/heavy_engineering'}, {id:'immersiveengineering:crafting/steel_scaffolding_standard'}, {id:'immersiveengineering:crafting/alu_scaffolding_standard'}])
+    e.remove([{id:'immersiveengineering:crafting/light_engineering'}, {id:'immersiveengineering:crafting/rs_engineering'}, {id:'immersiveengineering:crafting/heavy_engineering'}, {id:'immersiveengineering:crafting/steel_scaffolding_standard'}, {id:'immersiveengineering:crafting/alu_scaffolding_standard'}, {id:'immersiveengineering:crafting/blastfurnace_preheater'}])
 
     e.shaped('2x immersiveengineering:light_engineering', [
         'SCS',
         'CNC',
         'SCS'
     ], {
-        S: 'immersiveengineering:sheetmetal_steel',
+        S: 'immersiveengineering:sheetmetal_iron',
         C: 'immersiveengineering:component_iron',
         N: 'create:precision_mechanism'
     }).id('ico:light_engineering')
@@ -246,7 +439,7 @@ ServerEvents.recipes(e => {
         'CNC',
         'SCS'
     ], {
-        S: 'immersiveengineering:sheetmetal_aluminum',
+        S: 'immersiveengineering:sheetmetal_steel',
         C: 'immersiveengineering:component_steel',
         N: 'create:precision_mechanism'
     }).id('ico:heavy_engineering')
@@ -269,10 +462,20 @@ ServerEvents.recipes(e => {
         C: 'kubejs:screws'
     }).id('ico:alu_scaffolding_standard')
 
+    e.shaped('immersiveengineering:blastfurnace_preheater', [
+        'SS',
+        'SS',
+        'FH'
+    ], {
+        H: 'immersiveengineering:external_heater',
+        F: 'create:encased_fan',
+        S: 'immersiveengineering:sheetmetal_steel'
+    }).id('ico:blastfurnace_preheater')
+
     //thermal machinery
     e.remove([{id: 'thermal:machine_frame'}, {id: 'thermal:rf_coil'}, {id: 'thermal:machine_refinery'}, {id: 'thermal:machine_crystallizer'}, {id: 'thermal:machine_chiller'}, {id: 'thermal:machine_smelter'}])
 
-    e.recipes.shaped('thermal:machine_frame', [
+    /*e.recipes.shaped('thermal:machine_frame', [
         'SAS',
         'AGA',
         'SAS'
@@ -280,7 +483,7 @@ ServerEvents.recipes(e => {
         A: 'create:andesite_alloy',
         S: '#forge:plates/steel',
         G: '#forge:gears/invar'
-    }).id('ico:machine_frame')
+    }).id('ico:machine_frame')*/
 
     e.recipes.create.deploying('thermal:rf_coil', ['#forge:rods/electrum', 'minecraft:redstone'])
 
@@ -432,4 +635,106 @@ ServerEvents.recipes(e => {
             "fluid": "kubejs:molten_aluminum"
         }
     }).id('ico:crystalize_aluminum')
+
+    e.shaped('kubejs:aluminum_contacts', [
+        'SCS',
+        'CNC',
+        'SCS'
+    ], {
+        S: 'immersiveengineering:sheetmetal_aluminum',
+        C: '#forge:plates/aluminum',
+        N: 'create:electron_tube'
+    }).id('ico:aluminum_contacts')
+
+    //duroplast
+    e.remove([{id:'immersiveengineering:refinery/resin'}, {id:'immersiveengineering:bottling/duroplast_plate'}, {id:'immersiveengineering:bottling/duroplast_block'}])
+    e.custom({
+        "type": "createdieselgenerators:distillation",
+        "ingredients": [
+            {
+                "fluidTag": "forge:creosote",
+                "amount": 100
+            }
+        ],
+        "heatRequirement": "heated",
+        "processingTime": 100,
+        "results": [
+            {
+                "fluid": "kubejs:phenol",
+                "amount": 50
+            },
+            {
+                "fluid": "kubejs:cresol",
+                "amount": 50
+            }
+        ]
+    })
+
+    e.custom({
+        "type": "immersiveengineering:refinery",
+        "energy": 240,
+        "input0": {
+            "amount": 12,
+            "tag": "forge:acetaldehyde"
+        },
+        "input1": {
+            "amount": 8,
+            "tag": "forge:phenol"
+        },
+        "result": {
+            "amount": 8,
+            "fluid": "immersiveengineering:phenolic_resin"
+        }
+    }).id('ico:phenolic_resin')
+
+    e.custom({
+        "type": "immersiveengineering:bottling_machine",
+        "fluid": {
+            "amount": 250,
+            "tag": "forge:phenolic_resin"
+        },
+        "inputs": [
+            {
+                "item": 'createmetallurgy:graphite_plate_mold'
+            },
+            {
+                "item": 'minecraft:paper'
+            }
+        ],
+        "results": [
+            {
+                "item": "immersiveengineering:plate_duroplast"
+            },
+            {
+                "item": 'createmetallurgy:graphite_plate_mold'
+            }
+        ]
+    }).id('ico:duroplast_sheet')
+
+    e.custom({
+        "type": "immersiveengineering:bottling_machine",
+        "fluid": {
+            "amount": 1000,
+            "tag": "forge:phenolic_resin"
+        },
+        "inputs": [
+            {
+                "item": 'immersiveengineering:mold_packing_4'
+            },
+            {
+                "base_ingredient": {
+                    "item": 'minecraft:paper'
+                },
+                "count": 4
+            },
+        ],
+        "results": [
+            {
+                "item": "immersiveengineering:duroplast"
+            },
+            {
+                "item": 'immersiveengineering:mold_packing_4'
+            }
+        ]
+    }).id('ico:duroplast')
 })

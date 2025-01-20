@@ -7,7 +7,7 @@
   "rewards": {},
   "display": {
     "subtitle": {
-      "text": ""
+      "translate": "A good coating"
     },
     "description": [],
     "groups": {
@@ -27,7 +27,7 @@
     },
     "icon_background": "heracles:textures/gui/quest_backgrounds/diamonds.png",
     "title": {
-      "translate": "Bio Plastics"
+      "translate": "Thermal Plastics"
     }
   },
   "settings": {

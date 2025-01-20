@@ -6,11 +6,18 @@
     "subtitle": {
       "translate": "Dark arts"
     },
-    "description": [],
+    "description": [
+      "## - Arts of the Soul ---",
+      "--Dark Arts--",
+      "<hr/>",
+      "",
+      "<hr/>",
+      "<task task=\"get_malum_soulstone\" quest=\"arts_of_the_soul\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          150,
+          180,
           -150
         ]
       }

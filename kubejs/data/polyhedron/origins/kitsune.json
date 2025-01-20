@@ -1,0 +1,11 @@
+{
+    "name": "Kitsune",
+    "description": "Kitsune are fox spirits with paranormal abilities",
+    "powers": [
+        "polyhedron:kitsune/above",
+        "polyhedron:kitsune/fluffy",
+        "polyhedron:kitsune/pounce",
+        "polyhedron:kitsune/panic"
+    ],
+    "impact": 0
+}

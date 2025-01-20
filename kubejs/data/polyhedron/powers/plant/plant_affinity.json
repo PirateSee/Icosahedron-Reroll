@@ -1,0 +1,31 @@
+{
+    "name": "§a+ §r§nPlant Affinity",
+    "description": "Take less fall damage when landing on plants or grassy surfaces. Berry bushes don't hurt you.",
+    "type": "origins:multiple",
+    "fall": {
+        "condition": {
+            "type": "origins:block_collision",
+            "block_condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "forge:plant"
+                    },
+                    {
+                        "type": "origins:in_tag",
+                        "tag": "minecraft:dirt"
+                    }
+                ]
+            },
+            "offset_x": 0,
+            "offset_y": -0.5,
+            "offset_z": 0
+        },
+        "type": "origins:modify_damage_taken",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.75
+        }
+    }
+}

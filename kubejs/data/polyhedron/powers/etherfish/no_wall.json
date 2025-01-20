@@ -1,0 +1,17 @@
+{
+    "hidden": true,
+    "condition": {
+        "type": "origins:air",
+        "comparison": ">",
+        "compare_to": 0
+    },
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:name",
+        "name": "inWall"
+    },
+    "modifier": {
+        "operation": "set_total",
+        "value": 0
+    }
+}

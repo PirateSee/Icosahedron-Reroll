@@ -1,0 +1,9 @@
+{
+    "origins": [
+        "polyhedron:etherfish",
+        "polyhedron:kitsune",
+        "polyhedron:undead",
+        "polyhedron:plant"
+    ],
+    "enabled": true
+}

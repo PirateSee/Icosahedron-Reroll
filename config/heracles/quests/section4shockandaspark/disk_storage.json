@@ -19,7 +19,7 @@
     },
     "icon": {
       "item": {
-        "id": "ae2:item_storage_cell_4k",
+        "id": "ae2:drive",
         "count": 1
       },
       "type": "heracles:item"

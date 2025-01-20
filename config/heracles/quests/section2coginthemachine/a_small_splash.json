@@ -2,13 +2,27 @@
   "dependencies": [
     "bronze_age"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_spout": {
+      "type": "heracles:item",
+      "item": "create:spout",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Like a waterpark"
     },
-    "description": [],
+    "description": [
+      "## - A Small Splash ---",
+      "--Like a waterpark--",
+      "<hr/>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_spout\" quest=\"a_small_splash\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

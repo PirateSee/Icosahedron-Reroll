@@ -1,5 +1,7 @@
 {
-  "dependencies": [],
+  "dependencies": [
+    "gemstone_polishing"
+  ],
   "tasks": {},
   "rewards": {},
   "display": {
@@ -12,7 +14,7 @@
     "groups": {
       "Section 3: Deep in Flames": {
         "position": [
-          -120,
+          -90,
           150
         ]
       }

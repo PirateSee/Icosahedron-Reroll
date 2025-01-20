@@ -2,13 +2,34 @@
   "dependencies": [
     "bronze_age"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_steam_engine": {
+      "type": "heracles:item",
+      "item": "create:steam_engine",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    },
+    "adv_create_steam_engine": {
+      "advancements": [
+        "create:steam_engine"
+      ],
+      "type": "heracles:advancement"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Just add water"
     },
-    "description": [],
+    "description": [
+      "## - Full Steam Ahead ---",
+      "--Just add water--",
+      "<hr/>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_steam_engine\" quest=\"full_steam_ahead\"/>",
+      "<task task=\"adv_create_steam_engine\" quest=\"full_steam_ahead\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

@@ -2,14 +2,32 @@
   "dependencies": [
     "the_sieve"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_minecraft_iron_ingot": {
+      "type": "heracles:item",
+      "item": "minecraft:iron_ingot",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Riches from rock"
     },
     "description": [
-      "cassiterite, limonite, sphalerite"
+      "## - Crude Ore Processing ---",
+      "--Riches from rock--",
+      "<hr/>",
+      "",
+      "Through crude ore processing, /6/usable metals can be extracted/6/ from /b/crude ores/b/. These ores are not pure, but contain /b/more valuable materials/b/.",
+      "",
+      "<p>Process <aqua><item item=\"kubejs:cassiterite_ore\"/></aqua>, <aqua><item item=\"kubejs:limonite_ore\"/></aqua>, and <aqua> <item item=\"kubejs:sphalerite_ore\"/></aqua> into <aqua><item item=\"thermal:tin_ingot\">Tin</item></aqua>, <aqua><item item=\"minecraft:iron_ingot\">Iron</item></aqua>, and <aqua> <item item=\"create:zinc_ingot\">Zinc</item></aqua> respectively.</p>",
+      "",
+      "<p>Crude ore first has to be <gold><item item=\"create:millstone\">milled</item></gold> into a dust. The dirty dust needs to be <gold><item item=\"createsifter:sifter\">sifted</item></gold> through an <aqua><item item=\"createsifter:andesite_mesh\"/></aqua> to seperate the metals. <gold><item item=\"create:mechanical_press\">Compact</item></gold> the dust and smelt.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_minecraft_iron_ingot\" quest=\"crude_ore_processing\"/>"
     ],
     "groups": {
       "Section 2: Cog in the Machine": {

@@ -1,0 +1,106 @@
+{
+    "name": "§8o§r§n Fluffy Stature",
+    "description": "Take less fall damage. Walk across the softest of snows",
+    "type": "origins:multiple",
+    "resist": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "minecraft:fall"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": 0.75,
+            "name": "Fluffy"
+        }
+    },
+    "snowwalk_0": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block_collision",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:powder_snow"
+                    },
+                    "offset_x": 0,
+                    "offset_y": -0.01,
+                    "offset_z": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:block_collision",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:powder_snow"
+                    },
+                    "offset_x": 0,
+                    "offset_y": 0,
+                    "offset_z": 0
+                }
+            ]
+        },
+        "type": "origins:modify_velocity",
+        "modifiers": [
+            {
+                "operation": "set_base",
+                "value": 0
+            }
+        ],
+        "axes": [
+            "y"
+        ]
+    },
+    "snowalk_1": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block_collision",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:powder_snow"
+                    },
+                    "offset_x": 0,
+                    "offset_y": -0.01,
+                    "offset_z": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:block_collision",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:powder_snow"
+                    },
+                    "offset_x": 0,
+                    "offset_y": 0,
+                    "offset_z": 0
+                }
+            ]
+        },
+        "type": "origins:grounded"
+    },
+    "snowwalk_2": {
+        "condition": {
+            "type": "origins:block_collision",
+            "block_condition": {
+                "type": "origins:block",
+                "block": "minecraft:powder_snow"
+            },
+            "offset_x": 0,
+            "offset_y": 0,
+            "offset_z": 0
+        },
+        "type": "origins:modify_velocity",
+        "modifiers": [
+            {
+                "operation": "addition",
+                "value": 0.09
+            }
+        ],
+        "axes": [
+            "y"
+        ]
+    }
+}

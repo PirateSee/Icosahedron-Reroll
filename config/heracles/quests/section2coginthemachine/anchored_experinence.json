@@ -2,13 +2,28 @@
   "dependencies": [
     "bronze_age"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_enchantment_industry_": {
+      "type": "heracles:item",
+      "item": "create_enchantment_industry:disenchanter",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Save what is learned"
     },
-    "description": [],
+    "description": [
+      "## - Anchored Experinence ---",
+      "--Save what is learned--",
+      "<hr/>",
+      "<p>The <aqua><item item=\"create_enchantment_industry:disenchanter\"/></aqua> can pull <aqua>Liquid Experience</aqua> from players and items on top of it. This experience can then be stored for later use. <gold>Pump the experience out a leaky pipe end</gold> to collect it as orbs.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_enchantment_industry_\" quest=\"anchored_experinence\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

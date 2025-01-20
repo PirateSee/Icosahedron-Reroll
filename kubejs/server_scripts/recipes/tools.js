@@ -123,4 +123,26 @@ ServerEvents.recipes(e => {
     ], {
         T: '#forge:ingots/tin'
     }).id('ico:chainmail_helmet')
+
+    e.remove([{id:'minecraft:bucket'}, {id:'bclib:tag_bucket'}])
+
+    e.shaped('minecraft:bucket', [
+        'I I',
+        ' I '
+    ], {
+        I: '#forge:ingots/tin'
+    }).id('ico:bucket')
+
+    e.remove({id: 'apotheosis:salvaging_table'})
+    e.shaped('apotheosis:salvaging_table', [
+        'III',
+        'CTC',
+        'GLG'
+    ], {
+        I: '#forge:ingots/bronze',
+        G: 'apotheosis:gem_dust',
+        L: 'minecraft:lava_bucket',
+        C: 'create:cogwheel',
+        T: 'minecraft:smithing_table'
+    }).id('ico:salvaging_table')
 })

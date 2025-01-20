@@ -2,13 +2,36 @@
   "dependencies": [
     "deafening_clang"
   ],
-  "tasks": {},
+  "tasks": {
+    "adv_create_mechanical_mixer": {
+      "advancements": [
+        "create:mechanical_mixer"
+      ],
+      "type": "heracles:advancement"
+    },
+    "get_create_mechanical_mixer": {
+      "type": "heracles:item",
+      "item": "create:mechanical_mixer",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Stir the pot"
     },
-    "description": [],
+    "description": [
+      "## - Mixing it up ---",
+      "--Stir the pot--",
+      "<hr/>",
+      "<p>The <aqua><item item=\"create:mechanical_mixer\"/></aqua> requires a <aqua><item item=\"create:basin\"/></aqua> underneath it, from which it will process items in.</p>",
+      "",
+      "<p>It has a <red>minimum RPM requirement</red>. If you do not meet the required RPM requirement, <gold>gear up</gold> using <aqua><item item=\"create:large_cogwheel\">Large Cogwheels</item></aqua>.</p>",
+      "<hr/>",
+      "<task task=\"get_create_mechanical_mixer\" quest=\"mixing_it_up\"/>",
+      "<task task=\"adv_create_mechanical_mixer\" quest=\"mixing_it_up\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

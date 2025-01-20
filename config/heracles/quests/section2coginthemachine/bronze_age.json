@@ -1,14 +1,44 @@
 {
   "dependencies": [
+    "but_a_spark",
     "crude_ore_processing"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_copper_casing": {
+      "type": "heracles:item",
+      "item": "create:copper_casing",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    },
+    "get_create_deployer": {
+      "type": "heracles:item",
+      "item": "create:deployer",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Fluid Dynamics"
     },
-    "description": [],
+    "description": [
+      "## - Bronze Age ---",
+      "--Fluid dynamics--",
+      "<hr/>",
+      "",
+      "<p>Make <aqua><item item=\"thermal:bronze_ingot\">Bronze</item></aqua> with a <aqua><item item=\"create:mechanical_mixer\"/></aqua> heated by a <aqua><item item=\"createlowheated:basic_burner\"/></aqua> make <aqua><item item=\"thermal:bronze_dust\"/></aqua>, which can be smelted into ingots.</p>",
+      "",
+      "<p>Similar to <aqua><item item=\"create:andesite_casing\"/></aqua>, <aqua><item item=\"thermal:bronze_plate\">Bronze Plates</item></aqua> can be used to make <aqua><item item=\"create:copper_casing\"/></aqua> for use in fluid-related machinery.</p>",
+      "",
+      "<p>Addtionaly, the <aqua><item item=\"create:deployer\"/></aqua> can be used to <gold>interact with the enviroment</gold> the same way a player could. It can also <gold>process items</gold> sitting on a <aqua><item item=\"create:depot\"/></aqua> or <aqua><item item=\"create:belt_connector\"/></aqua>.</p>",
+      "",
+      "These new machines will help you construct more complex automation systems.",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_copper_casing\" quest=\"bronze_age\"/>",
+      "<task task=\"get_create_deployer\" quest=\"bronze_age\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

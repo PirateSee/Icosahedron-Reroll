@@ -26,6 +26,9 @@ StartupEvents.registry('fluid', e => {
     e.create('impure_invar')
         .stillTexture('ico:fluid/impure_invar')
         .flowingTexture('ico:fluid/impure_invar/flowing')
+    e.create('impure_constantan')
+        .stillTexture('ico:fluid/impure_constantan')
+        .flowingTexture('ico:fluid/impure_constantan/flowing')
 
     e.create('hematite_slurry')
         .stillTexture('ico:fluid/hematite_slurry')
@@ -64,6 +67,13 @@ StartupEvents.registry('fluid', e => {
     e.create('red_mud')
         .stillTexture('ico:fluid/red_mud')
         .flowingTexture('ico:fluid/red_mud/flowing')
+
+    e.create('cresol')
+        .stillTexture('ico:fluid/cresol')
+        .flowingTexture('ico:fluid/cresol/flowing')
+    e.create('phenol')
+        .stillTexture('ico:fluid/phenol')
+        .flowingTexture('ico:fluid/phenol/flowing')
         
     //natural
     e.create('runic_sap')
@@ -76,7 +86,7 @@ StartupEvents.registry('fluid', e => {
 
     //molten
     //base
-    e.create('molten_tin')
+    /*e.create('molten_tin')
         .stillTexture('ico:fluid/molten_tin/still')
         .flowingTexture('ico:fluid/molten_tin/flowing')
     e.create('molten_silver')
@@ -84,15 +94,15 @@ StartupEvents.registry('fluid', e => {
         .flowingTexture('ico:fluid/molten_silver/flowing')
     e.create('molten_nickel')
         .stillTexture('ico:fluid/molten_nickel/still')
-        .flowingTexture('ico:fluid/molten_nickel/flowing')
+        .flowingTexture('ico:fluid/molten_nickel/flowing')*/
     e.create('molten_aluminum')
         .stillTexture('ico:fluid/molten_aluminum/still')
         .flowingTexture('ico:fluid/molten_aluminum/flowing')
         
     //alloy
-    e.create('molten_bronze')
+    /*e.create('molten_bronze')
         .stillTexture('ico:fluid/molten_bronze/still')
-        .flowingTexture('ico:fluid/molten_bronze/flowing')
+        .flowingTexture('ico:fluid/molten_bronze/flowing')*/
     e.create('molten_rose_gold')
         .stillTexture('ico:fluid/molten_rose_gold/still')
         .flowingTexture('ico:fluid/flowing/molten_rose_gold')
@@ -108,12 +118,12 @@ StartupEvents.registry('fluid', e => {
 		.stillTexture('ico:fluid/molten_carbon_steel/still')
 		.flowingTexture('ico:fluid/molten_carbon_steel/flowing')
 
-    e.create('molten_electrum')
+    /*e.create('molten_electrum')
         .stillTexture('ico:fluid/molten_electrum/still')
         .flowingTexture('ico:fluid/flowing/molten_electrum')
     e.create('molten_invar')
         .stillTexture('ico:fluid/molten_invar/still')
-        .flowingTexture('ico:fluid/flowing/molten_invar')
+        .flowingTexture('ico:fluid/flowing/molten_invar')*/
 
     //other
     e.create('blaze_petrol')

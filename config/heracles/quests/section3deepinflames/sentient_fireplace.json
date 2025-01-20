@@ -2,13 +2,33 @@
   "dependencies": [
     "blazing_depths"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_blaze_burner": {
+      "type": "heracles:item",
+      "item": "create:blaze_burner",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Probably not dangerous"
     },
-    "description": [],
+    "description": [
+      "<h2>- Sentient Fireplace ---</h2>",
+      "--Probably not dangerous--",
+      "<hr/>",
+      "/b/Blazes/b/ make great fireplaces. Works just fine as an industrial-grade heater. May violate workplace safety laws, but it's assumed that cage it's in keeps it safely locked up and working. There are no known instances of that thing escaping.",
+      "",
+      "<p>When the <aqua><item item=\"create:blaze_burner\"/></aqua> is fed with fuel, it starts burning brightly. This heat is enough to <red>cook you</red>, and also heat up <aqua><item item=\"create:basin\">Basins</item></aqua> for <gold>Mixing or Compacting</gold> or <aqua><item item=\"create:steam_engine\">Steam Engines</item></aqua>.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_blaze_burner\" quest=\"sentient_fireplace\"/>",
+      "<hr/>",
+      "Maybe put some heat insulation on your armor. Or just put some cold blocks to counteract it.",
+      "<reward reward=\"award_hoglin_hide\" quest=\"Blazing Heat\"/>"
+    ],
     "groups": {
       "Section 3: Deep in Flames": {
         "position": [

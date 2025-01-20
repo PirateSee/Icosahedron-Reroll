@@ -1,0 +1,97 @@
+{
+    "name": "§c-§r§n Solar Radiation",
+    "description": "Staying out in the sun too long sets you on fire",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 15,
+        "start_value": 0
+    },
+    "action": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:exposed_to_sun"
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:spawn_particles",
+                        "particle": "minecraft:flame",
+                        "count": 4,
+                        "spread": {
+                            "x": 1,
+                            "y": 1,
+                            "z": 1
+                        }
+                    },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "polyhedron:undead/solar_rad_resource",
+                        "change": 1,
+                        "operation": "add"
+                    },
+                    {
+                        "type": "origins:if_else_list",
+                        "actions": [
+                            {
+                                "condition": {
+                                    "type": "origins:resource",
+                                    "resource": "polyhedron:undead/solar_rad_resource",
+                                    "comparison": ">=",
+                                    "compare_to": 10
+                                },
+                                "action": {
+                                    "type": "origins:set_on_fire",
+                                    "duration": 7
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:resource",
+                                    "resource": "polyhedron:undead/solar_rad_resource",
+                                    "comparison": ">=",
+                                    "compare_to": 6
+                                },
+                                "action": {
+                                    "type": "origins:chance",
+                                    "chance": 0.5,
+                                    "action": {
+                                        "type": "origins:set_on_fire",
+                                        "duration": 6
+                                    }
+                                }
+                            },
+                            {
+                                "condition": {
+                                    "type": "origins:resource",
+                                    "resource": "polyhedron:undead/solar_rad_resource",
+                                    "comparison": ">=",
+                                    "compare_to": 2
+                                },
+                                "action": {
+                                    "type": "origins:chance",
+                                    "chance": 0.25,
+                                    "action": {
+                                        "type": "origins:set_on_fire",
+                                        "duration": 4
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "polyhedron:undead/solar_rad_resource",
+                "change": -2,
+                "operation": "add"
+            }
+        }
+    }
+}

@@ -1,5 +1,7 @@
 {
-  "dependencies": [],
+  "dependencies": [
+    "unchained_blight"
+  ],
   "tasks": {},
   "rewards": {},
   "display": {
@@ -10,8 +12,8 @@
     "groups": {
       "Section 3: Deep in Flames": {
         "position": [
-          117,
-          106
+          90,
+          60
         ]
       }
     },

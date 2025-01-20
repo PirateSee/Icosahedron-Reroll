@@ -1,19 +1,34 @@
 {
   "dependencies": [
-    "deafening_clang"
+    "crude_ore_processing"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_createlowheated_basic_burner": {
+      "type": "heracles:item",
+      "item": "createlowheated:basic_burner",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Ignition"
     },
-    "description": [],
+    "description": [
+      "## - But a Spark ---",
+      "--Ignition--",
+      "<hr/>",
+      "<p><aqua><item item=\"createlowheated:basic_burner\"/></aqua></p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_createlowheated_basic_burner\" quest=\"but_a_spark\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          30,
-          60
+          150,
+          -30
         ]
       }
     },

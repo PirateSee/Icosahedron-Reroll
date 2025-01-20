@@ -71,14 +71,14 @@ ServerEvents.recipes(e => {
     e.custom({
         "type": "wizards_reborn:alchemy_machine",
         "outputItem": {
-            "item": "ae2:arcacite",
+            "item": 'wizards_reborn:arcacite',
             "count": 1
         },
         "wissen": 200,
         "steam": 200,
         "ingredients": [
             {
-                "tag": "forge:gems/arcanum"
+                "item": "wizards_reborn:arcanum"
             },
             {
                 "item": "wizards_reborn:arcanum"
@@ -97,10 +97,6 @@ ServerEvents.recipes(e => {
             {
                 "name": "wizards_reborn:alchemy_oil",
                 "amount" : 250
-            },
-            {
-                "name": "create_enchantment_industry:experience",
-                "amount" : 10
             }
         ]
     }).id('ico:arcacite')

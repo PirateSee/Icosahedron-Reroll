@@ -2,7 +2,20 @@
   "dependencies": [
     "rocky_mixture"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_cogwheel": {
+      "type": "heracles:item",
+      "item": "create:cogwheel",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    },
+    "adv_create_water_wheel": {
+      "advancements": [
+        "create:water_wheel"
+      ],
+      "type": "heracles:advancement"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
@@ -10,7 +23,19 @@
     },
     "description": [
       "## - Roll Around ---",
-      "--Rotation Transportation--"
+      "--Rotation Transportation--",
+      "<hr/>",
+      "This is the basics of kinetic machinery.",
+      "",
+      "Holding /6/[W]/6/ on components from /b/Create/b/ will display ponder scenes, a mini 3d video-slideshow of the subject block. Ponder any new components you find to learn how to use them.",
+      "",
+      "<p>Make some <aqua><item item=\"create:shaft\">Shafts</item></aqua> and <aqua><item item=\"create:cogwheel\">Cogwheels</item></aqua>. <gold>Ponder</gold> them to learn how they connect things.</p>",
+      "",
+      "<p>You'll need a source of kinetic energy. Try a <aqua><item item=\"create:water_wheel\"/></aqua>.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_cogwheel\" quest=\"roll_around\"/>",
+      "<task task=\"adv_create_water_wheel\" quest=\"roll_around\"/>"
     ],
     "groups": {
       "Section 1: Rolling out": {

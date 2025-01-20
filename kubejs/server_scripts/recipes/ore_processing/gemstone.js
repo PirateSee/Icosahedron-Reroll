@@ -32,4 +32,6 @@ ServerEvents.recipes(e => {
 
     gemstone_polishing('spelunkery:rough_diamond', 'kubejs:uncut_diamond', 'kubejs:unrefined_diamond', 'minecraft:diamond', 'diamond')
     gemstone_polishing('kubejs:rough_aquatrine', 'kubejs:uncut_aquatrine', 'kubejs:unrefined_aquatrine', 'kubejs:aquatrine', 'aquatrine')
+    gemstone_polishing('kubejs:rough_skyjade', 'kubejs:uncut_skyjade', 'kubejs:unrefined_skyjade', 'deep_aether:skyjade', 'skyjade')
+    gemstone_polishing('kubejs:rough_arcanum', 'kubejs:uncut_arcanum', 'kubejs:unrefined_arcanum', 'wizards_reborn:arcanum', 'arcanum')
 })

@@ -1,0 +1,194 @@
+{
+    "name": "§a+§r Phase Wave",
+    "type": "origins:multiple",
+    "action": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:etherfish/phasedash_charges",
+            "comparison": ">=",
+            "compare_to": 20
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:etherfish/phasedash_phasetime",
+                    "change": 10,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:etherfish/phasedash_charges",
+                    "change": -20,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:add_velocity",
+                    "y": 0.3,
+                    "z": 1.6,
+                    "space": "local",
+                    "client": true,
+                    "server": true
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:raycast",
+                    "distance": 8,
+                    "block": false,
+                    "entity": true,
+                    "shape_type": "collider",
+                    "fluid_handling": "none",
+                    "bientity_action": {
+                        "type": "origins:and",
+                        "actions": [
+                            {
+                                "type": "origins:damage",
+                                "amount": 8,
+                                "damage_type": "minecraft:magic"
+                            },
+                            {
+                                "type": "origins:actor_action",
+                                "action": {
+                                    "type": "origins:gain_air",
+                                    "value": 80
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "cooldown": 40,
+        "key": {
+            "key": "key.origins.primary_active"
+        }
+    },
+    "phasetime": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 20,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "phase": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:etherfish/phasedash_phasetime",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:phasing",
+        "render_type": "blindness",
+        "view_distance": 6,
+        "phase_down_condition": {
+            "type": "origins:constant",
+            "value": true
+        }
+    },
+    "phasedrain": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:etherfish/phasedash_phasetime",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:etherfish/phasedash_phasetime",
+                    "change": -1,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "charges": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 140,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "recharge": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:fluid_height",
+                        "fluid": "minecraft:water",
+                        "comparison": ">=",
+                        "compare_to": 0.1
+                    },
+                    "action": {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:resource",
+                            "resource": "polyhedron:etherfish/phasedash_charges",
+                            "comparison": "<",
+                            "compare_to": 60
+                        },
+                        "if_action": {
+                            "type": "origins:change_resource",
+                            "resource": "polyhedron:etherfish/phasedash_charges",
+                            "change": 4,
+                            "operation": "add"
+                        }
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:in_rain"
+                    },
+                    "action": {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:resource",
+                            "resource": "polyhedron:etherfish/phasedash_charges",
+                            "comparison": "<",
+                            "compare_to": 40
+                        },
+                        "if_action": {
+                            "type": "origins:change_resource",
+                            "resource": "polyhedron:etherfish/phasedash_charges",
+                            "change": 2,
+                            "operation": "add"
+                        }
+                    }
+                },
+                {
+                    "action": {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:resource",
+                            "resource": "polyhedron:etherfish/phasedash",
+                            "comparison": "<",
+                            "compare_to": 20
+                        },
+                        "if_action": {
+                            "type": "origins:change_resource",
+                            "resource": "polyhedron:etherfish/phasedash",
+                            "change": 1,
+                            "operation": "add"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

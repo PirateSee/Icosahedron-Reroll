@@ -2,13 +2,30 @@
   "dependencies": [
     "crude_ore_processing"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_diamond_grindstone": {
+      "type": "heracles:item",
+      "item": "spelunkery:diamond_grindstone",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "Quick Polishing"
     },
-    "description": [],
+    "description": [
+      "## - On the Grind ---",
+      "--Quick Polishing--",
+      "<hr/>",
+      "<p><aqua><item item=\"spelunkery:rough_diamond\">Rough Diamonds</item></aqua> can be polished at a <aqua><item item=\"spelunkery:diamond_grindstone\"/></aqua> to turn them into usable gemstones.</p>",
+      "",
+      "<p>Continued use may wear out the grindstone. It can be re-sharpened by <gold>Shift-Right Clicking</gold> with a <aqua><item item=\"spelunkery:rough_diamond_shard\"/></aqua>.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_diamond_grindstone\" quest=\"on_the_grind\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

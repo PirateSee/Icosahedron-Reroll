@@ -82,4 +82,41 @@ ServerEvents.recipes(e => {
             }
         ]
     }).id('ico:runewood_totem_base')
+
+    //machines
+    e.remove({id: 'malum:spirit_infusion/spirit_crucible'})
+    e.custom({
+        "type": "malum:spirit_infusion",
+        "extra_items": [
+            {
+                "count": 2,
+                "item": "malum:hex_ash"
+            },
+            {
+                "count": 8,
+                "item": "malum:tainted_rock"
+            },
+            {
+                "count": 8,
+                "item": "malum:twisted_rock"
+            }
+        ],
+        "input": {
+            "count": 1,
+            "item": "create:blaze_burner"
+        },
+        "output": {
+            "item": "malum:spirit_crucible"
+        },
+        "spirits": [
+            {
+                "type": "infernal",
+                "count": 12
+            },
+            {
+                "type": "arcane",
+                "count": 4
+            }
+        ]
+    }).id('ico:spirit_crucible')
 })

@@ -197,7 +197,7 @@ ServerEvents.recipes(e => {
         }).id("ico:purify_" + material + "_slurry")
     }
 
-    advanced_ore_processing('hematite', 'createmetallurgy:molten_iron', 80, 'kubejs:molten_tin', 20, 'minecraft:glowstone_dust')
+    advanced_ore_processing('hematite', 'createmetallurgy:molten_iron', 80, 'createmetallurgy:molten_tin', 20, 'minecraft:glowstone_dust')
     advanced_ore_processing('malachite', 'createmetallurgy:molten_copper', 100, 'createmetallurgy:molten_gold', 20, 'spelunkery:rough_lazurite_chunk')
 
     //silver
@@ -289,7 +289,7 @@ ServerEvents.recipes(e => {
         "processingTime": 100,
         "results": [
             {
-                "fluid": 'kubejs:molten_silver',
+                "fluid": 'createmetallurgy:molten_silver',
                 "amount": 90
             },
             {

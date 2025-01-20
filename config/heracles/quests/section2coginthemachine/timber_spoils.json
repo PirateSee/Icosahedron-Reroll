@@ -1,6 +1,6 @@
 {
   "dependencies": [
-    "bronze_age"
+    "well_wrought"
   ],
   "tasks": {},
   "rewards": {},
@@ -27,7 +27,7 @@
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          210,
+          300,
           -30
         ]
       }

@@ -1,0 +1,11 @@
+{
+    "powers": [
+        "polyhedron:plant/plant_affinity",
+        "polyhedron:plant/berry_immune",
+        "polyhedron:plant/grapplevine",
+        "polyhedron:plant/leaf_phasing",
+        "polyhedron:plant/sleep_sky",
+        "polyhedron:plant/herbicide"
+    ],
+    "impact": 0
+}

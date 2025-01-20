@@ -33,7 +33,7 @@ ServerEvents.recipes(e => {
     item_application_craft('create:cogwheel', cog_upgrade_resource, 'create:large_cogwheel', 'ico:upgrade_cogwheel_large_cogwheel')
     //item_application_craft('extendedgears:shaftless_cogwheel', cog_upgrade_resource, 'extendedgears:large_shaftless_cogwheel', 'ico:upgrade_shaftless_cogwheel_large_shaftless_cogwheel')
     //item_application_craft('extendedgears:half_shaft_cogwheel', cog_upgrade_resource, 'extendedgears:large_half_shaft_cogwheel', 'ico:upgrade_half_shaft_cogwheel_large_half_shaft_cogwheel')
-    item_application_craft('petrolsparts:coaxial_gear', cog_upgrade_resource, 'petrolsparts:large_coaxial_gear', 'ico:upgrade_coxial_cogwheel_large_coxial_cogwheel')
+    //item_application_craft('petrolsparts:coaxial_gear', cog_upgrade_resource, 'petrolsparts:large_coaxial_gear', 'ico:upgrade_coxial_cogwheel_large_coxial_cogwheel')
 
     item_application_craft('create:gearbox', 'kubejs:sawblade', 'create:mechanical_saw', 'ico:mechanical_saw')
     item_application_craft('create:gearbox', 'kubejs:iron_drill', 'create:mechanical_drill', 'ico:mechanical_drill')

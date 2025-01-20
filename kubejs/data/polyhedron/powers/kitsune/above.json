@@ -1,0 +1,15 @@
+{
+    "name": "§a+§r§n From Above",
+    "description": "Deal more damage while falling",
+    "condition": {
+        "type": "origins:fall_distance",
+        "comparison": ">=",
+        "compare_to": 1
+    },
+    "type": "origins:modify_damage_dealt",
+    "modifier": {
+        "operation": "addition",
+        "value": 2,
+        "name": "From Above"
+    }
+}

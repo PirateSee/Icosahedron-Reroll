@@ -2,7 +2,14 @@
   "dependencies": [
     "cave_hopping"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_create_andesite_alloy": {
+      "type": "heracles:item",
+      "item": "create:andesite_alloy",
+      "amount": 4,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
@@ -11,8 +18,13 @@
     "description": [
       "## - Rocky Mixture ---",
       "--From what all kinetics are made--",
+      "<hr/>",
+      "<p><aqua><item item=\"create:andesite_alloy\"/></aqua> is an important base material for everything kinetic. You'll be needing a lot of this.</p>",
       "",
-      "/b/Andesite Alloy/b/"
+      "<p>Crush <aqua><item item=\"minecraft:andesite\"/></aqua> at a <gold><item item=\"tetra:basic_workbench\"/></gold> wth a <aqua>Hammer</aqua>. Take the crushed andesite, some <aqua><item item=\"thermal:tin_nugget\">Tin Nuggets</item></aqua>, and a <aqua><item item=\"minecraft:water_bucket\"/></aqua> to make a slush, which then must be <gold><item item=\"minecraft:furnace\">smelted</item></gold>.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_create_andesite_alloy\" quest=\"rocky_mixture\"/>"
     ],
     "groups": {
       "Section 1: Rolling out": {

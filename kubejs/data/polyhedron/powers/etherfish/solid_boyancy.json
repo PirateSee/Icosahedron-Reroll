@@ -1,0 +1,42 @@
+{
+    "name": "§a+§r Solid Bouancy",
+    "description": "Slowly float up through solid matter",
+    "type": "origins:multiple",
+    "up": {
+        "condition": {
+            "type": "origins:block_collision",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            },
+            "offset_x": 0,
+            "offset_y": 0,
+            "offset_z": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "tp ~ ~0.15 ~"
+        }
+    },
+    "hover": {
+        "condition": {
+            "type": "origins:block_collision",
+            "block_condition": {
+                "type": "origins:movement_blocking"
+            },
+            "offset_x": 0,
+            "offset_y": 0,
+            "offset_z": 0
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "forge:entity_gravity",
+            "operation": "multiply_total",
+            "value": -1,
+            "name": "Solid Boyancy"
+        },
+        "tick_rate": 2,
+        "update_health": false
+    }
+}

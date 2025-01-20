@@ -1,19 +1,38 @@
 {
-  "dependencies": [],
-  "tasks": {},
+  "dependencies": [
+    "crude_ore_processing"
+  ],
+  "tasks": {
+    "get_apotheosis_salvaging_table": {
+      "type": "heracles:item",
+      "item": "apotheosis:salvaging_table",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
-      "text": ""
+      "translate": "From riches to scrap"
     },
     "description": [
-      ""
+      "## - Rare Recovery ---",
+      "--From riches to scrap--",
+      "<hr/>",
+      "<p><aqua>Apothic Loot </aqua> can be scrapped at a <aqua><item item=\"apotheosis:salvaging_table\"/></aqua> to get rarity-based scraps. This scrap can either be <gold>salvaged further</gold> into raw materials, or used later to <gold>upgrade gemstones.</gold></p>",
+      "",
+      "<p><aqua><item item=\"apotheosis:gem_dust\"/></aqua> can be obtained by crushing <aqua>Apothic Gemstones</aqua> under a falling anvil, or more efficently done through the <aqua><item item=\"apotheosis:salvaging_table\"/></aqua> itself.</p>",
+      "",
+      "Other equipment can also be scraped into their composite materials.",
+      "",
+      "<hr/>",
+      "<task task=\"get_apotheosis_salvaging_table\" quest=\"rare_recovery\"/>"
     ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          151,
-          -30
+          120,
+          -60
         ]
       }
     },

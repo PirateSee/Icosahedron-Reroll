@@ -56,7 +56,7 @@ ServerEvents.recipes(e => {
     }).id('ico:fan_upgrade_kit_2')
 
     //machines
-    e.remove([{id: 'vintageimprovements:spring_coiling_machine'}, {id: 'vintageimprovements:coling_wheel'}, {id: 'vintageimprovements:compressor'}])
+    e.remove([{id: 'vintageimprovements:craft/spring_coiling_machine'}, {id: 'vintageimprovements:craft/coling_wheel'}, {id: 'vintageimprovements:craft/vacuum_chamber'}, {id: 'create:crafting/kinetics/encased_fan'}])
 
     e.shaped('vintageimprovements:spring_coiling_machine', [
         'H  ',
@@ -70,10 +70,10 @@ ServerEvents.recipes(e => {
     }).id('ico:spring_coiling_machine')
 
     e.shaped('vintageimprovements:vacuum_chamber', [
-        'HCH',
-        'SFS'
+        'SCS',
+        'HFH'
     ], {
-        S: '#forge:springs/iron',
+        S: '#vintageimprovements:springs/iron',
         F: 'create:mechanical_pump',
         C: 'create:brass_casing',
         H: '#forge:plates/wrought_iron'
@@ -123,7 +123,7 @@ ServerEvents.recipes(e => {
     e.remove({id: 'spelunkery:crushing/polished_cinnabar'})
 
     e.recipes.create.crushing(['thermal:cinnabar_dust', 'minecraft:redstone', Item.of('minecraft:redstone_dust').withChance(0.5)], '#forge:gems/cinnabar').id('ico:crush_cinnabar')
-    e.recipes.create.mixing('3x minecraft:redstone_dust', ['thermal:cinnabar_dust', Fluid.of('immersiveengineering:redstone_acid', 250)]).id('ico:cinnabar_disolve')
+    e.recipes.create.mixing(Item.of('minecraft:redstone_dust',3), ['thermal:cinnabar_dust', Fluid.of('immersiveengineering:redstone_acid', 250)]).id('ico:cinnabar_disolve')
 
     //advanced
     e.remove({id: 'create:sequenced_assembly/precision_mechanism'})

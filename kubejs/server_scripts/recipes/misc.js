@@ -4,15 +4,106 @@
 ServerEvents.recipes(e => {
     //apoth recycling
 
-    e.recipes.create.milling(['spelunkery:raw_iron_nugget', 'spelunkery:raw_copper_nugget', '2x kubejs:raw_tin_nugget', Item.of('spelunkery:raw_zinc_nugget').withChance(0.5)], 'apotheosis:common_material').id('ico:recycle_common')
-    e.recipes.create.milling(['minecraft:leather', 'minecraft:rabbit_hide'], 'apotheosis:uncommon_material').id('ico:recycle_uncommon')
-    e.recipes.create.milling(['7x hexcasting:amethyst_dust', '2x spelunkery:rough_emerald', '2x spelunkery:rough_diamond_shard', Item.of('spelunkery:rough_diamond_shard').withChance(0.5)], 'apotheosis:rare_material').id('ico:recycle_rare')
+    e.custom({
+        "type": "apotheosis:salvaging",
+        "input": {
+            "item": "apotheosis:common_material"
+        },
+        "outputs": [
+            {
+                "min_count": 1,
+                "max_count": 2,
+                "stack": {
+                    "item": "minecraft:raw_iron"
+                }
+            },
+            {
+                "min_count": 2,
+                "max_count": 5,
+                "stack": {
+                    "item": "minecraft:raw_copper"
+                }
+            },
+            {
+                "min_count": 1,
+                "max_count": 3,
+                "stack": {
+                    "item": "thermal:raw_tin"
+                }
+            }
+        ]
+    }).id('ico:salvage_common')
+
+    e.custom({
+        "type": "apotheosis:salvaging",
+        "input": {
+            "item": "apotheosis:uncommon_material"
+        },
+        "outputs": [
+            {
+                "min_count": 2,
+                "max_count": 3,
+                "stack": {
+                    "item": "minecraft:leather"
+                }
+            },
+            {
+                "min_count": 3,
+                "max_count": 5,
+                "stack": {
+                    "item": "minecraft:rabbit_hide"
+                }
+            }
+        ]
+    }).id('ico:recycle_uncommon')
+
+    e.custom({
+        "type": "apotheosis:salvaging",
+        "input": {
+            "item": "apotheosis:uncommon_material"
+        },
+        "outputs": [
+            {
+                "min_count": 6,
+                "max_count": 12,
+                "stack": {
+                    "item": "minecraft:amethyst_shard"
+                }
+            },
+            {
+                "min_count": 3,
+                "max_count": 8,
+                "stack": {
+                    "item": "spelunkery:rough_emerald"
+                }
+            },
+            {
+                "min_count": 2,
+                "max_count": 5,
+                "stack": {
+                    "item": "spelunkery:rough_diamond"
+                }
+            }
+        ]
+    }).id('ico:recycle_rare')
+
+    //apoth other
+    e.remove({id:'apotheosis:gem_fused_slate'})
+    
+    e.shaped('8x apotheosis:gem_fused_slate', [
+        'SSS',
+        'SGS',
+        'SSS'
+    ], {
+        S: 'hexcasting:slate_block',
+        G: 'apotheosis:gem_dust'
+    }).id('ico:gem_fused_slate')
 
     //kill erroring recipes
     e.remove([{id: /^railways:sequenced_assembly\/track_create_dd_*?/}, {output: /^lost_aether_content:*?/}, {output: /^aether_treasure_reforging:*?/}, {output: /^ancient_aether:*?/}])
 
     //material repurposing
-    e.recipes.create.milling(['kubejs:tellurium_dust', '2x minecraft:gold_nugget', Item.of('minecraft:gold_nugget').withChance(0.5)], 'malum:cthonic_gold_fragment').id('kubejs:crush_cthonic_gold')
+    e.recipes.create.milling([Item.of('kubejs:tellurium_dust').withChance(0.75), '2x minecraft:gold_nugget', Item.of('minecraft:gold_nugget').withChance(0.5)], 'malum:cthonic_gold_fragment').id('kubejs:crush_cthonic_gold')
 
     //extruding
     e.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:andesite'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:diorite').id('ico:extrude_andesite')
@@ -104,7 +195,7 @@ ServerEvents.recipes(e => {
     e.recipes.create.crushing(['create:crushed_raw_gold', Item.of('create:crushed_raw_gold').withChance(0.75), Item.of('2x create:experience_nugget').withChance(0.75), Item.of('aether:holystone').withChance(0.12)], 'kubejs:holystone_gold_ore')
     e.recipes.create.crushing(['wizards_reborn:crushed_raw_arcane_gold', Item.of('wizards_reborn:crushed_raw_arcane_gold').withChance(0.15), Item.of('2x create:experience_nugget').withChance(0.75), Item.of('aether:holystone').withChance(0.12)], 'kubejs:holystone_arcane_gold_ore')
 
-    e.recipes.create.crushing(['aether:ambrosium', Item.of('aether:ambrosium').withChance(0.75), Item.of('create:experience_nugget').withChance(0.75), Item.of('aether:holystone').withChance(0.12)], 'aether:ambrosium_ore')
+    e.recipes.create.crushing(['aether:ambrosium_shard', Item.of('aether:ambrosium_shard').withChance(0.75), Item.of('create:experience_nugget').withChance(0.75), Item.of('aether:holystone').withChance(0.12)], 'aether:ambrosium_ore').id('ico:ambrosium_ore')
 
     e.custom({
         "type": "wizards_reborn:alchemy_machine",
@@ -122,7 +213,7 @@ ServerEvents.recipes(e => {
                 "tag": "forge:ingots/gold"
             },
             {
-                "item": "wizards_reborn:arcanium"
+                "item": "wizards_reborn:arcanum"
             },
             {
                 "item": "wizards_reborn:alchemy_calx"

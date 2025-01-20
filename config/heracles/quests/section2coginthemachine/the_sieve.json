@@ -2,13 +2,28 @@
   "dependencies": [
     "deafening_clang"
   ],
-  "tasks": {},
+  "tasks": {
+    "get_createsifter_sifter": {
+      "type": "heracles:item",
+      "item": "createsifter:sifter",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
   "rewards": {},
   "display": {
     "subtitle": {
       "translate": "And the sand"
     },
-    "description": [],
+    "description": [
+      "## - The Sieve ---",
+      "--And the sand--",
+      "<hr/>",
+      "<p>The <aqua><item item=\"createsifter:sifter\"/></aqua> processes items dropped on top of it through a <aqua><item item=\"createsifter:string_mesh\">Mesh</item></aqua>. Various meshes can be fitted to the top for diffrent recipes.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_createsifter_sifter\" quest=\"the_sieve\"/>"
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [

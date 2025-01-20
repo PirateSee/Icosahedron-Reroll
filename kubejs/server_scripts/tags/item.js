@@ -15,6 +15,10 @@ ServerEvents.tags('item', e => {
     e.add('forge:storage_blocks/wrought_iron', 'kubejs:wrought_iron_block')
     e.add('forge:storage_blocks/pig_iron', 'kubejs:pig_iron_block')
     e.add('forge:storage_blocks/carbon_steel', 'kubejs:carbon_steel_block')
+
+    e.add('forge:plates/wrought_iron', 'kubejs:wrought_iron_sheet')
+    //e.add('forge:plates/pig_iron', 'kubejs:pig_iron_sheet')
+    //e.add('forge:plates/carbon_steel', 'kubejs:carbon_steel_sheet')
     
     e.add('forge:gems/cinnabar', 'spelunkery:cinnabar')
 

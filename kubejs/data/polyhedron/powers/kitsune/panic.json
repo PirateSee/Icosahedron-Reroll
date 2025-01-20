@@ -1,0 +1,30 @@
+{
+    "name": "§8o§r§n Panic",
+    "description": "Gain weakness and slowness when low health.",
+    "condition": {
+        "type": "origins:relative_health",
+        "comparison": "<",
+        "compare_to": 0.25
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effects": [
+            {
+                "effect": "minecraft:speed",
+                "duration": 30,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            },
+            {
+                "effect": "minecraft:weakness",
+                "duration": 30,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": true
+            }
+        ]
+    }
+}

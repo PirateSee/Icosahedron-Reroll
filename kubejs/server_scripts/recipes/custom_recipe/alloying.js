@@ -37,11 +37,11 @@ ServerEvents.recipes(e => {
     }
 
     alloy_ratios('createmetallurgy:molten_copper', 'createmetallurgy:molten_zinc', 'kubejs:impure_brass', 'createmetallurgy:molten_brass', 0.5, 20, 60, 'brass')
-    alloy_ratios('createmetallurgy:molten_copper', 'kubejs:molten_tin', 'kubejs:impure_bronze', 'kubejs:molten_bronze', 0.75, 40, 80, 'bronze')
+    alloy_ratios('createmetallurgy:molten_copper', 'createmetallurgy:molten_tin', 'kubejs:impure_bronze', 'createmetallurgy:molten_bronze', 0.75, 40, 80, 'bronze')
     alloy_ratios('createmetallurgy:molten_copper', 'createmetallurgy:molten_gold', 'kubejs:impure_rose_gold', 'kubejs:molten_rose_gold', 0.5, 20, 40, 'rose_gold')
 
-    alloy_ratios('createmetallurgy:molten_gold', 'kubejs:molten_silver', 'kubejs:impure_electrum', 'kubejs:molten_electrum', 0.5, 20, 40, 'electrum', true)
-    alloy_ratios('createmetallurgy:molten_iron', 'kubejs:molten_nickel', 'kubejs:impure_invar', 'kubejs:molten_invar', 1/3, 30, 40, 'invar', true)
+    alloy_ratios('createmetallurgy:molten_gold', 'createmetallurgy:molten_silver', 'kubejs:impure_electrum', 'createmetallurgy:molten_electrum', 0.5, 20, 40, 'electrum', true)
+    alloy_ratios('createmetallurgy:molten_iron', 'createmetallurgy:molten_nickel', 'kubejs:impure_invar', 'createmetallurgy:molten_invar', 1/3, 30, 40, 'invar', true)
 
     e.custom({
         "type": "createmetallurgy:alloying",

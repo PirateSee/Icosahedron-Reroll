@@ -131,30 +131,38 @@ ServerEvents.recipes(e => {
             fluid_namespace = namespace
         }
         
-        molten_handling(namespace + ":" + material + "_nugget",
-         namespace + ":" + material + "_ingot",
-          namespace + ":" + material + "_block",
-           fluid_namespace + ":molten_" + material,
+        if (namespace == "immersiveengineering") {
+        molten_handling(namespace + ":nugget_" + material,
+            namespace + ":ingot_" + material,
+            namespace + ":storage_" + material,
+            fluid_namespace + ":molten_" + material,
             material)
+        } else {
+        molten_handling(namespace + ":" + material + "_nugget",
+            namespace + ":" + material + "_ingot",
+            namespace + ":" + material + "_block",
+            fluid_namespace + ":molten_" + material,
+            material)
+        }
     }
 
-    molten_ids('iron', 'minecraft', 'createmetallurgy')
-    molten_ids('copper', 'minecraft', 'createmetallurgy')
-    molten_ids('gold', 'minecraft', 'createmetallurgy')
-    molten_ids('zinc', 'create', 'createmetallurgy')
-    molten_ids('brass', 'create', 'createmetallurgy')
+    //molten_ids('iron', 'minecraft', 'createmetallurgy')
+    //molten_ids('copper', 'minecraft', 'createmetallurgy')
+    //molten_ids('gold', 'minecraft', 'createmetallurgy')
+    //molten_ids('zinc', 'create', 'createmetallurgy')
+    //molten_ids('brass', 'create', 'createmetallurgy')
 
     molten_ids('wrought_iron')
     molten_ids('pig_iron')
-    molten_ids('bronze', 'thermal', 'kubejs')
-    molten_ids('rose_gold', 'thermal', 'kubejs')
+    //molten_ids('bronze', 'thermal', 'kubejs')
+    //molten_ids('rose_gold', 'thermal', 'kubejs')
 
-    molten_ids('silver', 'thermal', 'kubejs')
-    molten_ids('nickel', 'thermal', 'kubejs')
-    molten_ids('electrum', 'thermal', 'kubejs')
-    molten_ids('invar', 'thermal', 'kubejs')
+    //molten_ids('silver', 'thermal', 'kubejs')
+    //molten_ids('nickel', 'thermal', 'kubejs')
+    //molten_ids('electrum', 'thermal', 'kubejs')
+    //molten_ids('invar', 'thermal', 'kubejs')
 
-    molten_ids('aluminum', 'immersiveengineering', 'kubejs')
+    //molten_ids('aluminum', 'immersiveengineering', 'kubejs')
 
     molten_ids('carbon_steel')
 

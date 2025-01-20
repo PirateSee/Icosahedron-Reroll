@@ -90,6 +90,8 @@ StartupEvents.registry('item', e => {
     e.create('steel_balls').texture('ico:item/ore/alloy/steel_balls')
 
     //gemstone polishing
+    e.create('rough_zanite').texture('icosahedron:item/ore/gem/rough_zanite')
+
     e.create('rough_aquatrine').texture('icosahedron:item/ore/gem/rough_aquatrine')
     e.create('uncut_aquatrine').texture('icosahedron:item/ore/gem/uncut_aquatrine')
     e.create('unrefined_aquatrine', 'create:sequenced_assembly').texture('icosahedron:item/incomplete/unrefined_aquatrine')
@@ -97,6 +99,14 @@ StartupEvents.registry('item', e => {
 
     e.create('uncut_diamond').texture('ico:item/ore/gem/uncut_diamond')
     e.create('unrefined_diamond', 'create:sequenced_assembly').texture('icosahedron:item/incomplete/unrefined_diamond')
+
+    e.create('rough_skyjade').texture('icosahedron:item/ore/gem/rough_skyjade')
+    e.create('uncut_skyjade').texture('icosahedron:item/ore/gem/uncut_skyjade')
+    e.create('unrefined_skyjade', 'create:sequenced_assembly').texture('icosahedron:item/incomplete/unrefined_skyjade')
+
+    e.create('rough_arcanum').texture('icosahedron:item/ore/gem/rough_arcanum')
+    e.create('uncut_arcanum').texture('icosahedron:item/ore/gem/uncut_arcanum')
+    e.create('unrefined_arcanum', 'create:sequenced_assembly').texture('icosahedron:item/incomplete/unrefined_arcanum')
 
     //advaned ore processing
     e.create('crushed_hematite').texture('ico:item/ore/advanced/crushed_hematite')
