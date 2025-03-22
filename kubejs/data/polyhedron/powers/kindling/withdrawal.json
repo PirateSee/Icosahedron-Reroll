@@ -1,0 +1,119 @@
+{
+    "name": "§c- §r§nWithdrawal",
+    "description": "If you spend too long not being on fire you'll start to slow down and take damage after a while",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 500,
+        "start_value": 500
+    },
+    "change": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:on_fire"
+                    },
+                    {
+                        "type": "origins:block_collision",
+                        "block_condition": {
+                            "type": "origins:block",
+                            "block": "minecraft:magma_block"
+                        },
+                        "offset_x": 0,
+                        "offset_y": -0.1,
+                        "offset_z": 0
+                    }
+                ]
+            },
+            "if_action": {
+                "type": "origins:change_resource",
+                "resource": "polyhedron:kindling/withdrawal_resource",
+                "change": 33,
+                "operation": "add"
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "polyhedron:kindling/withdrawal_resource",
+                "change": -1,
+                "operation": "add"
+            }
+        }
+    },
+    "ailments": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:kindling/withdrawal_resource",
+            "comparison": "<",
+            "compare_to": 100
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.1,
+            "name": "Fire Withdrawal 1"
+        },
+        "tick_rate": 20,
+        "update_health": false
+    },
+    "ailments_": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:kindling/withdrawal_resource",
+            "comparison": "<",
+            "compare_to": 50
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.1,
+            "name": "Fire Withdrawal 2"
+        },
+        "tick_rate": 20,
+        "update_health": false
+    },
+    "ailments__": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:kindling/withdrawal_resource",
+            "comparison": "<",
+            "compare_to": 25
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.1,
+            "name": "Fire Withdrawal 3"
+        },
+        "tick_rate": 20,
+        "update_health": false
+    },
+    "ailments___": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:kindling/withdrawal_resource",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 4,
+        "duration_per_stack": 20,
+        "tick_rate": 5,
+        "effect": {
+            "effect": "minecraft:poison",
+            "duration": 20,
+            "amplifier": 0,
+            "show_particles": true,
+            "show_icon": true
+        }
+    }
+}

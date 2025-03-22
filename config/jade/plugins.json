@@ -108,6 +108,10 @@
   "ars_nouveau": {
     "mob_jar": true
   },
+  "exposure": {
+    "lightroom": true,
+    "photograph_frame": true
+  },
   "mekanism": {
     "infuse_type": true,
     "gas": true,

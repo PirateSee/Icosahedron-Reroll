@@ -10,7 +10,7 @@
         ],
         "modifier": {
             "operation": "multiply_base_multiplicative",
-            "value": 0.25,
+            "value": 0.5,
             "name": "Herbicide Penalty"
         }
     },

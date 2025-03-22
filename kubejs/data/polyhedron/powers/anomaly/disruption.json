@@ -1,0 +1,40 @@
+{
+    "name": "§c- §r§nDisruption",
+    "description": "Wither, poison, levitation and slowness last much longer. Take more magic damage",
+    "type": "origins:multiple",
+    "status": {
+        "type": "origins:modify_status_effect_duration",
+        "status_effects": [
+            "minecraft:poison",
+            "minecraft:wither",
+            "minecraft:slowness",
+            "minecraft:levitation"
+        ],
+        "modifier": {
+            "operation": "multiply_base_multiplicative",
+            "value": 0.5,
+            "name": "Disruption"
+        }
+    },
+    "damage": {
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:in_tag",
+                    "tag": "minecraft:magic"
+                },
+                {
+                    "type": "origins:in_tag",
+                    "tag": "minecraft:indirect_magic"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_base_multiplicative",
+            "value": 0.5,
+            "name": "Disruption"
+        }
+    }
+}

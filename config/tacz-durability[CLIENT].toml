@@ -1,0 +1,5 @@
+
+[showgui]
+	#Show the overlay clientside?
+	showgui = true
+

@@ -6,34 +6,25 @@
     "subtitle": {
       "text": ""
     },
-    "description": [
-      "",
-      "tree farm (hardened wood)",
-      "",
-      "cobblestone alchemy catlyst to sand",
-      "sand to clay via claycidonia",
-      "sift clay for tin",
-      "",
-      "stone alchemy catylst to andesite"
-    ],
+    "description": [],
     "groups": {
-      "Section 2: Cog in the Machine": {
+      "Section 5: Under Pressure": {
         "position": [
-          75,
-          75
+          0,
+          0
         ]
       }
     },
     "icon": {
       "item": {
-        "id": "thermal:diamond_gear",
+        "id": "pneumaticcraft:pressure_tube",
         "count": 1
       },
       "type": "heracles:item"
     },
     "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
     "title": {
-      "translate": "Full Auto"
+      "translate": "Tube Pressure"
     }
   },
   "settings": {

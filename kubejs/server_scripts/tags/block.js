@@ -14,6 +14,11 @@ ServerEvents.tags('block', e => {
     e.add('forge:ores/gold', 'kubejs:holystone_gold_ore')
     e.add('forge:ores/arcane_gold', 'kubejs:holystone_arcane_gold_ore')
 
+    
+
     //tag repair
     e.remove('minecraft:mineable/pickaxe', 'ducky-periphs:focal_link_block')
+    e.add('c:wooden_chests', 'minecraft:chest')
+    e.add('c:wooden_composter', 'minecraft:composter')
+    e.add('c:workbench', 'minecraft:crafting_table')
 })

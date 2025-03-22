@@ -1,0 +1,69 @@
+{
+    "name": "§a+ §r§nLightweight",
+    "description": "You fall slower and move quicker when airborne, but have less hearts",
+    "type": "origins:multiple",
+    "likeair": {
+        "type": "origins:attribute_modify_transfer",
+        "attribute": "minecraft:generic.movement_speed",
+        "class": "modify_air_speed",
+        "multiplier": 0.4
+    },
+    "fall": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:block_collision",
+                    "block_condition": {
+                        "inverted": true,
+                        "type": "origins:movement_blocking"
+                    },
+                    "offset_x": 0,
+                    "offset_y": -0.1,
+                    "offset_z": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:lava",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "add_base_early",
+            "value": 0.08,
+            "name": "Lightweight"
+        },
+        "axes": [
+            "y"
+        ]
+    },
+    "jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "add_base_early",
+            "value": -0.015,
+            "name": "Lightweight"
+        }
+    },
+    "hp": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.max_health",
+            "operation": "addition",
+            "value": -6,
+            "name": "Lightweight"
+        },
+        "update_health": true
+    }
+}

@@ -1,11 +1,13 @@
 {
     "name": "Undead",
+    "description": "[Defensive]\nA living corpse- tough but doesn't regenerate well, and doesn't enjoy the sun.",
     "powers": [
         "polyhedron:undead/assimilation",
+        "polyhedron:undead/undying",
         "polyhedron:undead/slowheal",
         "polyhedron:undead/undead",
         "polyhedron:undead/solar_rad",
         "polyhedron:undead/evade_light"
     ],
-    "impact": 0
+    "impact": 2
 }

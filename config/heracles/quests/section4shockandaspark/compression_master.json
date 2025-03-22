@@ -19,12 +19,12 @@
     },
     "icon": {
       "item": {
-        "id": "minecraft:map",
+        "id": "kubejs:pressure_alloy",
         "count": 1
       },
       "type": "heracles:item"
     },
-    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "icon_background": "heracles:textures/gui/quest_backgrounds/gears.png",
     "title": {
       "translate": "Compression Master"
     }

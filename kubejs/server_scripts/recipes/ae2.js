@@ -3,39 +3,10 @@
 ServerEvents.recipes(e => {
 
     //resources
-    e.remove([{id: 'ae2:transform/fluix_crystals'}, {id: 'create:mxing/compact/ae2/fluix_crystal'}, {id: 'ae2:smelting/silicon_from_certus_quartz_dust'}, {id: 'ae2:blasting/silicon_from_certus_quartz_dust'}, {id: 'ae2:decorative/quartz_glass'}])
-
-    e.custom({
-        "type": "wizards_reborn:alchemy_machine",
-        "outputItem": {
-            "item": "ae2:fluix_crystal",
-            "count": 2
-        },
-        "wissen": 100,
-        "steam": 200,
-        "ingredients": [
-            {
-                "item": "wizards_reborn:alchemy_calx"
-            },
-            {
-                "item": "ae2:charged_certus_quartz_crystal"
-            },
-            {
-                "item": "ae2:charged_certus_quartz_crystal"
-            }
-        ],
-        "fluidIngredients": [
-            {
-                "name": "wizards_reborn:alchemy_oil",
-                "amount" : 100
-            }
-        ]
-    }).id('ico:fluix_crystal')
-
-    e.recipes.thermal.smelter('ae2:silicon', ['2x #forge:gems/quartz', 'ae2:certus_quartz_dust']).id('ico:silicon')
+    e.remove([{id: 'ae2:decorative/quartz_glass'}])
 
     //processors
-    e.remove([{id: 'ae2:inscriber/logic_processor_print'}, {id: 'ae2:inscriber/logic_processor'}, {id: 'ae2:inscriber/calculation_processor'}, {id: 'ae2:inscriber/engineering_processor'}])
+    /*e.remove([{id: 'ae2:inscriber/logic_processor_print'}, {id: 'ae2:inscriber/logic_processor'}, {id: 'ae2:inscriber/calculation_processor'}, {id: 'ae2:inscriber/engineering_processor'}])
 
     e.custom({
         "type": "ae2:inscriber",
@@ -112,7 +83,7 @@ ServerEvents.recipes(e => {
             "count": 1,
             "item": "ae2:engineering_processor"
         }
-    }).id('ico:engineering_processor')    
+    }).id('ico:engineering_processor')    */
 
     //cells
     e.remove([{id: 'ae2:network/cells/item_cell_housing'}, {id: 'ae2:network/cells/fluid_cell_housing'}])
@@ -138,39 +109,69 @@ ServerEvents.recipes(e => {
     })
 
     //network
-    e.remove([{id: 'ae2:network/parts/quartz_fiber_part'}, {id: 'ae2:network/blocks/inscribers'}, {id: 'ae2:network/blocks/storage_drive'}, {id: 'ae2:network/blocks/energy_energy_acceptor'}, {id: 'ae2:network/blocks/controller'}])
-    e.recipes.create.deploying('ae2:quartz_fiber', ['ae2:certus_quartz_dust', '#thermal:glass/hardened']).id('ico:quartz_fiber')
+    e.remove([{id: 'ae2:network/panels_semi_dark_monitor'}, {id: 'ae2:network/crystal_resonance_generator'}, {id: 'ae2:network/parts/quartz_fiber_part'}, {id: 'ae2:network/blocks/inscribers'}, {id: 'ae2:network/blocks/storage_drive'}, {id: 'ae2:network/blocks/energy_energy_acceptor'}, {id: 'ae2:network/blocks/controller'}])
+    //e.recipes.create.deploying('ae2:quartz_fiber', ['ae2:certus_quartz_dust', '#thermal:glass/hardened']).id('ico:quartz_fiber')
+    e.shaped('3x ae2:semi_dark_monitor', [
+        "IG",
+        'RG',
+        'IG'
+    ], {
+        G: '#forge:glass',
+        R: 'minecraft:redstone',
+        I: 'forge:ingots/iron'
+    }).id('ico:semi_dark_monitor')
     
-    e.custom({
-        "type": "wizards_reborn:arcane_workbench",
-        "pattern": [
-            "IPI",
-            "IFI",
-            "ISI",
-            "____"
-        ],
-        "key": {
-            "S": {
-                "tag": "forge:plates/steel"
-            },
-            "I": {
-                "tag": "forge:ingots/invar"
-            },
-            "F": {
-                "item": "immersiveengineering:light_engineering"
-            },
-            "P": {
-                "item": "create:mechanical_press"
-            }
-        },
-        "output": {
-            "item": "ae2:inscriber",
-            "count": 1
-        },
-        "wissen": 200
+    e.shaped('ae2:quartz_fiber', [
+        "GQA"
+    ], {
+        G: '#thermal:glass/hardened',
+        Q: 'ae2:certus_quartz_dust',
+        A: 'ico:andesite_alloyable'
+    }).id('ico:quartz_fiber')
+
+    e.shaped('ae2:crystal_resonance_generator', [
+        "BFB",
+        "BUB",
+        "III"
+    ], {
+        B: '#forge:ingots/bronze',
+        F: 'ae2:fluix_block',
+        I: '#forge:ingots/iron',
+        U: '#forge:raw_materials/uranium'
+    }).id('ico:crystal_resonance_generator')
+    
+    e.shaped('ae2:inscriber', [
+        "III",
+        "B B",
+        "III"
+    ], {
+        B: '#forge:ingots/bronze',
+        I: '#forge:ingots/iron'
     }).id('ico:inscriber')
 
-    e.custom({
+    e.shaped('ae2:drive', [
+        "IPI",
+        "STS",
+        "IPI"
+    ], {
+        I: '#forge:ingots/invar',
+        T: '#forge:ingots/tellurium',
+        S: "forge:plates/steel",
+        P: 'ae2:engineering_processor'
+    }).id('ico:drive')
+
+    e.shaped('ae2:interface', [
+        "ISI",
+        "A F",
+        "ISI"
+    ], {
+        I: '#forge:ingots/invar',
+        A: 'ae2:annihilation_core',
+        F: 'ae2:formation_core',
+        S: 'forge:plates/steel'
+    }).id('ico:interface')
+
+    /*e.custom({
         "type": "wizards_reborn:arcane_workbench",
         "pattern": [
             "ITI",
@@ -200,7 +201,7 @@ ServerEvents.recipes(e => {
             "count": 1
         },
         "wissen": 250
-    }).id('ico:drive')
+    }).id('ico:drive')*/
 
     e.custom({
         "type": "wizards_reborn:arcane_workbench",
@@ -313,11 +314,70 @@ ServerEvents.recipes(e => {
     //disks
     e.remove({id: /^ae2:network\/cells\/*?/})
 
-    e.recipes.create.compacting('ae2:cell_component_1k', ["ae2:logic_processor", "3x ae2:quartz_glass", "4x #forge:gems/certus_quartz", Fluid.of('create_enchantment_industry:experience', 2)]).id('ico:compact_cell_component_1k')
+    /*e.recipes.create.compacting('ae2:cell_component_1k', ["ae2:logic_processor", "3x ae2:quartz_glass", "4x #forge:gems/certus_quartz", Fluid.of('create_enchantment_industry:experience', 2)]).id('ico:compact_cell_component_1k')
     e.recipes.create.compacting('ae2:cell_component_4k', ["ae2:calculation_processor", "4x ae2:quartz_glass", "3x ae2:cell_component_1k", Fluid.of('create_enchantment_industry:experience', 4)]).id('ico:compact_cell_component_4k')
     e.recipes.create.compacting('ae2:cell_component_16k', ["ae2:calculation_processor", "4x ae2:quartz_glass", "3x ae2:cell_component_4k", Fluid.of('create_enchantment_industry:experience', 8)]).id('ico:compact_cell_component_16k')
     e.recipes.create.compacting('ae2:cell_component_64k', ["ae2:calculation_processor", "4x ae2:sky_dust", "3x ae2:cell_component_16k", Fluid.of('create_enchantment_industry:experience', 16)]).id('ico:compact_cell_component_64k')
-    e.recipes.create.compacting('ae2:cell_component_256k', ["ae2:calculation_processor", "4x ae2:sky_dust", "3x ae2:cell_component_64k", Fluid.of('create_enchantment_industry:experience', 32)]).id('ico:compact_cell_component_256k')
+    e.recipes.create.compacting('ae2:cell_component_256k', ["ae2:calculation_processor", "4x ae2:sky_dust", "3x ae2:cell_component_64k", Fluid.of('create_enchantment_industry:experience', 32)]).id('ico:compact_cell_component_256k')*/
+
+    e.shaped('ae2:cell_component_1k', [
+        'RLR',
+        'BQB',
+        'RGR'
+    ], {
+        Q: 'ae2:quartz_block',
+        L: 'ae2:logic_processor',
+        B: '#ico:exp_items',
+        G: 'apotheosis:gem_dust',
+        R: 'ae2:sky_dust'
+    }).id('ico:cell_component_1k')
+
+    e.shaped('ae2:cell_component_4k', [
+        'BLR',
+        'CGC',
+        'RCB'
+    ], {
+        G: 'ae2:quartz_glass',
+        L: 'ae2:calculation_processor',
+        C: 'ae2:cell_component_1k',
+        B: '#ico:exp_items',
+        R: 'minecraft:redstone'
+    }).id('ico:cell_component_4k')
+
+    e.shaped('ae2:cell_component_16k', [
+        'BLR',
+        'CGC',
+        'RCB'
+    ], {
+        G: 'ae2:quartz_glass',
+        L: 'ae2:calculation_processor',
+        C: 'ae2:cell_component_4k',
+        B: '#ico:exp_items',
+        R: 'minecraft:glowstone_dust'
+    }).id('ico:cell_component_16k')
+
+    e.shaped('ae2:cell_component_64k', [
+        'BLR',
+        'CGC',
+        'RCB'
+    ], {
+        G: 'ae2:quartz_glass',
+        L: 'ae2:calculation_processor',
+        C: 'ae2:cell_component_64k',
+        B: '#ico:exp_items',
+        R: 'minecraft:glowstone_dust'
+    }).id('ico:cell_component_64k')
+
+    e.shaped('ae2:cell_component_256k', [
+        'RLR',
+        'CGC',
+        'RCR'
+    ], {
+        G: 'ae2:quartz_glass',
+        L: 'ae2:calculation_processor',
+        C: 'ae2:cell_component_64k',
+        R: 'ae2:fluix_dust'
+    }).id('ico:cell_component_256k')
 
     /*e.custom({
         "type": "wizards_reborn:arcane_iterator",

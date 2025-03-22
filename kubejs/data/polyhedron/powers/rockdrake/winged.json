@@ -1,0 +1,70 @@
+{
+    "name": "§a+§r§n Cave Wings",
+    "description": "You can glide with elytra, but flight time is limited, and must be recharged on the ground.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "text": "Being above ground greatly reduces flight time",
+            "sprite": "origins:textures/gui/badge/info.png"
+        }
+    ],
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 50,
+        "start_value": 50,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "flighttime": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:fall_flying"
+            },
+            "if_action": {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:exposed_to_sky"
+                },
+                "if_action": {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:rockdrake/winged_resource",
+                    "change": -5,
+                    "operation": "add"
+                },
+                "else_action": {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:rockdrake/winged_resource",
+                    "change": -1,
+                    "operation": "add"
+                }
+            },
+            "else_action": {
+                "type": "origins:change_resource",
+                "resource": "polyhedron:rockdrake/winged_resource",
+                "change": 2,
+                "operation": "add"
+            }
+        }
+    },
+    "elytra": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:rockdrake/winged_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:elytra_flight",
+        "render_elytra": true
+    }
+}

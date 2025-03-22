@@ -1,0 +1,74 @@
+{
+  "dependencies": [
+    "bronze_age"
+  ],
+  "tasks": {
+    "get_ae2_crystal_generator": {
+      "type": "heracles:item",
+      "item": "ae2:crystal_resonance_generator",
+      "amount": 1,
+      "collection": "AUTOMATIC"
+    }
+  },
+  "rewards": {
+    "award_ae2_storage_bus": {
+      "item": {
+        "id": "ae2:storage_bus",
+        "count": 1
+      },
+      "type": "heracles:item"
+    }
+  },
+  "display": {
+    "subtitle": {
+      "translate": "Searchable Inventory"
+    },
+    "description": [
+      "# - Indexing ---",
+      "--Searchable Inventory--",
+      "<hr/>",
+      "<p>Eventually the collection of chests becomes too much to handle. While a better storage solution isn't quite possible yet, hooking up a searchable terminal would still greatly help with this issue.</p>",
+      "",
+      "<p>A small <aqua>ME System</aqua> consisting of a <aqua><item item=\"ae2:terminal\"/></aqua> connected to a <aqua><item item=\"ae2:storage_bus\"/></aqua> exposes the inventory to the terminal. Anything connected via storage busses will be acessable via the terminal.</p>",
+      "",
+      "<p>This could be very useful when paired with an <aqua><item item=\"create:item_vault\"/></aqua></p>",
+      "",
+      "<p>You'll need something to power this network, a <aqua><item item=\"ae2:crystal_resonance_generator\"/></aqua> should do the trick. For some reason, any generators after the first seem to stop working. It's unlikely that a network this small will need more power though.</p>",
+      "",
+      "<p>Make sure that these three devices are hooked up via <aqua><item item=\"ae2:fluix_glass_cable\">ME Cables</item></aqua>.</p>",
+      "",
+      "<hr/>",
+      "<task task=\"get_ae2_crystal_generator\" quest=\"indexing\"/>",
+      "<hr/>",
+      "A free storage bus, since you can't make them at your current tech level.",
+      "<reward reward=\"award_ae2_storage_bus\" quest=\"indexing\"/>"
+    ],
+    "groups": {
+      "Section 2: Cog in the Machine": {
+        "position": [
+          210,
+          -30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "ae2:terminal",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Indexing"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

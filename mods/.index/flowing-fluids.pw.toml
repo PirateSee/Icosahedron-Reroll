@@ -1,0 +1,16 @@
+filename = 'flowing_fluids_forge_1.20.1-0.3.jar'
+name = 'Flowing Fluids'
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'b9c405d51c02e1f66a03d926db2980f9b5052d876fe6cc446b52cd7ed18e205a82ddd767aa7ce1479aee894d994fc849cdebab8e96a1129fb69efe4caab9fb30'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/s1I3BT95/versions/9GJf0Hr0/flowing_fluids_forge_1.20.1-0.3.jar'
+
+[update.modrinth]
+mod-id = 's1I3BT95'
+version = '9GJf0Hr0'

@@ -14,7 +14,17 @@
         "entity_action": {
             "type": "origins:if_else",
             "condition": {
-                "type": "origins:exposed_to_sun"
+                "type": "origins:and",
+                "conditions": [
+                    {
+                        "type": "origins:exposed_to_sun"
+                    },
+                    {
+                        "inverted": true,
+                        "type": "origins:power_active",
+                        "power": "polyhedron:phantom/phantomize_toggle"
+                    }
+                ]
             },
             "if_action": {
                 "type": "origins:and",

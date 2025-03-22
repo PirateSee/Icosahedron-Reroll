@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "oil_refinement"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 5: Under Pressure": {
+        "position": [
+          180,
+          -30
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "pneumaticcraft:fluid_mixer",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Pneumatic Mixer"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

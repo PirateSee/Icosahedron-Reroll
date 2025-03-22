@@ -1,0 +1,19 @@
+{
+    "name": "§a+ §r§nInfrared Sensing",
+    "description": "See better in the dark, and easily identify mobs.",
+    "type": "origins:multiple",
+    "night_vision": {
+        "type": "origins:night_vision",
+        "strength": 0.2
+    },
+    "sense": {
+        "type": "origins:entity_glow",
+        "bientity_condition": {
+            "type": "origins:can_see"
+        },
+        "use_teams": false,
+        "red": 0.5,
+        "green": 0.1,
+        "blue": 0.1
+    }
+}

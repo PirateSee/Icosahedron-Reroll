@@ -1,0 +1,52 @@
+{
+    "name": "§c- §r§nArcane Fire",
+    "description": "Take additional protection-piercing fire damage.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "text": "Fire Protection still reduces damage taken",
+            "sprite": "origins:textures/gui/badge/info.png"
+        }
+    ],
+    "type": "origins:multiple",
+    "first": {
+        "condition": {
+            "type": "origins:enchantment",
+            "enchantment": "minecraft:fire_protection",
+            "calculation": "sum",
+            "comparison": "==",
+            "compare_to": 0
+        },
+        "type": "origins:action_when_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fire"
+        },
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 1,
+            "damage_type": "polyhedron:arcane_fire"
+        },
+        "cooldown": 1
+    },
+    "second": {
+        "condition": {
+            "type": "origins:enchantment",
+            "enchantment": "minecraft:fire_protection",
+            "calculation": "sum",
+            "comparison": "<",
+            "compare_to": 4
+        },
+        "type": "origins:action_when_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "fire"
+        },
+        "entity_action": {
+            "type": "origins:damage",
+            "amount": 1,
+            "damage_type": "polyhedron:arcane_fire"
+        },
+        "cooldown": 1
+    }
+}

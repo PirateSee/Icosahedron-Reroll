@@ -34,7 +34,7 @@ ServerEvents.recipes(e => {
     e.smoking('supplementaries:ash', '#immersive_weathering:flammable_planks').id('ico:smoking_planks')
     e.smoking('supplementaries:ash', '#minecraft:logs_that_burn').id('ico:smoking_logs')
 
-    e.shapeless('kubejs:hardened_wood_planks', ['2x #minecraft:planks', 'supplementaries:ash', 'kubejs:andesite_slush']).id('ico:hardened_wood_planks')
+    e.shapeless('2x kubejs:hardened_wood_planks', ['2x #minecraft:planks', 'supplementaries:ash', 'kubejs:andesite_slush']).id('ico:hardened_wood_planks')
     e.shaped('kubejs:compacted_hardened_wood', [
         'WW',
         'WW'
@@ -107,7 +107,7 @@ ServerEvents.recipes(e => {
     e.recipes.create.compacting('kubejs:andesite_framing', ['4x create:andesite_alloy']).id('ico:andesite_framing_compacting')
 
     //machinery
-    e.remove([{id:'create:crafting/kinetics/mechanical_press'}, {id:'create:crafting/kinetics/whisk'}, {id:'create:crafting/kinetics/mechanical_mixer'}, {id:'create:crafting/kinetics/mechanical_saw'}, {id:'create:crafting/kinetics/mechanical_drill'}, {id:'create_mechanical_extruder:mechanical_extruder'}])
+    e.remove([{id:'create:crafting/kinetics/mechanical_press'}, {id:'create:crafting/kinetics/whisk'}, {id:'create:crafting/kinetics/mechanical_mixer'}, {id:'create:crafting/kinetics/mechanical_saw'}, {id:'create:crafting/kinetics/mechanical_drill'}, {id:'create_mechanical_extruder:crafting/mechanical_extruder'}])
 
     e.shaped('kubejs:wooden_slide', [
         'L',
@@ -243,12 +243,11 @@ ServerEvents.recipes(e => {
     })
 
     //logistics
-
-    e.remove([{id:'create:crafting/kinetics/belt_connector'}, {id:'create:crafting/kinetics/chute'}, {id:'create:crafting/kinetics/andesite_funnel'}, {id:'create:crafting/kinetics/andesite_tunnel'}, {id:'create:crafting/kinetics/item_vault'}, {id:'create_connected:crafting/kinetics/item_silo'}])
+    e.remove([{id:'create:crafting/kinetics/belt_connector'}, {id:'create:crafting/kinetics/chute'}, {id:'create:crafting/logistics/andesite_funnel'}, {id:'create:crafting/kinetics/andesite_tunnel'}, {id:'create:crafting/kinetics/item_vault'}, {id:'create_connected:crafting/kinetics/item_silo'}])
 
     e.recipes.create.compacting('kubejs:kelp_sheet', '6x minecraft:dried_kelp').id('ico:kelp_sheet')
 
-    e.recipes.create.cutting('create:belt_connector', 'kubejs:kelp_sheet').id('ico:belt_connector')
+    e.recipes.create.cutting('create:belt_connector', '#ico:flexible_sheets').id('ico:belt_connector')
 
     e.shaped('4x create:chute', [
         'P',
@@ -264,7 +263,7 @@ ServerEvents.recipes(e => {
         'K'
     ], {
         A: 'create:andesite_alloy',
-        K: 'kubejs:kelp_sheet'
+        K: '#ico:flexible_sheets'
     }).id('ico:andesite_funnel')
 
     e.shaped('2x create:andesite_tunnel', [
@@ -272,10 +271,10 @@ ServerEvents.recipes(e => {
         'KK'
     ], {
         A: 'create:andesite_alloy',
-        K: 'kubejs:kelp_sheet'
+        K: '#ico:flexible_sheets'
     }).id('ico:andesite_tunnel')
 
-    e.shaped('2x create:item_vault', [
+    e.shaped('create:item_vault', [
         'P',
         'B',
         'P'
@@ -284,7 +283,7 @@ ServerEvents.recipes(e => {
         B: '#c:barrels'
     }).id('ico:item_vault')
 
-    e.shaped('2x create_connected:item_silo', [
+    e.shaped('create_connected:item_silo', [
         'PBP',
     ], {
         P: '#forge:plates/tin',

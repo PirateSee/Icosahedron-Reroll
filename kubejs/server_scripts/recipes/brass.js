@@ -92,13 +92,14 @@ ServerEvents.recipes(e => {
     //sulfuric_acid
     e.remove([{id: 'vintageimprovements:pressurizing/sulfuric_acid'}, {id: 'vintageimprovements:pressurizing/sulfur_dioxide'}, {id: 'vintageimprovements:pressurizing/sulfur_trioxide'}])
 
-    e.recipes.vintageimprovements.pressurizing([Fluid.of('vintageimprovements:sulfuric_acid', 250), Item.of('kubejs:waste_oxides').withChance(0.5)], ['#forge:gems/sulfur', '#forge:nuggets/iron', Fluid.of('minecraft:water', 1000)]).heated().secondaryFluidInput(0).id('ico:sulfuric_acid')
+    e.recipes.vintageimprovements.pressurizing([Fluid.of('vintageimprovements:sulfuric_acid', 500), Item.of('kubejs:waste_oxides').withChance(0.5)], ['#forge:gems/sulfur', '#forge:nuggets/iron', Fluid.of('minecraft:water', 1000)]).heated().secondaryFluidInput(0).id('ico:sulfuric_acid')
 
     //gemstone
-    e.remove([{id: 'create:crafting/materials/rose_quartz'}, {id: 'spelunkery:rose_quartz'}, {id: 'create:crafting/materials/electron_tube'}])
+    e.remove([{id: 'create:crafting/materials/electron_tube'}])
 
+    /*e.remove([{id: 'create:crafting/materials/rose_quartz'}, {id: 'spelunkery:rose_quartz'}])
     e.recipes.create.mixing(['malum:blazing_quartz', '2x malum:blazing_quartz_fragment'], ['malum:blazing_quartz', "#forge:gems/quartz", Fluid.of('minecraft:lava', 500)]).id('ico:blazing_quartz_reaction')
-    e.recipes.vintageimprovements.pressurizing('create:rose_quartz', ['malum:blazing_quartz', 'minecraft:redstone_block', Fluid.of('minecraft:lava', 1000)]).heated().secondaryFluidInput(0).id('ico:rose_quartz')
+    e.recipes.vintageimprovements.pressurizing('create:rose_quartz', ['malum:blazing_quartz', 'minecraft:redstone_block', Fluid.of('minecraft:lava', 1000)]).heated().secondaryFluidInput(0).id('ico:rose_quartz')*/
 
     /*let inter = 'kubejs:incomplete_electron_tube'
 	e.recipes.create.sequenced_assembly([
@@ -117,7 +118,7 @@ ServerEvents.recipes(e => {
     ], {
         W: '#forge:wires/copper',
         I: '#forge:plates/iron',
-        Q: 'create:polished_rose_quartz'
+        Q: 'kubejs:aquatrine'
     }).id('ico:electron_tube')
 
     e.remove({id: 'spelunkery:crushing/polished_cinnabar'})
@@ -146,13 +147,10 @@ ServerEvents.recipes(e => {
 	]).transitionalItem(inter).loops(5).id('ico:precision_mechanism')
 
     e.remove([{id: 'create:compacting/blaze_cake'}, {id: 'create:filling/blaze_cake'}, {id: 'create:crushing/netherrack'}])
-
     e.recipes.create.mixing('1x minecraft:netherrack', ['minecraft:cobblestone', 'malum:blazing_quartz_fragment']).id('ico:netherrack_from_blazing_quartz')
-
     e.recipes.create.crushing('create:cinder_flour', 'minecraft:nether_brick').id('ico:cinder_flour')
 
     e.recipes.create.compacting(['create:blaze_cake_base', 'thermal:nickel_ingot'], ['#forge:eggs', 'sugar', '4x create:cinder_flour', '#forge:ingots/nickel']).id('ico:blaze_cake_base')
-
     e.recipes.create.mixing([Fluid.of('kubejs:blazing_icing', 250), 'malum:blazing_quartz'], [Fluid.of('lava', 500), Fluid.of('thermal:sap', 250), '#forge:nuggets/copper', 'malum:blazing_quartz']).id('ico:blazing_icing')
     e.recipes.create.filling('create:blaze_cake', ['create:blaze_cake_base', Fluid.of('kubejs:blazing_icing', 250)]).id('ico:blaze_cake')
 })

@@ -1,0 +1,79 @@
+{
+    "hidden": true,
+    "type": "origins:multiple",
+    "noregen": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:anomaly/phasing_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:disable_regen"
+    },
+    "heal": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": ">=",
+                    "compare_to": 18
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:anomaly/phasing_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 240,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:heal",
+                    "amount": 1
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 6
+                }
+            ]
+        }
+    },
+    "heal_fast": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:food_level",
+                    "comparison": "==",
+                    "compare_to": 20
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:anomaly/phasing_resource",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:heal",
+                    "amount": 2
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 12
+                }
+            ]
+        }
+    }
+}

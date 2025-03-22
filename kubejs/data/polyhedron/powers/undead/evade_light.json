@@ -1,5 +1,6 @@
 {
     "name": "§c-§r§n Evade the Light",
+    "description": "Being in bright areas slows you down",
     "condition": {
         "type": "origins:brightness",
         "comparison": ">",

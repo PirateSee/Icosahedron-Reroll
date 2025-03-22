@@ -1,0 +1,16 @@
+filename = 'BeansBackpacks-forge-1.20.1-2.0.2.jar'
+name = 'Beans Backpacks (Legacy)'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '9db31d71b1fa724e0758d22b0ca4166640459b00727a2d8992efc0963243abdd75a0a12517cb2956b710450a3c5836796bc8cb1db6965d722a56aa76a21a3a9a'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/kYt0MSgT/versions/r9Lq0Zp7/BeansBackpacks-forge-1.20.1-2.0.2.jar'
+
+[update.modrinth]
+mod-id = 'kYt0MSgT'
+version = 'r9Lq0Zp7'

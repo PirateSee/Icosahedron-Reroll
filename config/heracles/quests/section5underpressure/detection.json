@@ -1,6 +1,6 @@
 {
   "dependencies": [
-    "disk_storage"
+    "etched_lightning"
   ],
   "tasks": {},
   "rewards": {},
@@ -8,25 +8,27 @@
     "subtitle": {
       "text": ""
     },
-    "description": [],
+    "description": [
+      ""
+    ],
     "groups": {
-      "Section 4: Shock and a Spark": {
+      "Section 5: Under Pressure": {
         "position": [
-          -180,
-          90
+          210,
+          60
         ]
       }
     },
     "icon": {
       "item": {
-        "id": "ae2:storage_bus",
+        "id": "pneumaticcraft:universal_sensor",
         "count": 1
       },
       "type": "heracles:item"
     },
     "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
     "title": {
-      "translate": "External Routing"
+      "translate": "Detection"
     }
   },
   "settings": {

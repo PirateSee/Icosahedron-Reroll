@@ -1,0 +1,13 @@
+{
+    "name": "Rock Draker",
+    "description": "Cavern dwelling flying",
+    "powers": [
+        "polyhedron:rockdrake/winged",
+        "polyhedron:rockdrake/airbrake",
+        "polyhedron:rockdrake/kick",
+        "polyhedron:rockdrake/climb",
+        "polyhedron:rockdrake/cavern_eyes",
+        "polyhedron:carnivore"
+    ],
+    "impact": 0
+}

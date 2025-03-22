@@ -8,11 +8,13 @@
     "subtitle": {
       "text": ""
     },
-    "description": [],
+    "description": [
+      ""
+    ],
     "groups": {
       "Section 2: Cog in the Machine": {
         "position": [
-          270,
+          300,
           0
         ]
       }

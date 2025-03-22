@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "oil_prospecting"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 5: Under Pressure": {
+        "position": [
+          150,
+          -60
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "pneumaticcraft:plastic",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/diamonds.png",
+    "title": {
+      "translate": "Oil Refinement"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

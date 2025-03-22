@@ -1,0 +1,19 @@
+{
+    "name": "Phantom",
+    "description": "§0[Nimble] [Airborne]§7\nHorrors of the night, Phantoms can both phase into terrain and fight from the sky.",
+    "powers": [
+        "polyhedron:phantom/phantomize",
+        "polyhedron:phantom/phantomize_dsc",
+        "polyhedron:phantom/phantomize_dsc_launch",
+        "polyhedron:phantom/air_move",
+        "polyhedron:phantom/undead",
+        "polyhedron:phantom/translucent",
+        "polyhedron:undead/solar_rad",
+        "polyhedron:phantom/fragile"
+    ],
+    "icon": {
+        "item": "minecraft:phantom_membrane"
+    },
+    "order": 300,
+    "impact": 3
+}

@@ -1,0 +1,17 @@
+{
+    "name": "Kindling",
+    "description": "[Fire]\nDecendants of the phoneix, Kindlings shed their wings to leave flames in their wake.",
+    "powers": [
+        "polyhedron:kindling/fire_immune",
+        "polyhedron:kindling/ignition",
+        "polyhedron:kindling/trailblazer",
+        "polyhedron:kindling/fireresist",
+        "polyhedron:kindling/dousing",
+        "polyhedron:kindling/snow",
+        "polyhedron:kindling/sparking",
+        "polyhedron:kindling/withdrawal",
+        "polyhedron:kindling/calorie_burner",
+        "polyhedron:kindling/quickfire"
+    ],
+    "impact": 3
+}

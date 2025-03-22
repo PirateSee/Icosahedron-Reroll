@@ -1,0 +1,14 @@
+{
+    "powers": [
+        "polyhedron:synthetic/bio_reactor",
+        "polyhedron:synthetic/hydrophobia",
+        "polyhedron:synthetic/infrared_sensing",
+        "polyhedron:synthetic/overdrive",
+        "polyhedron:synthetic/shield",
+        "polyhedron:synthetic/shock_absorber",
+        "polyhedron:synthetic/shock_absorber_effect",
+        "polyhedron:synthetic/synthetic_makeup",
+        "polyhedron:synthetic/breathless"
+    ],
+    "impact": 2
+}

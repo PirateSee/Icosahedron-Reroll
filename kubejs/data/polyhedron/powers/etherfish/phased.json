@@ -13,7 +13,7 @@
     "resistance": {
         "type": "origins:attribute",
         "modifier": {
-            "attribute": "minecraft:armor_toughness",
+            "attribute": "minecraft:generic.armor_toughness",
             "operation": "multiply_base",
             "value": -0.25
         },

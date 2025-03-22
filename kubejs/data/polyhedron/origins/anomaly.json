@@ -1,0 +1,13 @@
+{
+    "name": "Anomaly",
+    "description": "A glitch in reality. The ones who weren't supposed to exist",
+    "powers": [
+        "polyhedron:anomaly/blink",
+        "polyhedron:anomaly/phasing",
+        "polyhedron:anomaly/voidwalk",
+        "polyhedron:anomaly/cracked_armor",
+        "polyhedron:anomaly/disruption",
+        "polyhedron:anomaly/slowheal"
+    ],
+    "impact": 0
+}

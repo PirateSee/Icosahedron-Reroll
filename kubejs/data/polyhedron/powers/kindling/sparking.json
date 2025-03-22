@@ -1,0 +1,32 @@
+{
+    "name": "§c- §r§nCatalyst",
+    "description": "Deal reduced damage, unless your target is on fire",
+    "condition": {
+        "type": "origins:equipped_item",
+        "equipment_slot": "mainhand",
+        "item_condition": {
+            "inverted": true,
+            "type": "origins:enchantment",
+            "enchantment": "minecraft:fire_aspect",
+            "comparison": ">=",
+            "compare_to": 1
+        }
+    },
+    "type": "origins:modify_damage_dealt",
+    "target_condition": {
+        "inverted": true,
+        "type": "origins:on_fire"
+    },
+    "modifiers": [
+        {
+            "operation": "multiply_base_multiplicative",
+            "value": -0.25,
+            "name": "Catalyst"
+        },
+        {
+            "operation": "min_base",
+            "value": 0.5,
+            "name": "Catalyst"
+        }
+    ]
+}

@@ -10,11 +10,11 @@
     },
     "description": [
       "## - Cutting Disk ---",
-	  "--Like butter--",
-	  "<hr/>",
-	  "<p>The <aqua><item item=\"create:mechanical_saw\"/></aqua> processes items on top going the oposite direction of the blade. This can <gold>process logs into planks more efficently</gold> among other recipes.</p>",
-	  "<hr/>",
-	  "<task task=\"get_create_mechanical_saw\" quest=\"cutting_disk\">"
+      "--Like butter--",
+      "<hr/>",
+      "<p>The <aqua><item item=\"create:mechanical_saw\"/></aqua> processes items on top going the oposite direction of the blade. This can <gold>process logs into planks more efficently</gold> among other recipes.</p>",
+      "<hr/>",
+      "<task task=\"get_create_mechanical_saw\" quest=\"cutting_disk\">"
     ],
     "groups": {
       "Section 2: Cog in the Machine": {

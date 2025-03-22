@@ -1,0 +1,13 @@
+{
+    "name": "§c- §r§nFlamable",
+    "description": "Stay on fire forever until put out",
+    "condition": {
+        "type": "origins:on_fire"
+    },
+    "type": "origins:action_over_time",
+    "interval": 20,
+    "entity_action": {
+        "type": "origins:set_on_fire",
+        "duration": 4
+    }
+}

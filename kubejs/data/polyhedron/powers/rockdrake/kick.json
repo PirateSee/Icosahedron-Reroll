@@ -1,0 +1,67 @@
+{
+    "name": "§a+ §r§nKick",
+    "description": "Activate while flying near a surface",
+    "condition": {
+        "type": "origins:and",
+        "conditions": [
+            {
+                "type": "origins:fall_flying"
+            },
+            {
+                "type": "origins:or",
+                "conditions": [
+                    {
+                        "type": "origins:block_collision",
+                        "block_condition": {
+                            "type": "origins:movement_blocking"
+                        },
+                        "offset_x": 1.3,
+                        "offset_y": 0,
+                        "offset_z": 1.3
+                    },
+                    {
+                        "type": "origins:block_collision",
+                        "block_condition": {
+                            "type": "origins:movement_blocking"
+                        },
+                        "offset_x": 1.3,
+                        "offset_y": 0,
+                        "offset_z": -1.3
+                    },
+                    {
+                        "type": "origins:block_collision",
+                        "block_condition": {
+                            "type": "origins:movement_blocking"
+                        },
+                        "offset_x": -1.3,
+                        "offset_y": 0,
+                        "offset_z": -1.3
+                    },
+                    {
+                        "type": "origins:block_collision",
+                        "block_condition": {
+                            "type": "origins:movement_blocking"
+                        },
+                        "offset_x": -1.3,
+                        "offset_y": 0,
+                        "offset_z": 1.3
+                    }
+                ]
+            }
+        ]
+    },
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:add_velocity",
+        "y": 0.1,
+        "z": 0.7,
+        "space": "local",
+        "client": true,
+        "server": true
+    },
+    "cooldown": 30,
+    "key": {
+        "key": "key.jump",
+        "continuous": true
+    }
+}

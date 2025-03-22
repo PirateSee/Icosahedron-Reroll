@@ -1,0 +1,15 @@
+{
+    "name": "§a+ §r§nOverdrive",
+    "description": "Mine quicker, as long as your hunger bar is full",
+    "condition": {
+        "type": "origins:food_level",
+        "comparison": ">",
+        "compare_to": 19
+    },
+    "type": "origins:modify_break_speed",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": 0.2,
+        "name": "Overdrive"
+    }
+}

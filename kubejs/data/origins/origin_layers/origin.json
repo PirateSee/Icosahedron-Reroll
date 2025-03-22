@@ -3,7 +3,15 @@
         "polyhedron:etherfish",
         "polyhedron:kitsune",
         "polyhedron:undead",
-        "polyhedron:plant"
+        "polyhedron:plant",
+        "polyhedron:synthetic",
+        "polyhedron:jellyfish",
+        "polyhedron:kindling",
+        "polyhedron:golem",
+        "polyhedron:phantom",
+        "polyhedron:rockdrake",
+        "polyhedron:sunmoth",
+        "polyhedron:anomaly"
     ],
     "enabled": true
 }

@@ -1,0 +1,14 @@
+{
+    "name": "Sun Moth",
+    "description": "Glowing bright as the sun, these moths absorb light to keep themselves light and nimble.",
+    "powers": [
+        "polyhedron:sunmoth/luminescence",
+        "polyhedron:sunmoth/flight",
+        "polyhedron:sunmoth/punchglow",
+        "polyhedron:sunmoth/lightweight",
+        "polyhedron:sunmoth/sparks",
+        "polyhedron:sunmoth/catalyst",
+        "polyhedron:sunmoth/metabolism"
+    ],
+    "impact": 2
+}

@@ -1,0 +1,98 @@
+{
+    "name": "§a+ §r§nVoidwalk",
+    "description": "Falling into the void gives you a boost upward. 1.5Cooldown.",
+    "type": "origins:multiple",
+    "activate": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:in_block_anywhere",
+                    "block_condition": {
+                        "type": "origins:block",
+                        "block": "minecraft:void_air"
+                    },
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:anomaly/voidwalk_resource",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "rising_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:in_block_anywhere",
+                "block_condition": {
+                    "type": "origins:block",
+                    "block": "minecraft:void_air"
+                },
+                "comparison": ">=",
+                "compare_to": 1
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:add_velocity",
+                        "y": 10,
+                        "space": "world",
+                        "client": true,
+                        "server": true,
+                        "set": true
+                    },
+                    {
+                        "type": "origins:apply_effect",
+                        "effect": {
+                            "effect": "minecraft:levitation",
+                            "duration": 300,
+                            "amplifier": 2,
+                            "show_particles": true,
+                            "show_icon": true
+                        }
+                    },
+                    {
+                        "type": "origins:spawn_particles",
+                        "particle": "minecraft:dragon_breath",
+                        "count": 15,
+                        "speed": 0.1,
+                        "offset_y": -1
+                    },
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "polyhedron:anomaly/voidwalk_resource",
+                        "change": 100,
+                        "operation": "set"
+                    }
+                ]
+            }
+        }
+    },
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 450,
+        "start_value": 450,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 19
+        }
+    },
+    "regen": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "polyhedron:anomaly/voidwalk_resource",
+            "change": 1,
+            "operation": "add"
+        }
+    }
+}

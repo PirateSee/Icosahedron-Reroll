@@ -1,0 +1,23 @@
+{
+    "name": "§8o §r§nShock Absorber",
+    "description": "Fall damage is reduced. Signifigant fall damage causes debuffs.",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:in_tag",
+                "tag": "minecraft:is_fall"
+            },
+            {
+                "type": "origins:name",
+                "name": "flyIntoWall"
+            }
+        ]
+    },
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.25,
+        "name": "Shock Absorber Debuff"
+    }
+}

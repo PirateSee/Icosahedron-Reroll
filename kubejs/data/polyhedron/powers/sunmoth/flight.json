@@ -1,0 +1,120 @@
+{
+    "name": "§a+ §r§nSolar Hover",
+    "description": "While having at least 4/7th Luminescence, you can fly.",
+    "type": "origins:multiple",
+    "disable": {
+        "condition": {
+            "type": "origins:creative_flying"
+        },
+        "type": "origins:self_action_when_hit",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "polyhedron:sunmoth/flight_disable_resource",
+            "change": 5,
+            "operation": "set"
+        },
+        "cooldown": 1
+    },
+    "fly": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:sunmoth/flight_disable_resource",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:sunmoth/luminescence_resource",
+                    "comparison": ">",
+                    "compare_to": 50
+                }
+            ]
+        },
+        "type": "origins:creative_flight"
+    },
+    "disable_resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 5,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "disable_decay": {
+        "condition": {
+            "type": "origins:fall_distance",
+            "comparison": "<",
+            "compare_to": 3
+        },
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "polyhedron:sunmoth/flight_disable_resource",
+            "change": -1,
+            "operation": "add"
+        }
+    },
+    "drain": {
+        "condition": {
+            "type": "origins:creative_flying"
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:sunmoth/luminescence_resource",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:exhaust",
+                    "amount": 1
+                }
+            ]
+        }
+    },
+    "stop": {
+        "condition": {
+            "type": "origins:creative_flying"
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "falling_action": {
+            "type": "origins:add_velocity",
+            "z": -0.1,
+            "space": "velocity",
+            "client": true,
+            "server": true
+        }
+    },
+    "speed": {
+        "condition": {
+            "type": "origins:creative_flying"
+        },
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5,
+            "name": "Flight"
+        },
+        "axes": [
+            "x",
+            "y",
+            "z"
+        ]
+    },
+    "key7": {
+        "condition": {
+            "type": "origins:creative_flying"
+        },
+        "type": "origins:prevent_sprinting"
+    }
+}

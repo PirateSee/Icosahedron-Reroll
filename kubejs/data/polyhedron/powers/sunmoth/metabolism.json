@@ -1,0 +1,47 @@
+{
+    "1": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:sunmoth/luminescence_resource",
+            "comparison": "<",
+            "compare_to": 10
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.2,
+            "name": "Metabolism III"
+        }
+    },
+    "2": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:sunmoth/luminescence_resource",
+            "comparison": "<",
+            "compare_to": 20
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.15,
+            "name": "Metabolism II"
+        }
+    },
+    "3": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:sunmoth/luminescence_resource",
+            "comparison": "<",
+            "compare_to": 30
+        },
+        "type": "origins:modify_exhaustion",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.1,
+            "name": "Metabolism I"
+        }
+    },
+    "name": "§c- §r§nMetabolism",
+    "description": "Exahust quicker at low Luminescence",
+    "type": "origins:multiple"
+}

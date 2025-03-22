@@ -1,0 +1,74 @@
+{
+    "name": "§c- §r§nCavern Eyes",
+    "description": "Your eyes are used to the dark. Being out in the sun is far too bright, and slows you down.",
+    "type": "origins:multiple",
+    "nightvision": {
+        "type": "origins:night_vision",
+        "strength": 0.5
+    },
+    "thesun": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:exposed_to_sun"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:blindness"
+                }
+            ]
+        },
+        "type": "origins:overlay",
+        "texture": "minecraft:textures/block/white_concrete.png",
+        "strength": 0.3,
+        "draw_mode": "texture",
+        "draw_phase": "above_hud",
+        "hide_with_hud": false,
+        "visible_in_third_person": true
+    },
+    "speed": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:exposed_to_sun"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:blindness"
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.2,
+            "name": "Cavern Eyes"
+        },
+        "tick_rate": 5,
+        "update_health": false
+    },
+    "mining": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:exposed_to_sun"
+                },
+                {
+                    "type": "origins:status_effect",
+                    "effect": "minecraft:blindness"
+                }
+            ]
+        },
+        "type": "origins:modify_break_speed",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.3,
+            "name": "Cavern Eyes"
+        }
+    }
+}

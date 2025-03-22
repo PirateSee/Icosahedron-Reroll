@@ -1,0 +1,24 @@
+{
+    "name": "§c- §r§nCracked Armor",
+    "description": "Reduced armor effectiveness. Unable to use shields",
+    "type": "origins:multiple",
+    "attribute": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "multiply_total",
+            "value": -0.2,
+            "name": "Cracked Armor"
+        },
+        "update_health": false
+    },
+    "shield": {
+        "type": "origins:prevent_item_use",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+                "tag": "origins:shields"
+            }
+        }
+    }
+}

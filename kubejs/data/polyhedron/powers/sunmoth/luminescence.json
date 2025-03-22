@@ -1,0 +1,81 @@
+{
+    "name": "§a+ §r§nLuminescence",
+    "description": "Huddle near light sources to absorb light. Luminescence is used in other powers.",
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 70,
+        "start_value": 70,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "passive": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else_list",
+            "actions": [
+                {
+                    "condition": {
+                        "type": "origins:and",
+                        "conditions": [
+                            {
+                                "type": "origins:brightness",
+                                "comparison": ">=",
+                                "compare_to": 0.7
+                            },
+                            {
+                                "inverted": true,
+                                "type": "origins:creative_flying"
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "polyhedron:sunmoth/luminescence_resource",
+                        "change": 4,
+                        "operation": "add"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:or",
+                        "conditions": [
+                            {
+                                "type": "origins:brightness",
+                                "comparison": ">=",
+                                "compare_to": 0.4
+                            },
+                            {
+                                "type": "origins:on_fire"
+                            }
+                        ]
+                    },
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "polyhedron:sunmoth/luminescence_resource",
+                        "change": 2,
+                        "operation": "add"
+                    }
+                },
+                {
+                    "condition": {
+                        "type": "origins:brightness",
+                        "comparison": ">=",
+                        "compare_to": 0.15
+                    }
+                },
+                {
+                    "action": {
+                        "type": "origins:change_resource",
+                        "resource": "polyhedron:sunmoth/luminescence_resource",
+                        "change": -1,
+                        "operation": "add"
+                    }
+                }
+            ]
+        }
+    }
+}

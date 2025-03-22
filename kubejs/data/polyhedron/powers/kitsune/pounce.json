@@ -153,21 +153,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 2,
+                                        "y": 1.7,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.3,
+                                        "z": 1.1,
                                         "space": "local",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:exhaust",
-                                        "amount": 0.1
+                                        "amount": 2
                                     }
                                 ]
                             }
@@ -190,21 +190,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 1.8,
+                                        "y": 1.5,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.3,
+                                        "z": 1,
                                         "space": "local",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:exhaust",
-                                        "amount": 0.05
+                                        "amount": 1.6
                                     }
                                 ]
                             }
@@ -227,17 +227,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 1.6,
+                                        "y": 1.4,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.2,
+                                        "z": 0.8,
                                         "space": "local",
                                         "client": true,
                                         "server": true
+                                    },
+                                    {
+                                        "type": "origins:exhaust",
+                                        "amount": 1.4
                                     }
                                 ]
                             }
@@ -260,17 +264,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 1.4,
+                                        "y": 1.2,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.2,
+                                        "z": 0.8,
                                         "space": "local",
                                         "client": true,
                                         "server": true
+                                    },
+                                    {
+                                        "type": "origins:exhaust",
+                                        "amount": 1.2
                                     }
                                 ]
                             }
@@ -293,17 +301,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 1.2,
+                                        "y": 1.1,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.15,
+                                        "z": 0.7,
                                         "space": "local",
                                         "client": true,
                                         "server": true
+                                    },
+                                    {
+                                        "type": "origins:exhaust",
+                                        "amount": 1
                                     }
                                 ]
                             }
@@ -326,17 +338,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 1,
+                                        "y": 0.8,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.15,
+                                        "z": 0.7,
                                         "space": "local",
                                         "client": true,
                                         "server": true
+                                    },
+                                    {
+                                        "type": "origins:exhaust",
+                                        "amount": 0.8
                                     }
                                 ]
                             }
@@ -359,17 +375,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 0.8,
+                                        "y": 0.6,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.1,
+                                        "z": 0.6,
                                         "space": "local",
                                         "client": true,
                                         "server": true
+                                    },
+                                    {
+                                        "type": "origins:exhaust",
+                                        "amount": 0.4
                                     }
                                 ]
                             }
@@ -390,17 +410,21 @@
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "y": 0.6,
+                                        "y": 0.5,
                                         "space": "world",
                                         "client": true,
                                         "server": true
                                     },
                                     {
                                         "type": "origins:add_velocity",
-                                        "z": 0.1,
+                                        "z": 0.5,
                                         "space": "local",
                                         "client": true,
                                         "server": true
+                                    },
+                                    {
+                                        "type": "origins:exhaust",
+                                        "amount": 0.2
                                     }
                                 ]
                             }

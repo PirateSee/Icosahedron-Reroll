@@ -1,0 +1,150 @@
+{
+    "name": "§c- §r§nShort Circuit",
+    "description": "Being in water shorts your circuits, damaging you and shocking others",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "text": "Shield Bubble protects you",
+            "sprite": "origins:textures/gui/badge/info.png"
+        }
+    ],
+    "type": "origins:multiple",
+    "damage": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:fluid_height",
+                            "fluid": "minecraft:water",
+                            "comparison": ">",
+                            "compare_to": 0
+                        },
+                        {
+                            "type": "origins:in_rain"
+                        }
+                    ]
+                }
+            ]
+        },
+        "type": "origins:damage_over_time",
+        "interval": 25,
+        "onset_delay": 5,
+        "damage": 3,
+        "damage_easy": 2,
+        "damage_type": "origins:hurt_by_water",
+        "protection_enchantment": "origins:water_protection",
+        "protection_effectiveness": 1
+    },
+    "shock_": {
+        "type": "origins:action_when_damage_taken",
+        "damage_condition": {
+            "type": "origins:name",
+            "name": "origins:hurt_by_water"
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:area_of_effect",
+                    "radius": 10,
+                    "bientity_condition": {
+                        "type": "origins:target_condition",
+                        "condition": {
+                            "type": "origins:and",
+                            "conditions": [
+                                {
+                                    "type": "origins:fluid_height",
+                                    "fluid": "minecraft:water",
+                                    "comparison": ">=",
+                                    "compare_to": 0.1
+                                },
+                                {
+                                    "type": "origins:living"
+                                }
+                            ]
+                        }
+                    },
+                    "bientity_action": {
+                        "type": "origins:damage",
+                        "amount": 3,
+                        "damage_type": "minecraft:magic"
+                    }
+                },
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:electric_spark",
+                    "count": 20,
+                    "speed": 1,
+                    "spread": {
+                        "x": 3,
+                        "y": 1,
+                        "z": 3
+                    },
+                    "offset_y": 1
+                }
+            ]
+        },
+        "cooldown": 1
+    },
+    "shake": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0.2
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 6,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:block_collision",
+                        "block_condition": {
+                            "inverted": true,
+                            "type": "origins:movement_blocking"
+                        },
+                        "offset_x": 0,
+                        "offset_y": 0.2,
+                        "offset_z": 0
+                    },
+                    "if_action": {
+                        "type": "origins:execute_command",
+                        "command": "tp ~ ~0.1 ~"
+                    }
+                },
+                {
+                    "type": "origins:delay",
+                    "action": {
+                        "type": "origins:if_else",
+                        "condition": {
+                            "type": "origins:block_collision",
+                            "block_condition": {
+                                "inverted": true,
+                                "type": "origins:movement_blocking"
+                            },
+                            "offset_x": 0,
+                            "offset_y": -1.2,
+                            "offset_z": 0
+                        },
+                        "if_action": {
+                            "type": "origins:execute_command",
+                            "command": "tp ~ ~-0.1 ~"
+                        }
+                    },
+                    "ticks": 3
+                }
+            ]
+        }
+    }
+}

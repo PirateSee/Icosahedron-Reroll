@@ -1,0 +1,10 @@
+{
+    "name": "§a+ §r§nLast Breath",
+    "description": "Killing an entity restores some air",
+    "type": "origins:self_action_on_kill",
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 60
+    },
+    "cooldown": 20
+}

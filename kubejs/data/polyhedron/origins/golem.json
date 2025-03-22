@@ -1,0 +1,11 @@
+{
+    "powers": [
+        "polyhedron:golem/bulk",
+        "polyhedron:golem/sink",
+        "polyhedron:golem/carry",
+        "polyhedron:golem/momentum",
+        "polyhedron:golem/rapid_descent",
+        "polyhedron:synthetic/breathless"
+    ],
+    "impact": 3
+}

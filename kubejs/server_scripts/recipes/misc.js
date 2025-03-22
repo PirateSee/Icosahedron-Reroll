@@ -128,6 +128,7 @@ ServerEvents.recipes(e => {
 
     e.recipes.create.crushing([Item.of('vintageimprovements:vanadium_nugget').withChance(0.3), Item.of('vintageimprovements:vanadium_nugget').withChance(0.1)], '#create_dd:stone_types/basalt').id('ico:crush_basalt')
 
+    e.remove({id:'create:splashing/gravel'})
     e.custom({
 		"type": "createsifter:sifting",
 		"ingredients": [
@@ -145,14 +146,14 @@ ServerEvents.recipes(e => {
 			},
             {
 			    "item": 'kubejs:raw_tin_nugget',
-                "chance": 0.1
+                "chance": 0.15  
 			}
 		],
 		"processingTime": 250,
 		"minimumSpeed": 64.0
 	}).id('ico:sift_gravel')
 
-    e.custom({
+    /*e.custom({
 		"type": "createsifter:sifting",
 		"ingredients": [
 			{
@@ -178,7 +179,7 @@ ServerEvents.recipes(e => {
 		],
 		"processingTime": 300,
 		"minimumSpeed": 64.0
-	}).id('ico:sift_sand')
+	}).id('ico:sift_sand')*/
 
     e.shapeless('minecraft:andesite', ['minecraft:diorite', 'minecraft:cobblestone']).id('ico:andesite')
 
@@ -197,7 +198,7 @@ ServerEvents.recipes(e => {
 
     e.recipes.create.crushing(['aether:ambrosium_shard', Item.of('aether:ambrosium_shard').withChance(0.75), Item.of('create:experience_nugget').withChance(0.75), Item.of('aether:holystone').withChance(0.12)], 'aether:ambrosium_ore').id('ico:ambrosium_ore')
 
-    e.custom({
+    /*e.custom({
         "type": "wizards_reborn:alchemy_machine",
         "outputItem": {
             "item": "wizards_reborn:arcane_gold_ingot",
@@ -232,5 +233,5 @@ ServerEvents.recipes(e => {
                 "amount" : 200
             }
         ]
-    }).id('ico:arcane_gold_ingot_from_ingot')
+    }).id('ico:arcane_gold_ingot_from_ingot')*/
 })

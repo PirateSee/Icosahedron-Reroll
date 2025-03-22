@@ -8,7 +8,7 @@ ServerEvents.recipes(e => {
                 },
                 {
                     "fluid": "vintageimprovements:sulfuric_acid",
-                    "amount": 10
+                    "amount": 100
                 }
             ],
             "processingTime": 100,

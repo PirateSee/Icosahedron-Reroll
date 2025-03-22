@@ -1,0 +1,193 @@
+{
+    "name": "§a+ §r§nAirbrake",
+    "description": "While gliding, crouch to slow down-mid air. Uncrouching restores some lost momentum.",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "text": "Airbraking signifigantly reduces kinetic damage",
+            "sprite": "origins:textures/gui/badge/info.png"
+        }
+    ],
+    "type": "origins:multiple",
+    "held": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 2,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "boost": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 20,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true
+        }
+    },
+    "active": {
+        "condition": {
+            "type": "origins:fall_flying"
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "polyhedron:rockdrake/airbrake_held",
+            "change": 2,
+            "operation": "set"
+        },
+        "key": {
+            "key": "key.sneak",
+            "continuous": true
+        }
+    },
+    "holddecay": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:rockdrake/airbrake_held",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:rockdrake/airbrake_held",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:rockdrake/airbrake_boost",
+                    "change": -1,
+                    "operation": "add"
+                }
+            ]
+        },
+        "falling_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:resource",
+                "resource": "polyhedron:rockdrake/airbrake_boost",
+                "comparison": "==",
+                "compare_to": 0
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:change_resource",
+                        "resource": "polyhedron:rockdrake/airbrake_boost",
+                        "change": 20,
+                        "operation": "set"
+                    },
+                    {
+                        "type": "origins:add_velocity",
+                        "z": 0.1,
+                        "space": "local",
+                        "client": true,
+                        "server": true
+                    }
+                ]
+            }
+        }
+    },
+    "slow": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fall_flying"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:rockdrake/airbrake_held",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5,
+            "name": "Airbrake"
+        },
+        "axes": [
+            "x",
+            "y",
+            "z"
+        ]
+    },
+    "boostcd": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:rockdrake/airbrake_boost",
+                    "change": -1,
+                    "operation": "add"
+                }
+            ]
+        }
+    },
+    "slow_vertical": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fall_flying"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:rockdrake/airbrake_held",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "type": "origins:modify_velocity",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.2,
+            "name": "Airbrake Vertical"
+        },
+        "axes": [
+            "y"
+        ]
+    },
+    "resist": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:rockdrake/airbrake_held",
+                    "comparison": ">",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:fall_flying"
+                }
+            ]
+        },
+        "type": "origins:modify_damage_taken",
+        "damage_condition": {
+            "type": "origins:in_tag",
+            "tag": "origins:kinetic"
+        },
+        "modifier": {
+            "operation": "multiply_base",
+            "value": -0.9,
+            "name": "Airbrake"
+        }
+    }
+}

@@ -1,0 +1,14 @@
+{
+    "name": "§a+ §r§nObsidian Skin",
+    "description": "Immune to fire damage",
+    "type": "origins:modify_damage_taken",
+    "damage_condition": {
+        "type": "origins:in_tag",
+        "tag": "minecraft:is_fire"
+    },
+    "modifier": {
+        "operation": "set_total",
+        "value": 0,
+        "name": "Fire Immunity"
+    }
+}

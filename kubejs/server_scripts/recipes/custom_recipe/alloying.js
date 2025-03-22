@@ -63,4 +63,7 @@ ServerEvents.recipes(e => {
             }
         ]
     }).id("kubejs:carbon_steel")
+
+    // remove base alloying
+    e.remove([{id: 'createmetallurgy:alloying/invar'}, {id: 'createmetallurgy:alloying/bronze'}, {id: 'createmetallurgy:alloying/brass'}, {id: 'createmetallurgy:alloying/electrum'}, {id: 'createmetallurgy:alloying/constantan'}])
 })

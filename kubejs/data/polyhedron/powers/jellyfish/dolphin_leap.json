@@ -1,0 +1,87 @@
+{
+    "name": "§a+ §r§nDolphin Leap",
+    "type": "origins:multiple",
+    "jump": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:submerged_in",
+                    "fluid": "minecraft:water"
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:jellyfish/dolphin_leap_resource",
+                    "comparison": ">=",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "rising_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:apply_effect",
+                    "effect": {
+                        "effect": "minecraft:levitation",
+                        "duration": 6,
+                        "amplifier": 20,
+                        "is_ambient": true,
+                        "show_particles": false,
+                        "show_icon": false
+                    }
+                },
+                {
+                    "type": "origins:set_resource",
+                    "resource": "polyhedron:jellyfish/dolphin_leap_resource",
+                    "value": 0
+                }
+            ]
+        }
+    },
+    "disqualify": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "polyhedron:jellyfish/dolphin_leap_resource",
+                    "comparison": ">=",
+                    "compare_to": 1
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:swimming"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 5,
+        "rising_action": {
+            "type": "origins:set_resource",
+            "resource": "polyhedron:jellyfish/dolphin_leap_resource",
+            "value": 1
+        }
+    },
+    "qualify": {
+        "condition": {
+            "type": "origins:swimming"
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "rising_action": {
+            "type": "origins:set_resource",
+            "resource": "polyhedron:jellyfish/dolphin_leap_resource",
+            "value": 1
+        }
+    },
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 1,
+        "start_value": 0
+    }
+}

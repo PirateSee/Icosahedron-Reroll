@@ -1,5 +1,8 @@
 StartupEvents.registry('item', e => {
 
+    //raw
+    e.create('nitra').texture('ico:item/ore/nitra')
+
     //stuff
     e.create('meteoric_iron').texture('ico:item/ore/meteoric_iron')
 
@@ -88,6 +91,15 @@ StartupEvents.registry('item', e => {
     e.create('screws').texture('ico:item/ore/alloy/screws')
 
     e.create('steel_balls').texture('ico:item/ore/alloy/steel_balls')
+
+    //pressure
+    e.create('pressure_alloy').texture('ico:item/ore/alloy/pressure_alloy')
+    e.create('compressed_framing').texture('ico:item/compressed/compressed_framing')
+
+    e.create('lubricated_bearing').texture('ico:item/compressed/lubricated_bearing')
+    e.create('plasticizer').texture('ico:item/compressed/plasticizer')
+
+    e.create('incomplete_pcb', 'create:sequenced_assembly').texture('icosahedron:item/incomplete/incomplete_pcb')
 
     //gemstone polishing
     e.create('rough_zanite').texture('icosahedron:item/ore/gem/rough_zanite')

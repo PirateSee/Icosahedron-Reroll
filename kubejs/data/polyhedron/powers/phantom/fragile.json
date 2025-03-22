@@ -1,0 +1,12 @@
+{
+    "name": "§c- §r§nFragile",
+    "description": "Have 3 less hearts",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.max_health",
+        "operation": "addition",
+        "value": -6,
+        "name": "Fragile"
+    },
+    "update_health": true
+}

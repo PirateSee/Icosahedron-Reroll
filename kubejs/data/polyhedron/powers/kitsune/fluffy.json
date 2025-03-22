@@ -1,106 +1,65 @@
 {
     "name": "§8o§r§n Fluffy Stature",
-    "description": "Take less fall damage. Walk across the softest of snows",
+    "description": "Fall slower and take much less fall damage.",
     "type": "origins:multiple",
     "resist": {
         "type": "origins:modify_damage_taken",
         "damage_condition": {
             "type": "origins:name",
-            "name": "minecraft:fall"
+            "name": "fall"
         },
         "modifier": {
             "operation": "multiply_base",
-            "value": 0.75,
+            "value": -0.5,
             "name": "Fluffy"
         }
     },
-    "snowwalk_0": {
+    "fall": {
         "condition": {
             "type": "origins:and",
             "conditions": [
                 {
                     "type": "origins:block_collision",
                     "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:powder_snow"
+                        "inverted": true,
+                        "type": "origins:movement_blocking"
                     },
                     "offset_x": 0,
-                    "offset_y": -0.01,
+                    "offset_y": -0.1,
                     "offset_z": 0
                 },
                 {
                     "inverted": true,
-                    "type": "origins:block_collision",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:powder_snow"
-                    },
-                    "offset_x": 0,
-                    "offset_y": 0,
-                    "offset_z": 0
-                }
-            ]
-        },
-        "type": "origins:modify_velocity",
-        "modifiers": [
-            {
-                "operation": "set_base",
-                "value": 0
-            }
-        ],
-        "axes": [
-            "y"
-        ]
-    },
-    "snowalk_1": {
-        "condition": {
-            "type": "origins:and",
-            "conditions": [
-                {
-                    "type": "origins:block_collision",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:powder_snow"
-                    },
-                    "offset_x": 0,
-                    "offset_y": -0.01,
-                    "offset_z": 0
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": "==",
+                    "compare_to": 0
                 },
                 {
                     "inverted": true,
-                    "type": "origins:block_collision",
-                    "block_condition": {
-                        "type": "origins:block",
-                        "block": "minecraft:powder_snow"
-                    },
-                    "offset_x": 0,
-                    "offset_y": 0,
-                    "offset_z": 0
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:lava",
+                    "comparison": "==",
+                    "compare_to": 0
                 }
             ]
         },
-        "type": "origins:grounded"
-    },
-    "snowwalk_2": {
-        "condition": {
-            "type": "origins:block_collision",
-            "block_condition": {
-                "type": "origins:block",
-                "block": "minecraft:powder_snow"
-            },
-            "offset_x": 0,
-            "offset_y": 0,
-            "offset_z": 0
-        },
         "type": "origins:modify_velocity",
-        "modifiers": [
-            {
-                "operation": "addition",
-                "value": 0.09
-            }
-        ],
+        "modifier": {
+            "operation": "add_base_early",
+            "value": 0.065,
+            "name": "Fluffy Stature"
+        },
         "axes": [
             "y"
         ]
+    },
+    "jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "add_base_early",
+            "value": -0.02,
+            "name": "Fluffy Stature"
+        }
     }
 }

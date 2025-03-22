@@ -1,0 +1,54 @@
+{
+    "name": "§8o§r§n Trailblazer",
+    "description": "While on fire, run faster and leave behind a trail of fire when sprinting.",
+    "type": "origins:multiple",
+    "trail": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:sprinting"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:action_over_time",
+        "interval": 10,
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "setblock ~ ~ ~ fire keep"
+        }
+    },
+    "speed": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:on_fire"
+                },
+                {
+                    "type": "origins:moving"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": 0.2,
+            "name": "Trailblazer"
+        },
+        "tick_rate": 5,
+        "update_health": false
+    }
+}

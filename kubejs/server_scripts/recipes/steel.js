@@ -12,9 +12,9 @@ ServerEvents.recipes(e => {
         B: '#forge:ingots/brick',
         N: 'minecraft:nether_brick',
         L: 'minecraft:blackstone'
-    })
+    }).id('ico:cokebrick')
 
-    e.custom({
+    /*e.custom({
         "type": "immersiveengineering:coke_oven",
         "creosote": 50,
         "input": {
@@ -24,7 +24,24 @@ ServerEvents.recipes(e => {
           "item": 'thermal:coal_coke'
         },
         "time": 2000
-    })
+    }).id('ico:coal_coke')*/
+
+    e.custom({
+        "type": "thermal:pyrolyzer",
+        "ingredient": {
+            "tag": "forge:storage_blocks/charcoal"
+        },
+        "result": [
+            {
+                "item": "thermal:coal_coke"
+            },
+            {
+                "fluid": "thermal:creosote",
+                "amount": 10
+            }
+        ],
+        "experience": 0.05
+    }).id('ico:coal_coke_from_charcoal')
 
     e.remove([{id: 'createmetallurgy:alloying/steel'}, {id: 'immersiveengineering:blastfurnace/steel'}, {id: 'immersiveengineering:blastfurnace/steel_block'}, {id: 'createmetallurgy:smelting/coke_from_coal'}, {id: 'createmetallurgy:blasting/coke_from_coal'}])
 

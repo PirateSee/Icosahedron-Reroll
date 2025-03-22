@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "etched_lightning"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 5: Under Pressure": {
+        "position": [
+          270,
+          60
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "pneumaticcraft:assembly_drill",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/gears.png",
+    "title": {
+      "translate": "Assembly Line"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

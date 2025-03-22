@@ -1,0 +1,60 @@
+{
+    "name": "§8o§r§n Dense",
+    "description": "Sink like a stone but breathe freely in water",
+    "type": "origins:multiple",
+    "ignore": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">=",
+            "compare_to": 0.1
+        },
+        "type": "origins:ignore_water"
+    },
+    "movement": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">=",
+            "compare_to": 0.1
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 4,
+        "tick_rate": 3,
+        "effects": [
+            {
+                "effect": "minecraft:slowness",
+                "duration": 4,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            },
+            {
+                "effect": "minecraft:slow_falling",
+                "duration": 4,
+                "amplifier": 0,
+                "show_particles": false,
+                "show_icon": false
+            }
+        ]
+    },
+    "jump": {
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "addition",
+            "value": 0.05,
+            "name": "Sink"
+        }
+    },
+    "sprint": {
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">=",
+            "compare_to": 0.1
+        },
+        "type": "origins:prevent_sprinting"
+    }
+}

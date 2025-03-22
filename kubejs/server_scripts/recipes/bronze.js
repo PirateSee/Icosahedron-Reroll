@@ -42,31 +42,9 @@ ServerEvents.recipes(e => {
 	]).transitionalItem(inter).loops(1).id('ico:sorting_algorithm')
 
     //machinery
-    e.remove([{id: 'create:crafting/kinetics/spout'}, {id: 'create:crafting/kinetics/item_drain'}, {id: 'create:crafting/kinetics/steam_engine'}, {id: 'create:crafting/kinetics/empty_blaze_burner'}, {id: 'create:crafting/kinetics/fluid_pipe'}, {id: 'create:crafting/kinetics/fluid_pipe_vertical'}, {id: 'create:crafting/kinetics/mechanical_pump'}, {id: 'create:crafting/kinetics/fluid_valve'}, {id: 'create:crafting/kinetics/fluid_tank'}, {id: 'create_enchantment_industry:disenchanter'}])
+    e.remove([{id: 'create:crafting/kinetics/spout'}, {id: 'create:crafting/kinetics/item_drain'}, {id: 'create:crafting/kinetics/steam_engine'}, {id: 'create:crafting/kinetics/empty_blaze_burner'}, {id: 'create:crafting/kinetics/mechanical_pump'}, {id: 'create:crafting/kinetics/fluid_valve'}, {id: 'create:crafting/kinetics/fluid_tank'}, {id: 'create_enchantment_industry:crafting/disenchanter'}])
 
     e.shapeless('2x create:fluid_tank', ['#c:barrels', 'create:copper_casing']).id('ico:fluid_tank')
-
-    inter = 'kubejs:incomplete_bronze_tubing'
-    e.recipes.create.sequenced_assembly([
-	    'kubejs:bronze_tubing'
-	], '#forge:ingots/bronze', [
-        e.recipes.createDeploying(inter, [inter, '#forge:plates/bronze']),
-        e.recipes.createDeploying(inter, [inter, '#forge:plates/bronze']),
-        e.recipes.createCutting(inter,inter)
-	]).transitionalItem(inter).loops(1).id('ico:bronze_tubing')
-
-    /*inter = 'kubejs:incomplete_bronze_parts'
-    e.recipes.create.sequenced_assembly([
-	    'kubejs:bronze_parts'
-	], 'create:fluid_tank', [
-		e.recipes.createDeploying(inter, [inter, '#forge:gears/gold']),
-        e.recipes.createDeploying(inter, [inter, 'kubejs:bronze_tubing']),
-        e.recipes.createCutting(inter,inter),
-        e.recipes.createDeploying(inter, [inter, 'kubejs:bronze_tubing']),
-        e.recipes.createPressing(inter,inter)
-	]).transitionalItem(inter).loops(3).id('ico:incomplete_bronze_parts')*/
-
-    e.recipes.create.deploying('create:fluid_pipe', ['#forge:plates/copper', '#forge:nuggets/copper'])
 
     e.shaped('create:spout', [
         'F',
@@ -74,7 +52,7 @@ ServerEvents.recipes(e => {
         'N'
     ], {
         F: 'create:fluid_tank',
-        K: 'kubejs:kelp_sheet',
+        K: '#ico:flexible_sheets',
         N: '#ico:andesite_alloyable'
     }).id('ico:spout')
 
@@ -87,9 +65,11 @@ ServerEvents.recipes(e => {
     }).id('ico:item_drain')
 
     e.shaped('create_enchantment_industry:disenchanter', [
+        'B',
         'S',
         'D'
     ], {
+        B: '#ico:exp_items',
         D: 'create:item_drain',
         S: '#create:sandpaper'
     }).id('ico:disenchanter')
@@ -144,8 +124,8 @@ ServerEvents.recipes(e => {
         'K'
     ], {
         S: 'kubejs:sorting_algorithm',
-        I: '#forge:ingots/rose_gold',
-        K: 'kubejs:kelp_sheet'
+        I: '#forge:ingots/brass',
+        K: '#ico:flexible_sheets'
     }).id('ico:brass_funnel')
 
     e.shaped('2x create:brass_tunnel', [
@@ -154,8 +134,8 @@ ServerEvents.recipes(e => {
         'KK'
     ], {
         S: 'kubejs:sorting_algorithm',
-        I: '#forge:ingots/rose_gold',
-        K: 'kubejs:kelp_sheet'
+        I: '#forge:ingots/brass',
+        K: '#ico:flexible_sheets'
     }).id('ico:brass_tunnel')
 
     //foundry
@@ -304,6 +284,7 @@ ServerEvents.recipes(e => {
     e.recipes.create.compacting('malum:cursed_sapball', Fluid.of('kubejs:cursed_sap', 500))
 
     e.recipes.create.mixing(['thermal:rosin', Fluid.of('thermal:tree_oil', 100)], Fluid.of('thermal:resin', 200)).lowheated().id('ico:rosin')
+    e.recipes.create.mixing('thermal:rubber', Fluid.of('thermal:latex', 250)).lowheated().id('ico:rubber')
 
     e.remove({id: 'thermal:device_tree_extractor'})
 

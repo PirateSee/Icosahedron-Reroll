@@ -1,0 +1,60 @@
+{
+    "name": "§a+ §r§nSparks",
+    "description": "Getting hit consumes Luminescence to push back and cause the attacker to glow. Unarmed attacks also cause glowing.",
+    "type": "origins:action_when_hit",
+    "bientity_action": {
+        "type": "origins:and",
+        "actions": [
+            {
+                "type": "origins:if_else",
+                "condition": {
+                    "type": "origins:target_condition",
+                    "condition": {
+                        "type": "origins:resource",
+                        "resource": "polyhedron:sunmoth/luminescence_resource",
+                        "comparison": ">",
+                        "compare_to": 10
+                    }
+                },
+                "if_action": {
+                    "type": "origins:and",
+                    "actions": [
+                        {
+                            "type": "origins:invert",
+                            "action": {
+                                "type": "origins:add_velocity",
+                                "y": 0.1,
+                                "z": 0.3,
+                                "client": true,
+                                "server": true
+                            }
+                        },
+                        {
+                            "type": "origins:actor_action",
+                            "action": {
+                                "type": "origins:apply_effect",
+                                "effect": {
+                                    "effect": "minecraft:glowing",
+                                    "duration": 200,
+                                    "amplifier": 0,
+                                    "show_particles": true,
+                                    "show_icon": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "type": "origins:target_action",
+                "action": {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:sunmoth/luminescence_resource",
+                    "change": -2,
+                    "operation": "add"
+                }
+            }
+        ]
+    },
+    "cooldown": 5
+}

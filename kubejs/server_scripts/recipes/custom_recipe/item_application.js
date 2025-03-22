@@ -24,7 +24,7 @@ ServerEvents.recipes(e => {
     }
 
     //andesite
-    item_application('kubejs:hardened_wood', 'kubejs:andesite_framing', 'create:andesite_casing', 'ico:andesite_casing')
+    item_application('kubejs:hardened_wood_planks', 'kubejs:andesite_framing', 'create:andesite_casing', 'ico:andesite_casing')
 
     let cog_upgrade_resource = '#forge:ingots/tin'
 
@@ -39,7 +39,7 @@ ServerEvents.recipes(e => {
     item_application_craft('create:gearbox', 'kubejs:iron_drill', 'create:mechanical_drill', 'ico:mechanical_drill')
 
     //bronze
-    item_application('create:andesite_casing', 'kubejs:bronze_framing', 'create:copper_casing', 'ico:copper_casing')
+    item_application('create:hardened_wood_planks', 'kubejs:bronze_framing', 'create:copper_casing', 'ico:copper_casing')
 
     item_application_craft('create:fluid_pipe', 'create:cogwheel', 'create:mechanical_pump', 'ico:mechanical_pump')
     item_application_craft('create:fluid_pipe', '#forge:gears/iron', 'create:fluid_valve', 'ico:fluid_valve')
@@ -48,11 +48,15 @@ ServerEvents.recipes(e => {
     item_application_craft('create:chute', 'kubejs:sorting_algorithm', 'create:smart_chute', 'ico:smart_chute')
 
     //brass
-    item_application('create:copper_casing', 'kubejs:brass_framing', 'create:brass_casing', 'ico:brass_casing')
+    item_application('create:hardened_wood_planks', 'kubejs:brass_framing', 'create:brass_casing', 'ico:brass_casing')
 
     //item_application_craft('create:brass_casing', 'create:propeller', 'create:encased_fan', 'ico:encased_fan')
 
     item_application_craft('create:mechanical_mixer', 'kubejs:mixer_upgrade_kit', 'createmetallurgy:foundry_mixer', 'ico:foundry_mixer')
     item_application_craft('createsifter:sifter', 'kubejs:sifter_upgrade_kit', 'createsifter:brass_sifter', 'ico:brass_sifter')
     item_application_craft('create:encased_fan', 'kubejs:fan_upgrade_kit', 'create_dd:industrial_fan', 'ico:industrial_fan')
+
+    //compressed
+    item_application('minecraft:stripped_crimson_stem', 'kubejs:compressed_framing', 'compressedcreativity:compressed_iron_casing', 'ico:compressed_iron_casing_from_stem')
+    item_application('minecraft:stripped_crimson_hyphae', 'kubejs:compressed_framing', 'compressedcreativity:compressed_iron_casing', 'ico:compressed_iron_casing_from_hyphae')
 })

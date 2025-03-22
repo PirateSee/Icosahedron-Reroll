@@ -1,0 +1,45 @@
+{
+    "name": "§c- §r§nFire Climate",
+    "description": "Become slower in cold climates and weaker in damp ones.",
+    "type": "origins:multiple",
+    "cold": {
+        "condition": {
+            "type": "origins:biome",
+            "condition": {
+                "type": "origins:temperature",
+                "comparison": "<",
+                "compare_to": 0.1
+            }
+        },
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_base",
+            "value": -0.15,
+            "name": "Cold Climate"
+        },
+        "tick_rate": 20,
+        "update_health": false
+    },
+    "damp": {
+        "condition": {
+            "type": "origins:biome",
+            "condition": {
+                "type": "origins:high_humidity"
+            }
+        },
+        "type": "origins:stacking_status_effect",
+        "min_stacks": 0,
+        "max_stacks": 1,
+        "duration_per_stack": 22,
+        "tick_rate": 20,
+        "effect": {
+            "effect": "minecraft:weakness",
+            "duration": 22,
+            "amplifier": 0,
+            "is_ambient": true,
+            "show_particles": true,
+            "show_icon": true
+        }
+    }
+}

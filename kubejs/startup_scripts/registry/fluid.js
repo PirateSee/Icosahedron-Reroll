@@ -74,7 +74,11 @@ StartupEvents.registry('fluid', e => {
     e.create('phenol')
         .stillTexture('ico:fluid/phenol')
         .flowingTexture('ico:fluid/phenol/flowing')
-        
+
+    e.create('dirty_plastic')
+        .stillTexture('ico:fluid/dirty_plastic')
+        .flowingTexture('ico:fluid/dirty_plastic/flowing')
+
     //natural
     e.create('runic_sap')
         .stillTexture('ico:fluid/runic_sap/still')

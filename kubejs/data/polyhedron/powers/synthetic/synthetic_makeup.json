@@ -1,0 +1,106 @@
+{
+    "name": "§8o§r§n Synthetic Makeup",
+    "description": "Only naturally regenerate to half health. Repair self with ingots.",
+    "type": "origins:multiple",
+    "noregen": {
+        "condition": {
+            "type": "origins:relative_health",
+            "comparison": ">",
+            "compare_to": 0.5
+        },
+        "type": "origins:disable_regen"
+    },
+    "repair": {
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:or",
+                    "conditions": [
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "mainhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "c:ingots"
+                                }
+                            }
+                        },
+                        {
+                            "type": "origins:equipped_item",
+                            "equipment_slot": "offhand",
+                            "item_condition": {
+                                "type": "origins:ingredient",
+                                "ingredient": {
+                                    "tag": "c:ingots"
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:relative_health",
+                    "comparison": "<",
+                    "compare_to": 1
+                }
+            ]
+        },
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:heal",
+                    "amount": 3
+                },
+                {
+                    "type": "origins:if_else",
+                    "condition": {
+                        "type": "origins:equipped_item",
+                        "equipment_slot": "mainhand",
+                        "item_condition": {
+                            "type": "origins:ingredient",
+                            "ingredient": {
+                                "tag": "c:ingots"
+                            }
+                        }
+                    },
+                    "if_action": {
+                        "type": "origins:equipped_item_action",
+                        "equipment_slot": "mainhand",
+                        "action": {
+                            "type": "origins:consume",
+                            "amount": 1
+                        }
+                    },
+                    "else_action": {
+                        "type": "origins:equipped_item_action",
+                        "equipment_slot": "offhand",
+                        "action": {
+                            "type": "origins:consume",
+                            "amount": 1
+                        }
+                    }
+                }
+            ]
+        },
+        "cooldown": 200,
+        "hud_render": {
+            "should_render": true
+        },
+        "key": {
+            "key": "key.use"
+        }
+    },
+    "armor": {
+        "type": "origins:attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 4,
+            "name": "Synthetic Makeup"
+        },
+        "update_health": false
+    }
+}

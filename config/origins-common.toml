@@ -147,6 +147,7 @@
 		"polyhedron:kitsune/fluffy" = true
 		"polyhedron:kitsune/pounce" = true
 		"polyhedron:kitsune/panic" = true
+		"polyhedron:kitsune/arcane_fire" = true
 
 	[origins."ars_scalaes:affinity/earth_affinity"]
 		enabled = true
@@ -174,4 +175,93 @@
 		"polyhedron:undead/solar_rad" = true
 		"polyhedron:undead/undead" = true
 		"polyhedron:undead/evade_light" = true
+		"polyhedron:undead/undying" = true
+
+	[origins."polyhedron:synthetic"]
+		enabled = true
+		"polyhedron:synthetic/bio_reactor" = true
+		"polyhedron:synthetic/hydrophobia" = true
+		"polyhedron:synthetic/infrared_sensing" = true
+		"polyhedron:synthetic/overdrive" = true
+		"polyhedron:synthetic/shield" = true
+		"polyhedron:synthetic/shock_absorber" = true
+		"polyhedron:synthetic/shock_absorber_effect" = true
+		"polyhedron:synthetic/synthetic_makeup" = true
+		"polyhedron:synthetic/breathless" = true
+
+	[origins."polyhedron:jellyfish"]
+		enabled = true
+		"polyhedron:jellyfish/dolphin_leap" = true
+		"polyhedron:jellyfish/flamable" = true
+		"polyhedron:jellyfish/stings" = true
+		"polyhedron:jellyfish/last_breath" = true
+		"origins:aquatic" = true
+		"origins:like_water" = true
+		"origins:conduit_power_on_land" = true
+		"origins:air_from_potions" = true
+		"origins:aqua_affinity" = true
+		"origins:water_breathing" = true
+
+	[origins."polyhedron:kindling"]
+		enabled = true
+		"polyhedron:kindling/fire_immune" = true
+		"polyhedron:kindling/ignition" = true
+		"polyhedron:kindling/trailblazer" = true
+		"polyhedron:kindling/dousing" = true
+		"polyhedron:kindling/freezing" = true
+		"polyhedron:kindling/quickfire" = true
+		"polyhedron:kindling/withdrawal" = true
+		"polyhedron:kindling/calorie_burner" = true
+		"polyhedron:kindling/snow" = true
+		"polyhedron:kindling/sparking" = true
+		"polyhedron:kindling/fireresist" = true
+
+	[origins."polyhedron:golem"]
+		enabled = true
+		"polyhedron:golem/bulk" = true
+		"polyhedron:golem/sink" = true
+		"polyhedron:golem/carry" = true
+		"polyhedron:synthetic/breathless" = true
+		"polyhedron:golem/momentum" = true
+		"polyhedron:golem/rapid_descent" = true
+
+	[origins."polyhedron:phantom"]
+		enabled = true
+		"polyhedron:phantom/phantomize" = true
+		"polyhedron:phantom/phantomize_dsc" = true
+		"polyhedron:phantom/phantomize_dsc_launch" = true
+		"polyhedron:phantom/air_move" = true
+		"polyhedron:phantom/undead" = true
+		"polyhedron:phantom/translucent" = true
+		"polyhedron:undead/solar_rad" = true
+		"polyhedron:phantom/fragile" = true
+
+	[origins."polyhedron:rockdrake"]
+		enabled = true
+		"polyhedron:rockdrake/winged" = true
+		"polyhedron:rockdrake/airbrake" = true
+		"polyhedron:carnivore" = true
+		"polyhedron:rockdrake/cavern_eyes" = true
+		"polyhedron:rockdrake/kick" = true
+		"polyhedron:rockdrake/climb" = true
+
+	[origins."polyhedron:sunmoth"]
+		enabled = true
+		"polyhedron:sunmoth/luminescence" = true
+		"polyhedron:sunmoth/flight" = true
+		"polyhedron:sunmoth/punchglow" = true
+		"polyhedron:sunmoth/sparks" = true
+		"polyhedron:sunmoth/catalyst" = true
+		"polyhedron:phantom/fragile" = true
+		"polyhedron:sunmoth/metabolism" = true
+		"polyhedron:sunmoth/lightweight" = true
+
+	[origins."polyhedron:anomaly"]
+		enabled = true
+		"polyhedron:anomaly/blink" = true
+		"polyhedron:anomaly/phasing" = true
+		"polyhedron:anomaly/cracked_armor" = true
+		"polyhedron:anomaly/disruption" = true
+		"polyhedron:anomaly/voidwalk" = true
+		"polyhedron:anomaly/slowheal" = true
 

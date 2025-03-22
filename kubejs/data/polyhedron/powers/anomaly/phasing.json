@@ -1,0 +1,140 @@
+{
+    "name": "§a+ §r§nPhasing",
+    "description": "Taking damage temporarily makes you phase out of existence, slowing you down but letting you move through walls and rendering you invincible",
+    "badges": [
+        {
+            "type": "origins:tooltip",
+            "text": "Naturally regenerate slower while phased.",
+            "sprite": "origins:textures/gui/badge/info.png"
+        }
+    ],
+    "type": "origins:multiple",
+    "resource": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 15
+    },
+    "damage": {
+        "type": "origins:self_action_when_hit",
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:anomaly/phasing_resource",
+                    "change": 15,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:dragon_breath",
+                    "count": 10,
+                    "speed": 0.1
+                }
+            ]
+        },
+        "cooldown": 1
+    },
+    "drain": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:anomaly/phasing_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:action_over_time",
+        "interval": 2,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "polyhedron:anomaly/phasing_resource",
+                    "change": -1,
+                    "operation": "add"
+                },
+                {
+                    "type": "origins:apply_effect",
+                    "effects": [
+                        {
+                            "effect": "minecraft:slow_falling",
+                            "duration": 3,
+                            "amplifier": 0,
+                            "show_particles": true,
+                            "show_icon": true
+                        },
+                        {
+                            "effect": "minecraft:slowness",
+                            "duration": 3,
+                            "amplifier": 0,
+                            "show_particles": true,
+                            "show_icon": true
+                        }
+                    ]
+                },
+                {
+                    "type": "origins:spawn_particles",
+                    "particle": "minecraft:dragon_breath",
+                    "count": 2,
+                    "speed": 0.05
+                }
+            ]
+        }
+    },
+    "phase": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:anomaly/phasing_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:phasing",
+        "render_type": "none",
+        "view_distance": 10,
+        "phase_down_condition": {
+            "type": "origins:sneaking"
+        }
+    },
+    "overlay": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:anomaly/phasing_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:overlay",
+        "texture": "minecraft:textures/misc/nausea.png",
+        "strength": 0.3,
+        "red": 0.2,
+        "green": 0,
+        "blue": 0.3,
+        "draw_mode": "texture",
+        "draw_phase": "below_hud",
+        "hide_with_hud": true,
+        "visible_in_third_person": false
+    },
+    "model": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:anomaly/phasing_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:model_color",
+        "alpha": 0.5
+    },
+    "invincibility": {
+        "condition": {
+            "type": "origins:resource",
+            "resource": "polyhedron:anomaly/phasing_resource",
+            "comparison": ">",
+            "compare_to": 0
+        },
+        "type": "origins:invulnerability",
+        "damage_condition": {
+            "inverted": true,
+            "type": "origins:in_tag",
+            "tag": "minecraft:bypasses_cooldown"
+        }
+    }
+}

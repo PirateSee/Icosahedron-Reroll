@@ -1,0 +1,17 @@
+{
+    "name": "Jellyfish",
+    "powers": [
+        "polyhedron:jellyfish/dolphin_leap",
+        "polyhedron:jellyfish/flamable",
+        "polyhedron:jellyfish/stings",
+        "polyhedron:jellyfish/last_breath",
+        "origins:aquatic",
+        "origins:like_water",
+        "origins:conduit_power_on_land",
+        "origins:air_from_potions",
+        "origins:aquatic",
+        "origins:aqua_affinity",
+        "origins:water_breathing"
+    ],
+    "impact": 3
+}

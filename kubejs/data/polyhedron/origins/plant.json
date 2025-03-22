@@ -1,4 +1,6 @@
 {
+    "name": "Dryad",
+    "description": "[Nimble]\n",
     "powers": [
         "polyhedron:plant/plant_affinity",
         "polyhedron:plant/berry_immune",
@@ -7,5 +9,5 @@
         "polyhedron:plant/sleep_sky",
         "polyhedron:plant/herbicide"
     ],
-    "impact": 0
+    "impact": 1
 }

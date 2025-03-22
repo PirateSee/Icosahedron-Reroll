@@ -1,0 +1,40 @@
+{
+  "dependencies": [
+    "pneumatic_mixer"
+  ],
+  "tasks": {},
+  "rewards": {},
+  "display": {
+    "subtitle": {
+      "text": ""
+    },
+    "description": [],
+    "groups": {
+      "Section 5: Under Pressure": {
+        "position": [
+          210,
+          0
+        ]
+      }
+    },
+    "icon": {
+      "item": {
+        "id": "pneumaticcraft:printed_circuit_board",
+        "count": 1
+      },
+      "type": "heracles:item"
+    },
+    "icon_background": "heracles:textures/gui/quest_backgrounds/default.png",
+    "title": {
+      "translate": "Etched Lightning"
+    }
+  },
+  "settings": {
+    "showDependencyArrow": true,
+    "repeatable": false,
+    "autoClaimRewards": false,
+    "individual_progress": false,
+    "hidden": "LOCKED",
+    "unlockNotification": false
+  }
+}

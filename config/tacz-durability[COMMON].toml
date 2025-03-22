@@ -1,0 +1,45 @@
+
+[maxdurability]
+	#The durability the gun starts with and the max it can repair to
+	maxdurability = 2000
+
+[inaccuracy_rate]
+	#The rate of accuracy lost on lower durability, lower value = lower accuracy
+	inaccuracy_rate = 500
+
+[gunsbreak]
+	#Do guns break or not
+	gunsbreak = false
+
+[jamchance]
+	#Set to 0 to stop jamming entirely, do NOT set below 0 (LOWER number = LOWER jam chance)
+	jamchance = 15
+
+[swampmodifier]
+	#Jam chance increase, random value from 1 to the config value (increased number = lower multiplier)
+	swampmodifier = 2
+
+[junglemodifier]
+	#Jam chance increase, random value from 1 to the config value (increased number = lower multiplier)
+	junglemodifier = 3
+
+[watermodifier]
+	#Jam chance increase, random value from 1 to the config value (increased number = lower multiplier)
+	watermodifier = 1
+
+[desertmodifier]
+	#Jam chance increase, random value from 1 to the config value (increased number = lower multiplier)
+	desertmodifier = 4
+
+[coldmodifier]
+	#Jam chance increase, random value from 1 to the config value (increased number = lower multiplier)
+	coldmodifier = 4
+
+[unjammable_list]
+	#List of guns that can't jam
+	unjammable_list = ["tacz:db_short", "tacz:db_long"]
+
+[debug]
+	#consoledebug
+	consoledebug = false
+
