@@ -1,16 +1,16 @@
-filename = 'ColdSweat-2.3.10.jar'
+filename = 'ColdSweat-2.4-b01a.jar'
 name = 'Cold Sweat'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
-x-prismlauncher-release-type = 'release'
+x-prismlauncher-release-type = 'beta'
 
 [download]
-hash = 'f2dadff1214d7831c986e7f6bcd6f97d799effd9b28e1aeea571c5c4ed8d9de1dc3d0e82633286a62574ea58f3e4b28e001f2a05c930078ff0434ddfde1c09f8'
+hash = 'e8362414a3910da3c92e6fa846c94b8949dc39323da486687408ab02b7dba5e1a384585ed125f0ef0880062b02fb5e41712e4d1a6548509d9e197be5c1221e58'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/uXhSmPjd/versions/xVoyhk1K/ColdSweat-2.3.10.jar'
+url = 'https://cdn.modrinth.com/data/uXhSmPjd/versions/no1UYmeO/ColdSweat-2.4-b01a.jar'
 
 [update.modrinth]
 mod-id = 'uXhSmPjd'
-version = 'xVoyhk1K'
+version = 'no1UYmeO'

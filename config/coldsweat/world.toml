@@ -94,6 +94,10 @@
 		#The maximum amount of insulation that the hearth can provide
 		#Range: 0 ~ 10
 		"Hearth Effect Strength" = 10
+		#How often the hearth consumes fuel (in ticks)
+		#Lower numbers mean fuel is consumed faster. Setting to 0 disables fuel consumption
+		#Range: > 0
+		"Hearth Fuel Consumption Interval" = 40
 
 	["Thermal Sources".Boiler]
 		#Allows the boiler to automatically turn on/off based on nearby players' temperature
@@ -114,6 +118,10 @@
 		#The maximum amount of insulation that the boiler can provide
 		#Range: 0 ~ 10
 		"Boiler Warmth Strength" = 5
+		#How often the boiler consumes fuel (in ticks)
+		#Lower numbers mean fuel is consumed faster. Setting to 0 disables fuel consumption
+		#Range: > 0
+		"Boiler Fuel Consumption Interval" = 40
 
 	["Thermal Sources".Icebox]
 		#Allows the icebox to automatically turn on/off based on nearby players' temperature
@@ -134,4 +142,8 @@
 		#The maximum amount of insulation that the icebox can provide
 		#Range: 0 ~ 10
 		"Icebox Chill Strength" = 5
+		#How often the icebox consumes fuel (in ticks)
+		#Lower numbers mean fuel is consumed faster. Setting to 0 disables fuel consumption
+		#Range: > 0
+		"Icebox Fuel Consumption Interval" = 40
 

@@ -13,6 +13,30 @@
 		#Range: 0 ~ 1000
 		wissenRaysLimit = 200
 
+	#Shaders
+	[graphics.shaders]
+		#Intensity of gaining knowledge effect post process shader.
+		#Range: 0.0 ~ 2.0
+		knowledgeShaderIntensity = 1.0
+		#Intensity of Mor Spores effect post process shader.
+		#WARNING: High value is not recommended due to bright flashes.
+		#Range: 0.25 ~ 2.0
+		morSporesShaderIntensity = 1.0
+		#Intensity of Wissen Aura effect post process shader.
+		#Range: 0.0 ~ 2.0
+		wissenAuraShaderIntensity = 1.0
+		#Intensity of Irritation effect post process shader.
+		#Range: 0.0 ~ 2.0
+		irritationShaderIntensity = 1.0
+		#Enable Light Rays glow effect post process shader.
+		lightRaysShader = true
+		#Intensity of Light Rays glow effect post process shader.
+		#Range: 0.0 ~ 2.0
+		lightRaysShaderIntensity = 1.0
+		#Radius of Light Rays glow effect post process shader.
+		#Range: 0.0 ~ 2.0
+		lightRaysShaderRadius = 1.0
+
 #Arcanemicon
 [arcanemicon]
 	#Enable hard mode in research.

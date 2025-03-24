@@ -1,4 +1,4 @@
-filename = 'corpse-forge-1.20.1-1.0.19.jar'
+filename = 'corpse-forge-1.20.1-1.0.20.jar'
 name = 'Corpse'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '0a709113a43830e0974e85bada6fc9c3345379e1e4386c5f18fe1568d48d66affa172390c6c3d0acfb3e10a60a8062b503c0da3ea5e850ead103e50a05584ed2'
+hash = 'c2bbc5dcaa456a711d03550d7ca60cef71c28915b756c86ab6fd6b7838661cede06c6f5f0955c2f79ba587a68e5aef8a8549554f8f11fdfa679132d831d2d6f8'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/WrpuIfhw/versions/TlmJAOz2/corpse-forge-1.20.1-1.0.19.jar'
+url = 'https://cdn.modrinth.com/data/WrpuIfhw/versions/COpemDNs/corpse-forge-1.20.1-1.0.20.jar'
 
 [update.modrinth]
 mod-id = 'WrpuIfhw'
-version = 'TlmJAOz2'
+version = 'COpemDNs'

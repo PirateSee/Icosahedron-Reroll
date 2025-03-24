@@ -1,16 +1,16 @@
-filename = 'Geophilic v3.1.5 f15-61.jar'
+filename = 'Geophilic v3.2 f15-61.jar'
 name = 'Geophilic'
-side = 'both'
-x-prismlauncher-loaders = [ 'neoforge', 'forge', 'fabric', 'quilt' ]
+side = 'server'
+x-prismlauncher-loaders = [ 'neoforge', 'forge', 'quilt', 'fabric' ]
 x-prismlauncher-mc-versions = [ '1.20', '1.20.1', '1.20.2', '1.20.3', '1.20.4', '1.20.5', '1.20.6', '1.21', '1.21.1', '1.21.2', '1.21.3', '1.21.4' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'b976d76375d8131232be4010e51e0222a62747d7'
-hash-format = 'sha1'
-mode = 'metadata:curseforge'
-url = ''
+hash = '6109a5ee6f21a587cc68330e37dcddb4a5a8c095f063f15c37bba35756da360e48d15edba48c21ff7ca391d66fcb2844ea1b0dec7cef37e93e9de4ca1e5d4e33'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/hl5OLM95/versions/wIVsGybb/Geophilic v3.2 f15-61.jar'
 
-[update.curseforge]
-file-id = 5991153
-project-id = 711216
+[update.modrinth]
+mod-id = 'hl5OLM95'
+version = 'wIVsGybb'

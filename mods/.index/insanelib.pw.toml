@@ -1,16 +1,16 @@
-filename = 'InsaneLib-1.15.1-mc1.20.1.jar'
+filename = 'insanelib-1.18.3.jar'
 name = 'InsaneLib'
 side = 'both'
-x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-loaders = [ 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '254d38f151ccfaa3e4ce2066ca925eb3515585335aae19b0e63a6d6a416765d06b525a6cbcb8e75c2a058178e47fbd86f93f8dbec6033d95cc522eec25e96713'
+hash = '8c99dc187d3545051b738dd99269c8559112201a8fb69319689f454660e627872670b3e31891e7bfc6dffbbb06f3c093de03deb83a550fde0d0c156c4b779bc8'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/USZyvOJq/versions/5oermGyM/InsaneLib-1.15.1-mc1.20.1.jar'
+url = 'https://cdn.modrinth.com/data/USZyvOJq/versions/l4TqBFwP/insanelib-1.18.3.jar'
 
 [update.modrinth]
 mod-id = 'USZyvOJq'
-version = '5oermGyM'
+version = 'l4TqBFwP'

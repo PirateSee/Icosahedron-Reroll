@@ -1,4 +1,4 @@
-filename = 'multiblocked2-1.20.1-1.0.21.a.jar'
+filename = 'multiblocked2-1.20.1-1.0.21.c.jar'
 name = 'Multiblocked2'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'beta'
 
 [download]
-hash = '27a92aaa2e02798564075d31a0800ee815e8ab9d4fb3e9354fcba1df9045eddfb39d3486a9a5ee829bbe3ed6ae9c4becdb9dff6d7fb6d77462ecb8e08b3a50ec'
+hash = 'd55712bd16aade7234bc0b40b27d50b558ea12f1eb9b018c2b807806d1acf675d3653a29d4b117003fde6ee8fc22dbd5171b61051e4a2f669ff8868d6d8cb60e'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/R2gjKEpa/versions/lqvgvSik/multiblocked2-1.20.1-1.0.21.a.jar'
+url = 'https://cdn.modrinth.com/data/R2gjKEpa/versions/gTpotYtR/multiblocked2-1.20.1-1.0.21.c.jar'
 
 [update.modrinth]
 mod-id = 'R2gjKEpa'
-version = 'lqvgvSik'
+version = 'gTpotYtR'

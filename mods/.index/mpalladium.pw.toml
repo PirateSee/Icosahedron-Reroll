@@ -1,16 +1,16 @@
-filename = 'Palladium 1.20-1.20.2-1.1.0.jar'
+filename = 'Palladium-1.20-1.20.2-1.1.5.1.jar'
 name = 'Palladium'
 side = 'both'
-x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20', '1.20.1', '1.20.2' ]
-x-prismlauncher-release-type = 'beta'
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'd9185a63af9104e33ef558896338921aa98b4c449b48974d1c0dddbe274e10a86476f301bd1c22e0ccb6020393c4741a69736c7a18574f67b57e880abec5e517'
+hash = '259c097ca154c7ad08d15626a0bfb56bf63398075328dc2b0212223cc71b16c8dc4f82502c4006ea44c9f3b0ab7a6e2f0c4c0b1a091104a0db9087b6a1897275'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/JNRr4jji/versions/uRDQDE7I/Palladium 1.20-1.20.2-1.1.0.jar'
+url = 'https://cdn.modrinth.com/data/JNRr4jji/versions/YhZGG5yP/Palladium-1.20-1.20.2-1.1.5.1.jar'
 
 [update.modrinth]
 mod-id = 'JNRr4jji'
-version = 'uRDQDE7I'
+version = 'YhZGG5yP'

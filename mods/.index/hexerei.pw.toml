@@ -1,16 +1,16 @@
-filename = 'hexerei-0.4.2.2.jar'
+filename = 'hexerei-0.4.2.3.jar'
 name = 'Hexerei'
 side = 'both'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
 x-prismlauncher-mc-versions = [ '1.20.1' ]
-x-prismlauncher-release-type = 'release'
+x-prismlauncher-release-type = 'beta'
 
 [download]
-hash = '9336279528ed66975d174fa9d5bf547f67be27930a1069fd9e7f441593f73af1ad111e663dbb4d696ef1a4852fb2f8a633c91396849a70c55ac75286a16708bf'
+hash = '44c6a9263f175c2cb0e6ee2b4372cdb53f7904bd7585a634b81bae221e8a7284aa30b733813f48de3550c97009219898663e28d06b2210fb1ad9596e9f484141'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/IQSOHVhI/versions/1DZLciOu/hexerei-0.4.2.2.jar'
+url = 'https://cdn.modrinth.com/data/IQSOHVhI/versions/z5SfvrzM/hexerei-0.4.2.3.jar'
 
 [update.modrinth]
 mod-id = 'IQSOHVhI'
-version = '1DZLciOu'
+version = 'z5SfvrzM'

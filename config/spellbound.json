@@ -148,7 +148,23 @@
     "BASE_POWER": -10,
     "POWER_PER_RANK": 11,
     "POWER_RANGE": 50,
-    "ABSORPTION_PER_DAMAGE_PER_LEVEL": 0.125
+    "ABSORPTION_RATIO_PER_RANK": 0.125,
+    "DURATION": 600
+  },
+  "goldskin": {
+    "ENABLED": true,
+    "IS_TREASURE": false,
+    "IS_FOR_SALE": true,
+    "RARITY": 2,
+    "SOFT_CAP": 4,
+    "HARD_CAP": 4,
+    "BASE_POWER": -10,
+    "POWER_PER_RANK": 11,
+    "POWER_RANGE": 50,
+    "TIME_UNTIL_RESET": 100,
+    "ABSORPTION_PER_TICK": 0.01,
+    "BASE_ABSORPTION": 0.05,
+    "ABSORPTION_PER_LEVEL": 0.05
   },
   "grace": {
     "ENABLED": true,
@@ -225,7 +241,8 @@
     "SECONDS_TO_DIE": 10,
     "HEALTH_REBOUND_PER_RANK": 0.0625,
     "INSTANT_MAX_HEALTH_LOSS_FACTOR": 0.5,
-    "RECOVERY_FROM_EXPERIENCE": 0.01
+    "RECOVERY_FROM_EXPERIENCE": 0.01,
+    "TEXT_PROMPT": true
   },
   "launching": {
     "ENABLED": true,
@@ -358,6 +375,20 @@
     "POWER_RANGE": 50,
     "LIGHT_MINIMUM": 8,
     "REPAIR_PERIOD": 40
+  },
+  "pinata": {
+    "ENABLED": true,
+    "IS_TREASURE": false,
+    "IS_FOR_SALE": true,
+    "RARITY": 3,
+    "SOFT_CAP": 3,
+    "HARD_CAP": 3,
+    "BASE_POWER": 6,
+    "POWER_PER_RANK": 9,
+    "POWER_RANGE": 50,
+    "KILLS_TO_PAYOUT": 30,
+    "PAYOUT_MULTIPLIER": 30,
+    "ADVANCE_NOTICE": 3
   },
   "polygamous": {
     "ENABLED": false,
@@ -547,7 +578,8 @@
     "ALLOW_NEW_PLOTHOOKS": true,
     "RARITY_OF_NEW_PLOTHOOKS": 2,
     "CAN_CREATE_TREASURE": true,
-    "CAN_CREATE_CURSE": false
+    "CAN_CREATE_CURSE": false,
+    "CAN_CREATE_NON_LOOT": false
   },
   "sunkenTreasure": {
     "ENABLED": true,
@@ -604,6 +636,24 @@
     "POWER_PER_RANK": 10,
     "POWER_RANGE": 50,
     "OFF_TYPE_MINING_SPEED_FACTOR": 0.5
+  },
+  "vengeful": {
+    "ENABLED": true,
+    "IS_TREASURE": false,
+    "IS_FOR_SALE": true,
+    "RARITY": 3,
+    "SOFT_CAP": 3,
+    "HARD_CAP": 3,
+    "BASE_POWER": -10,
+    "POWER_PER_RANK": 20,
+    "POWER_RANGE": 50,
+    "DAMAGE_BASE": 1.0,
+    "DAMAGE_RATIO": 0.33,
+    "INJURY_MINIMUM_BASE": 10.0,
+    "INJURY_MINIMUM_PER_LEVEL": -2.0,
+    "TIMEOUT": 2400,
+    "FOLLOWUP_HIT_DELAY": 12,
+    "HIGHLIGHT_COLOR": 8914952
   },
   "warlike": {
     "ENABLED": true,

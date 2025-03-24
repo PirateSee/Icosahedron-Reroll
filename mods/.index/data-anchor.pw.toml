@@ -1,0 +1,16 @@
+filename = 'Data_Anchor-forge-1.20.1-1.0.0.13.jar'
+name = 'Data Anchor'
+side = 'both'
+x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'b3fdda3d73cd3485cbf51fe921305f626681d98c2b677f2d3c818ade0774e39181699f4c30b93965783f1b8344d92c8ff18ed55cd652d2eba859d166113ba825'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/z2XEADmE/versions/bCCJ6RU0/Data_Anchor-forge-1.20.1-1.0.0.13.jar'
+
+[update.modrinth]
+mod-id = 'z2XEADmE'
+version = 'bCCJ6RU0'

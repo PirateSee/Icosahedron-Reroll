@@ -1,0 +1,16 @@
+filename = 'MissingWilds-forge-1.2.1+1.20.1.jar'
+name = 'Missing Wilds'
+side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '79d36c4a0a564c0b9eadd805df6f73d1746f18867cdaef3cb3725346e236a7bf0697a6d10b3f8efb2f39ce8ed39633065b221c6b750a4de9974188b80f7ddb0c'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Nw0MStSd/versions/CUyy6u4Y/MissingWilds-forge-1.2.1%2B1.20.1.jar'
+
+[update.modrinth]
+mod-id = 'Nw0MStSd'
+version = 'CUyy6u4Y'

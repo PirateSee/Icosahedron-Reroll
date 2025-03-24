@@ -66,3 +66,4 @@ config/voicechat/voicechat-volumes.properties
 .disabled
 config/figura.json
 config/figura.json
+/mods/.connector

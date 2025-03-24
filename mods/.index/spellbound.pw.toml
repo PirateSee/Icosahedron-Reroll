@@ -1,4 +1,4 @@
-filename = 'spellbound-1.17.0.jar'
+filename = 'spellbound-1.20.3.jar'
 name = 'Spellbound'
 side = 'both'
 x-prismlauncher-loaders = [ 'fabric' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'af338e03a4fd0860857d698e86cb28247f0ed44847f4d3ce9df81b74e7654b1ab070b6ce4bbe09a84119f3805962ee5108fe4a92bd370d35b0a45fd04694e6d8'
+hash = '07545a22c4799efdc948f0ce06c573fd349d6cb9a6ffed1b8ed77b9a6062002c96083bbd0016ea6b5b9d3610577ebd2595fd6ba0b4987a497c7de9a3b7e0f940'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/PvOWwwRg/versions/o0ha58bL/spellbound-1.17.0.jar'
+url = 'https://cdn.modrinth.com/data/PvOWwwRg/versions/bieyaFxV/spellbound-1.20.3.jar'
 
 [update.modrinth]
 mod-id = 'PvOWwwRg'
-version = 'o0ha58bL'
+version = 'bieyaFxV'

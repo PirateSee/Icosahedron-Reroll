@@ -1,4 +1,4 @@
-filename = 'spelunkery-1.20.1-0.3.15-forge.jar'
+filename = 'spelunkery-1.20.1-0.3.16-forge.jar'
 name = 'Spelunkery'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '92fe73c006e95dbd618292d27b6cac794d032e64d5edb158b26ee16a76eddc1e7164f637321dd57ac214d37e08a516b7547f3dba1b5268caff09ffe67782ff21'
+hash = 'ad89ff6fc6f3734725fedef065b43bda848766fe5ea5cde83149e3f47421f653f64e9eaececcbc79e25587a4e01523062ccc7dbcdaaf1a15f20c0aa1a8f3b8ab'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/krskFMfA/versions/Pae622FR/spelunkery-1.20.1-0.3.15-forge.jar'
+url = 'https://cdn.modrinth.com/data/krskFMfA/versions/jW8j0zdc/spelunkery-1.20.1-0.3.16-forge.jar'
 
 [update.modrinth]
 mod-id = 'krskFMfA'
-version = 'Pae622FR'
+version = 'jW8j0zdc'

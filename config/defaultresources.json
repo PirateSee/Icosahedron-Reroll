@@ -1,7 +1,8 @@
 // Set extraction to "extract" to extract currently unextracted resources.
 {
   "extract": {
-    "alembic": "extract"
+    "alembic": "extract",
+    "missingwilds": "extract"
   },
   "from_resource_packs": {}
 }

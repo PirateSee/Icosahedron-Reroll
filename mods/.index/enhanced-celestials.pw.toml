@@ -1,4 +1,4 @@
-filename = 'Enhanced-Celestials-Forge-1.20.1-5.0.2.3.jar'
+filename = 'Enhanced-Celestials-forge-1.20.1-5.0.3.1.jar'
 name = 'Enhanced Celestials'
 side = 'both'
 x-prismlauncher-loaders = [ 'neoforge', 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'a609671d3d8ce01f9efd638512f155f47c4d7c6bf0155d2fca203eca7b402218e628d5a86f465935c62b4e48bdcf1e989687932301744db1201a1626722d15e9'
+hash = '0604bfeb4c8bd3c1d5cd7526dadb74808aad8b3e62de95145e84921c45ce32189d335b99a7475510ee351112e47ea56a25bec376f8e3d16c0637f6ca5dea11eb'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/2rL16t1O/versions/NnLZsxmO/Enhanced-Celestials-Forge-1.20.1-5.0.2.3.jar'
+url = 'https://cdn.modrinth.com/data/2rL16t1O/versions/HTji7Upc/Enhanced-Celestials-forge-1.20.1-5.0.3.1.jar'
 
 [update.modrinth]
 mod-id = '2rL16t1O'
-version = 'NnLZsxmO'
+version = 'HTji7Upc'

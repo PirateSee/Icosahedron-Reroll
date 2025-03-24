@@ -1,4 +1,4 @@
-filename = 'fluffy_fur-1.20.1-0.1.5.jar'
+filename = 'fluffy_fur-1.20.1-0.1.7.jar'
 name = 'Fluffy Fur'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'a8638319116b90a01c199d5ed180d14c628b8c527070f1e59c122d240e7ba2da0ce69623a9886bff7481f8df2eb347858cc55e4029d0a4c8fd298d8aa7beb67f'
+hash = '294f9257e1f061311d9fa7ef29bd3e05be9e82db5cd8adc9f8391db70d8dbbfaa45120d9f315067feeea189890e72914c8c4145178bf0383f75d7405dba1ef7a'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/srqzRpcV/versions/tjhaQDWe/fluffy_fur-1.20.1-0.1.5.jar'
+url = 'https://cdn.modrinth.com/data/srqzRpcV/versions/96Q5XRyy/fluffy_fur-1.20.1-0.1.7.jar'
 
 [update.modrinth]
 mod-id = 'srqzRpcV'
-version = 'tjhaQDWe'
+version = '96Q5XRyy'

@@ -1,13 +1,16 @@
-filename = 'tetranomicon-1.5.3-1.20.1.jar'
+filename = 'tetranomicon-1.6.1-1.20.1.jar'
 name = 'Tetranomicon'
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '367337b34fe379104ed51051b7ca084bb01c4625'
+hash = '714fed6404cb8577c48fffa217efef7655232485'
 hash-format = 'sha1'
 mode = 'metadata:curseforge'
 url = ''
 
 [update.curseforge]
-file-id = 5099572
+file-id = 6286722
 project-id = 445385

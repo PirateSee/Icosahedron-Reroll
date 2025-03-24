@@ -1,13 +1,16 @@
-filename = 'species-1.20.1-2.2-forge.jar'
+filename = 'Species-1.20.1-2.3-forge.jar'
 name = 'Species'
 side = 'both'
+x-prismlauncher-loaders = [ 'forge' ]
+x-prismlauncher-mc-versions = [ '1.20.1' ]
+x-prismlauncher-release-type = 'release'
 
 [download]
-hash = 'ca69f61833a605b127b18906d09c8740a9ced98cfb18146637629cfa65209e843f798057097d47702e5c5ca2d622f90fa55b8f0fade3015e56929e5e27347e18'
+hash = 'e18f9bb08d49741951ff9d3c3cf90feab8bc1016f69657aa90316ad4caa5eadecea558ef2f6054542ba1167b3a47763c0b13c03fe17f3d6d7e9391c49cbffe11'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/s5d4P01r/versions/6ZvnLcTh/species-1.20.1-2.2-forge.jar'
+url = 'https://cdn.modrinth.com/data/s5d4P01r/versions/N9CbMB7B/Species-1.20.1-2.3-forge.jar'
 
 [update.modrinth]
 mod-id = 's5d4P01r'
-version = '6ZvnLcTh'
+version = 'N9CbMB7B'
