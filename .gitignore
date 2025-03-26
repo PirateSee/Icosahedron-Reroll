@@ -69,3 +69,6 @@ config/figura.json
 /mods/.connector
 /mods/.connector
 observable_announce
+/tacz/tacz_default_gun
+/tacz_backup
+/.mixin.out
