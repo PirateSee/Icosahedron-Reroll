@@ -1,4 +1,4 @@
-filename = 'insanelib-1.18.3.jar'
+filename = 'insanelib-1.19.0.jar'
 name = 'InsaneLib'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '8c99dc187d3545051b738dd99269c8559112201a8fb69319689f454660e627872670b3e31891e7bfc6dffbbb06f3c093de03deb83a550fde0d0c156c4b779bc8'
+hash = '3969b43bc2aada37e2f844ad26d10bb65994c0ba0e6257621e96fe6680470294df117df15bb723b0bdea1d79b09893d6de711009db1834b01c340913ae11c612'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/USZyvOJq/versions/l4TqBFwP/insanelib-1.18.3.jar'
+url = 'https://cdn.modrinth.com/data/USZyvOJq/versions/9KaJ9HJk/insanelib-1.19.0.jar'
 
 [update.modrinth]
 mod-id = 'USZyvOJq'
-version = 'l4TqBFwP'
+version = '9KaJ9HJk'

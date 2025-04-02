@@ -1,4 +1,4 @@
-filename = 'emi-1.1.20+1.20.1+forge.jar'
+filename = 'emi-1.1.21+1.20.1+forge.jar'
 name = 'EMI'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '32ecb901c18cadc76059afebcfa889f72985252205c18863b70048bbba456c938ce135c085caadea76cd9fa96843e4b471619f82b98ef56a628726e39d4a822b'
+hash = '7a7c74bb1f324904f245f4e5a590631c1f380c4cd606b7e097fa38a359ae96e21b9dea32b5df324e8be9e509b867cbec38aacbe3026e9d9105a100c491c7e113'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/fRiHVvU7/versions/3fJ5PcgX/emi-1.1.20%2B1.20.1%2Bforge.jar'
+url = 'https://cdn.modrinth.com/data/fRiHVvU7/versions/AcC9huLj/emi-1.1.21%2B1.20.1%2Bforge.jar'
 
 [update.modrinth]
 mod-id = 'fRiHVvU7'
-version = '3fJ5PcgX'
+version = 'AcC9huLj'
