@@ -64,7 +64,6 @@
 	#Format: [offset, *units]
 	"Overcast Temperature Offset" = [-0.35, "mc"]
 
-#"Thermal sources" are blocks that have a smokestack and emit frigidness/warmth, like the hearth, boiler, and iceobx
 ["Thermal Sources"]
 	#How effective thermal sources are at normalizing temperature
 	#Range: 0.0 ~ 1.0

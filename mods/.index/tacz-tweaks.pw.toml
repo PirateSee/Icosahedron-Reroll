@@ -1,4 +1,4 @@
-filename = 'tacz-tweaks-2.1.0-all.jar'
+filename = 'tacz-tweaks-2.3.0-all.jar'
 name = 'TaCZ Tweaks'
 side = 'both'
 x-prismlauncher-loaders = [ 'forge' ]
@@ -6,11 +6,11 @@ x-prismlauncher-mc-versions = [ '1.20', '1.20.1' ]
 x-prismlauncher-release-type = 'release'
 
 [download]
-hash = '697e67eb4307600fc1bd4a3252a3c811ff0d193a287644f41a48f7d9b7eb5e01b7127ab8e137df4ad12b940f2294a8737c234ec5cc8107f1ac9b1d185db70c83'
+hash = '4b716b0b05ea48dd33100945e26be5c428189259d1b653c9964a897c49b69e8dfe93e9ab59a3666700d59aa8cbf9ed20a3c57464c77ab35e3f1f0f29ed8400f8'
 hash-format = 'sha512'
 mode = 'url'
-url = 'https://cdn.modrinth.com/data/H8peNuJG/versions/ujVLcg4P/tacz-tweaks-2.1.0-all.jar'
+url = 'https://cdn.modrinth.com/data/H8peNuJG/versions/RhtUIRLI/tacz-tweaks-2.3.0-all.jar'
 
 [update.modrinth]
 mod-id = 'H8peNuJG'
-version = 'ujVLcg4P'
+version = 'RhtUIRLI'
